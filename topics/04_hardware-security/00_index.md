@@ -1,0 +1,52 @@
+# ハードウェアセキュリティ — 領域地図
+
+> 対応科目: H09J6B Design of Digital Platforms: Concepts, H0Q34A Design Seminar, H0E85A Hardware Security ｜ 層: 地図 (Layer 0)
+
+[`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/00_index.md)
+の物理・設計の基礎の上に、「信頼をどう物理的に確立し、どう物理的に破られるか」を扱う。
+[`../02_cryptography/`](../02_cryptography/00_index.md) が数学的に証明した安全性が、
+実際のチップの上でどう崩れうるか（そしてどう守るか）が本領域の核心。
+
+---
+
+## 進捗チェックリスト
+
+- [x] `01_digital-platform-design.md` — 設計抽象レベル・PPAからPPAS(Security)へ・HW/SW協調設計とTCB
+- [x] `02_hardware-attacks.md` — 攻撃者能力の分類(非侵襲/半侵襲/侵襲)・フォールト注入(RSA-CRT)・Spectre/Meltdown
+- [x] `03_security-building-blocks.md` — Root of Trust・TPM(PCR)・RNG・PUF
+- [x] `04_side-channels.md` — 電力解析(SPA/DPA/CPA)・キャッシュ攻撃(Flush+Reload/Prime+Probe)・定数時間実装・マスキング
+
+---
+
+## 科目対応マップ
+
+| ファイル | 主要対応科目 | 暗号/他領域との接続 |
+|---|---|---|
+| 01 設計 | H09J6B, H0Q34A | `01_prerequisites/03_hardware-digital-logic`のPPA/CMOS |
+| 02 攻撃 | H0E85A | `02_cryptography/03_public-key-crypto/01_rsa`（RSA-CRT） |
+| 03 部品 | H0E85A, H09J6B | `02_cryptography/04_hash-and-mac`（PCR拡張）・`04_digital-signatures`（RNG不備事例） |
+| 04 サイドチャネル | H0E85A | `02_cryptography/06_advanced-topics-map`（動機付け）・`03_privacy/03_ppt-cryptographic`（秘密分散） |
+
+---
+
+## このドメインで「本体」を置かないもの（DRY）
+
+- **CMOS・組合せ/順序回路・パイプライン・メモリ階層の基礎** → [`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/00_index.md)（本領域はその上のセキュリティ応用）
+- **MPC・秘密分散の一般論** → [`../02_cryptography/06_advanced-topics-map.md`](../02_cryptography/06_advanced-topics-map.md)（マスキングとの関係のみ本領域で言及）
+- **Spectre/Meltdownへのソフトウェア側の緩和策** → [`../05_software-security/03_security-patterns.md`](../05_software-security/03_security-patterns.md)
+
+---
+
+## 深掘りキュー（Layer 2 候補）
+
+- [ ] safegcd等の定数時間アルゴリズムの実装詳細 → `deep/constant-time-algorithms/`
+- [ ] マスキングの次数（1次/高次マスキング）と各次数を破る攻撃 → `deep/higher-order-masking/`
+- [ ] PUFの評価指標（uniqueness, reliability）の定量化 → `deep/puf-metrics/`（`01_prerequisites`側のキューと統合）
+- [ ] Rowhammerのようなメモリ物理攻撃 → `deep/rowhammer/`
+
+---
+
+## 参考（領域全体）
+
+- Mangard, S., Oswald, E., Popp, T. *Power Analysis Attacks: Revealing the Secrets of Smart Cards*.
+- KU Leuven H0E85A シラバス（シラバスページで検索）
