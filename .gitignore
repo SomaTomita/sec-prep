@@ -1,0 +1,15 @@
+# 内部用ドキュメント（公開しない）
+/docs/
+
+# CLAUDE.md を公開しない場合は次行を有効化
+# /CLAUDE.md
+
+# ビルド成果物・環境
+site/
+.venv/
+.cache/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
