@@ -1,0 +1,131 @@
+/* ============================================================
+   sec-prep カスタムテーマ — 集中配色 + 控えめモーション
+   ============================================================ */
+
+:root {
+  --sp-grad-a: #185b7b;
+  --sp-grad-b: #4bbdf0;
+}
+
+/* ---------- 配色: ライト（冷たい紙色 × 深ネイビー） ---------- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #154359;
+  --md-primary-fg-color--light: #2a6a8a;
+  --md-primary-fg-color--dark: #0e2f3f;
+  --md-accent-fg-color: #1e88c7;
+  --md-default-bg-color: #f4f7f9;
+  --md-typeset-a-color: #186a92;
+  --md-code-bg-color: #e9eff3;
+}
+
+/* ---------- 配色: ダーク（青黒 × 低彩度シアン） ---------- */
+[data-md-color-scheme="slate"] {
+  --md-hue: 207;                       /* slate 全体を青方向へ */
+  --md-primary-fg-color: #0d1720;
+  --md-accent-fg-color: #4bbdf0;
+  --md-default-bg-color: #0d1720;
+  --md-typeset-a-color: #6cc6ee;
+  --md-code-bg-color: #14222e;
+  --sp-grad-a: #4bbdf0;
+  --sp-grad-b: #cfeeff;
+}
+
+/* ---------- タイポグラフィ ---------- */
+.md-typeset {
+  font-feature-settings: "palt";       /* 日本語の詰め */
+  letter-spacing: 0.01em;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: "Manrope", "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* h1 はグラデーション文字（参考デザインの stat value を継承） */
+.md-typeset h1 {
+  width: fit-content;
+  background: linear-gradient(294deg, var(--sp-grad-a) 10%, var(--sp-grad-b) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ---------- ヘッダー: 半透明ガラス ---------- */
+.md-header {
+  background-color: color-mix(in srgb, var(--md-primary-fg-color) 88%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* ---------- リンク ---------- */
+.md-typeset a:not(.md-button) {
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+/* ---------- グリッドカード（ランディング/README用） ---------- */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--md-shadow-z2);
+  border-color: var(--md-accent-fg-color);
+}
+
+/* ---------- ボタン: 面取り（参考デザインの chamfer を継承） ---------- */
+.md-typeset .md-button {
+  border-radius: 0;
+  clip-path: polygon(
+    12px 0, 100% 0, 100% calc(100% - 12px),
+    calc(100% - 12px) 100%, 0 100%, 0 12px
+  );
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+.md-typeset .md-button:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- テーブル ---------- */
+.md-typeset table:not([class]) th {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent);
+}
+
+/* ---------- Mermaid 図の中央寄せ ---------- */
+.md-typeset .mermaid {
+  text-align: center;
+}
+
+/* ---------- アニメーション（motion 許可時のみ） ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes sp-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  /* ページ本文の入場 */
+  .md-content__inner {
+    animation: sp-fade-up 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  /* 演習の解答展開 */
+  .md-typeset details[open] > *:not(summary) {
+    animation: sp-fade-up 0.25s ease-out both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
