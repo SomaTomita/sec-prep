@@ -1,0 +1,88 @@
+site_name: KU Leuven Cybersecurity 予習ノート
+site_description: KU Leuven Master of Cybersecurity 受講前の予習ノート — 暗号・プライバシー・HW/SW/システムセキュリティ・法務・ガバナンス
+site_url: https://somatomita.github.io/sec-prep/
+repo_url: https://github.com/SomaTomita/sec-prep
+repo_name: SomaTomita/sec-prep
+docs_dir: topics
+
+theme:
+  name: material
+  language: ja
+  font:
+    text: Noto Sans JP
+    code: JetBrains Mono
+  icon:
+    logo: material/shield-lock-outline
+    repo: fontawesome/brands/github
+  favicon: assets/favicon.svg
+  features:
+    - navigation.instant
+    - navigation.instant.progress   # ページ遷移時の上部プログレスバー
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes            # フォルダの README.md をセクショントップに
+    - navigation.footer             # ページ下部の 前へ/次へ
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードへ
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードへ
+
+plugins:
+  - search:
+      lang:
+        - ja
+        - en
+  - awesome-pages        # .pages でフォルダ見出しの日本語化
+  - privacy              # 外部アセット（フォント・mermaid.js）をビルド時にセルフホスト
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+hooks:
+  - mkdocs_hooks.py
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn          # --strict でアンカー切れもビルド失敗にする
+
+extra_css:
+  - https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap
+  - assets/stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SomaTomita/sec-prep
