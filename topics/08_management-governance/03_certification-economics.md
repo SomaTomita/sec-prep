@@ -1,6 +1,6 @@
 # 03. 認証制度とセキュリティ経済学（Common Criteria・FIPS 140-3）
 
-> 対応科目: H0Q27A, H0O37A ｜ 前: [02 運用管理・IAM・BCP/DR](./02_security-operations.md) ｜ 層: 基礎(Layer 1)
+> 前: [02 運用管理・IAM・BCP/DR](./02_security-operations.md) ｜ 層: 基礎(Layer 1)
 
 [02](./02_security-operations.md) までで「自組織の内側」のリスク対応を見た。最後に、
 「そのセキュリティ品質を**外部にどう証明するか**」（認証制度）と、そもそも

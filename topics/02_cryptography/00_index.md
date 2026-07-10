@@ -1,8 +1,8 @@
 # 暗号 — サブ領域地図
 
-> 対応科目: H05E1B / H0Q28A / H03G5A / H0E74A ｜ 層: 地図 (Layer 0)
+> 層: 地図 (Layer 0)
 
-このサブ領域は KU Leuven 暗号系 4 科目の中核。
+このサブ領域は暗号系の専門選択科目群の中核。
 道具（数学）は `../01_prerequisites/01_math-for-crypto/` に、適用がここ。
 
 ---
@@ -24,13 +24,13 @@
 
 ## 科目対応マップ
 
-| トピック | 主要対応科目 |
-|---|---|
-| 対称鍵・AES | H05E1B |
-| RSA・DH・ECC | H05E1B, H0Q28A, H03G5A |
-| デジタル署名・プロトコル | H0Q28A, H03G5A |
-| 計算量・代数 | H0E74A |
-| 耐量子（格子・コード） | H03G5A, H0E74A |
+| トピック |
+|---|
+| 対称鍵・AES |
+| RSA・DH・ECC |
+| デジタル署名・プロトコル |
+| 計算量・代数 |
+| 耐量子（格子・コード） |
 
 ---
 
@@ -41,7 +41,3 @@
 ---
 
 ## 参考（サブ領域全体）
-
-- H05E1B シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H05E1BE.htm
-- H0Q28A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q28AE.htm
-- H03G5A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H03G5AE.htm

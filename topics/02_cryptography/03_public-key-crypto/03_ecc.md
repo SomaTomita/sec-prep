@@ -1,6 +1,6 @@
 # 03. 楕円曲線暗号（ECC）
 
-> 対応科目: H05E1B / H0Q28A / H03G5A ｜ 前: [02 Diffie–Hellman](./02_dh.md) ｜ 次: [04 デジタル署名](./04_digital-signatures.md) ｜ 層: 基礎(Layer 1)
+> 前: [02 Diffie–Hellman](./02_dh.md) ｜ 次: [04 デジタル署名](./04_digital-signatures.md) ｜ 層: 基礎(Layer 1)
 > 親: [README](./README.md)
 
 [02](./02_dh.md) の最後で触れた通り、DH は `Z_p^*` に限らず**離散対数問題が定義できる巡回群**なら
@@ -171,4 +171,3 @@ ECC は鍵共有（ECDH）だけでなく、**署名**（ECDSA・EdDSA）にも�
 - RFC 7748 — Elliptic Curves for Security (Curve25519/X25519, 2016): https://datatracker.ietf.org/doc/html/rfc7748
 - NIST SP 800-186 — Recommendations for Discrete Logarithm-based Cryptography: Elliptic Curve Domain Parameters
 - Dual_EC_DRBG — Wikipedia（NSA疑惑の経緯まとめ）: https://en.wikipedia.org/wiki/Dual_EC_DRBG
-- KU Leuven H05E1B シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H05E1BE.htm

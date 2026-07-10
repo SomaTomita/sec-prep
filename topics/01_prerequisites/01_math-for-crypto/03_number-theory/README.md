@@ -1,6 +1,6 @@
 # 整数論（Number Theory）
 
-> 対応科目: H05E1B / H0Q28A / H03G5A ｜ 層: 基礎(Layer 1)
+> 層: 基礎(Layer 1)
 > 親: [../00_index.md](../00_index.md)
 
 ## 一言で
@@ -26,15 +26,15 @@ RSA・DH・ECC といった公開鍵暗号の「安全性の根拠」を形成�
 
 ## なぜ重要か / コースでの位置づけ
 
-### H05E1B — RSA の全体像
+### RSA の全体像
 `n = p·q` の生成、φ(n) の計算、逆元 `d` の計算、暗号化・復号の正当性証明が
 フェルマー/オイラーの定理で正当化される。
 
-### H0Q28A — 署名とプロトコル
+### 署名とプロトコル
 DSA はモジュラー算術と離散対数問題に基づく。
 TLS ハンドシェイクの DH/ECDH も DLP の困難性を前提とする。
 
-### H03G5A — 暗号解読と安全性
+### 暗号解読と安全性
 差分解析・線形解析は対称鍵暗号が対象だが、公開鍵の安全性モデルは
 DLP/IFP を「仮定」として形式化する。
 
@@ -43,7 +43,7 @@ DLP/IFP を「仮定」として形式化する。
 一般化されるため、ECDLP も同様に多項式時間で破られる（古典では ECDLP の方が困難だが、
 量子計算下ではこの優位が消える）。
 
-### H0E74A — 計算量と実装
+### 計算量と実装
 Miller-Rabin、Pollard Rho（素因数分解）、楕円曲線素因数分解法（ECM）を
 Magma で実装・評価する。
 
@@ -54,7 +54,7 @@ Magma で実装・評価する。
 - **RSA・DH・ECDSA などプロトコルそのもの** → [`../../../02_cryptography/`](../../../02_cryptography/00_index.md)（本フォルダは安全性の数学的根拠までを扱う）
 - **合同算術の基礎（余り・合同式・拡張ユークリッド・逆元・CRTの入口）** → [`../01_modular-arithmetic/`](../01_modular-arithmetic/README.md)（本フォルダはその続き）
 - **群・環・体の一般論（`Z_n^*` が乗法群をなす理由など）** → `../02_groups-rings-fields.md`（昇格後は `../02_groups-rings-fields/`）
-- **Miller-Rabin・Pollard の ρ法・ECM などアルゴリズムの実装** → H0E74A の Magma 実習（下記深掘り候補参照）
+- **Miller-Rabin・Pollard の ρ法・ECM などアルゴリズムの実装** → Magma 実習（下記深掘り候補参照）
 
 ---
 
@@ -71,4 +71,3 @@ Magma で実装・評価する。
 
 - Stallings, *Cryptography and Network Security* (7th ed.), Chapters 4–5
 - Boneh & Shoup, *A Graduate Course in Applied Cryptography*, Ch. 10–12 (https://toc.cryptobook.us/)
-- KU Leuven H0E74A シラバス（Miller-Rabin, Pollard Rho, ECM の前提）: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0E74AE.htm

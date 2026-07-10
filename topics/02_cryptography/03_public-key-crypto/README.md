@@ -1,6 +1,6 @@
 # 公開鍵暗号（Public-Key Cryptography）
 
-> 対応科目: H05E1B / H0Q28A / H03G5A ｜ 層: 基礎(Layer 1)
+> 層: 基礎(Layer 1)
 > 親: [../00_index.md](../00_index.md)
 
 「送信者と受信者が**鍵を事前に共有しなくてよい**」暗号の総称。

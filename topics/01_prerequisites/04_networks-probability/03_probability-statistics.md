@@ -1,6 +1,6 @@
 # 確率・統計の基礎
 
-> 対応科目: H09L2A Privacy Technologies, H05E1B Cryptography and Network Security ｜ 前: [02 ネットワークサービス](./02_network-services.md) ｜ 次: [02_cryptography](../../02_cryptography/00_index.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Privacy Technologies, Cryptography and Network Security ｜ 前: [02 ネットワークサービス](./02_network-services.md) ｜ 次: [02_cryptography](../../02_cryptography/00_index.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
@@ -120,7 +120,7 @@ P(衝突なし) = 365/365 × 364/365 × 363/365 × … × 343/365   （365 か�
 
 ### 差分プライバシーとの接続
 
-H09L2A の中心概念「差分プライバシー（DP）」は確率論で定義される。
+プライバシー技術の中心概念「差分プライバシー（DP）」は確率論で定義される。
 
 - **ε-差分プライバシー**:
   ```
@@ -134,15 +134,15 @@ H09L2A の中心概念「差分プライバシー（DP）」は確率論で定�
 
 ## なぜ重要か / コースでの位置づけ
 
-**H09L2A（Privacy Technologies）**
+**Privacy Technologies**
 - 差分プライバシー・k-匿名化の「なぜこれで安全か」の論証は全て確率論で行われる。
 - 前提として「確率・統計・情報理論」が明示されている（シラバス §6.4）。
 
-**H05E1B（Cryptography and Network Security）**
+**Cryptography and Network Security**
 - 暗号解読の計算量論的安全性（確率ネゲリジブル関数など）は確率論の言葉で定義される。
 - 誕生日境界はハッシュ関数・MAC の出力長設計の根拠。
 
-**H03G5A（Advanced Methods in Cryptography）**
+**Advanced Methods in Cryptography**
 - 差分解読（Differential Cryptanalysis）と線形解読（Linear Cryptanalysis）は確率的議論。差分と線形特性の確率を積み重ねて攻撃計算量を見積もる。
 
 **統計的攻撃**
@@ -192,5 +192,4 @@ Layer 1（基礎）はここまで——次は暗号分野の本体へ。→ [`.
 - Mitzenmacher & Upfal, *Probability and Computing*, 2nd ed. (Cambridge, 2017) — 計算機科学向け確率論の標準教科書
 - Dwork & Roth, *The Algorithmic Foundations of Differential Privacy* (2014) — 差分プライバシーの一次資料（無料 PDF あり）
 - Stevens et al., "SHAttered" (2017): https://shattered.io/ — SHA-1 衝突実証
-- KU Leuven H09L2A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H09L2AE.htm
 - NIST SP 800-90A Rev.1: Recommendation for Random Number Generation Using Deterministic Random Bit Generators

@@ -1,8 +1,8 @@
 # 05. 分散システムセキュリティ
 
-> 対応科目: H0Q33A ｜ 前: [04 インフラセキュリティ](./04_infrastructure-security.md) ｜ 層: 基礎(Layer 1)
+> 前: [04 インフラセキュリティ](./04_infrastructure-security.md) ｜ 層: 基礎(Layer 1)
 
-H0Q33A（Security and Privacy in Contemporary Distributed Software Systems）は
+Security and Privacy in Contemporary Distributed Software Systems は
 クラウドストレージ・ブロックチェーン・車載システムという3つの具体例を軸に、
 「単一の管理者がいない/信頼できない participant がいる」システムのセキュリティを扱う。
 [04](./04_infrastructure-security.md)までの「1組織のネットワーク」という前提が崩れる場面。
@@ -113,7 +113,7 @@ Wired誌上で実演され、Fiat Chrysler社は140万台のリコールを実�
 
 ## なぜ重要か / コースでの位置づけ
 
-H0Q33Aが扱う3例（クラウド・ブロックチェーン・車載）はいずれも「単一の信頼できる管理者を
+ここで見た3例（クラウド・ブロックチェーン・車載）はいずれも「単一の信頼できる管理者を
 前提にできない」という共通の課題を持つ。責任共有モデルは契約による解決、BFTは
 アルゴリズムによる解決、CANバスの事例は「設計時に想定していなかった脅威モデルの変化」
 という教訓を示す——3例を並べて見ることで、分散システムセキュリティが単一の技術ではなく
@@ -160,4 +160,3 @@ H0Q33Aが扱う3例（クラウド・ブロックチェーン・車載）はい�
 - Lamport, L., Shostak, R., Pease, M. (1982). *The Byzantine Generals Problem*. ACM Transactions on Programming Languages and Systems, 4(3), 382-401.
 - Castro, M., Liskov, B. (1999). *Practical Byzantine Fault Tolerance*. Proc. 3rd USENIX Symposium on Operating Systems Design and Implementation (OSDI).
 - Greenberg, A. (2015). *Hackers Remotely Kill a Jeep on the Highway—With Me in It*. Wired. https://www.wired.com/2015/07/hackers-remotely-kill-jeep-highway/
-- KU Leuven H0Q33A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q33A.htm

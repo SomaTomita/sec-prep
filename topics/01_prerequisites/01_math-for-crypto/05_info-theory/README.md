@@ -1,6 +1,6 @@
 # 情報理論基礎（Information Theory）
 
-> 対応科目: H05E1B Cryptography and Network Security / H0Q28A Cryptographic Protocols ｜ 層: 基礎(Layer 1)
+> 対応科目: Cryptography and Network Security / Cryptographic Protocols ｜ 層: 基礎(Layer 1)
 > 親: [../00_index.md](../00_index.md)
 
 ## 一言で
@@ -27,16 +27,16 @@ Shannon が 1948〜49 年に確立したこの枠組みは、
 
 ## なぜ重要か / コースでの位置づけ
 
-### H05E1B の前提知識として明記
+### 前提知識として明記
 - シラバスに「情報理論の基礎」が前提として列挙されている
 - OTP を「完全秘匿の基準点」として授業の最初に位置づける構成が多い
 
-### H0Q28A（暗号プロトコル）
+### 暗号プロトコル
 - 秘密分散（secret sharing）では、シェアから秘密の情報が得られないことを
   `H(Secret | shares < k) = H(Secret)` という条件で表す
 - セキュリティモデル（information-theoretic vs computational）の区別が頻出
 
-### H03G5A（上級）
+### 上級
 - 証明可能安全性では「実世界とシミュレーションが区別できない」という定式化が
   情報理論的な区別不可能性（indistinguishability）につながる
 
@@ -69,4 +69,3 @@ Shannon が 1948〜49 年に確立したこの枠組みは、
 - Shannon, "Communication Theory of Secrecy Systems", *Bell System Technical Journal*, 1949
   (完全秘匿の原典)
 - Paar & Pelzl, *Understanding Cryptography*, Ch. 1（導入部の情報理論）
-- KU Leuven H05E1B シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H05E1BE.htm

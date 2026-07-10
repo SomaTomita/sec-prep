@@ -1,6 +1,6 @@
 # 02. 匿名化と差分プライバシー
 
-> 対応科目: H00Y2A, H09L2A ｜ 前: [01 プライバシーの基本概念](./01_privacy-concepts.md) ｜ 次: [03 暗号的PET](./03_ppt-cryptographic.md) ｜ 層: 基礎(Layer 1)
+> 前: [01 プライバシーの基本概念](./01_privacy-concepts.md) ｜ 次: [03 暗号的PET](./03_ppt-cryptographic.md) ｜ 層: 基礎(Layer 1)
 
 [01](./01_privacy-concepts.md) の「匿名性集合」を**実データ**で作る古典的手法（k-匿名化とその
 発展形）と、それらが構造的に抱える弱点を見た上で、根本的に異なるアプローチ

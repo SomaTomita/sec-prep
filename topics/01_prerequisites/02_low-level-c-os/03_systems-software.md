@@ -1,6 +1,6 @@
 # システムソフトウェア（コンパイル・リンク・実行形式）
 
-> 対応科目: H04K5A Development of Secure Software / H05M8B Capita Selecta: Secure Software ｜ 前: [02 プロセスと OS](./02_process-and-os.md) ｜ 次: [00_index](../03_hardware-digital-logic/00_index.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Development of Secure Software / Capita Selecta: Secure Software ｜ 前: [02 プロセスと OS](./02_process-and-os.md) ｜ 次: [00_index](../03_hardware-digital-logic/00_index.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
@@ -108,8 +108,8 @@ NX により新しいシェルコードを実行できない場合、攻撃者�
 | `Ghidra`, `IDA` | 逆アセンブラ/デコンパイラ | バイナリ解析、マルウェア解析 |
 | `pwntools` | CTF/エクスプロイト支援ライブラリ | ROP チェーン自動構築、通信処理 |
 
-これらは H04K5A のラボ/プロジェクト（17時間分）および  
-H05M8B（Capita Selecta: Secure Software）で実際に使われる可能性が高い。
+これらはラボ/プロジェクト（17時間分）および  
+Capita Selecta: Secure Software で実際に使われる可能性が高い。
 
 ### コンパイラのセキュリティオプション
 
@@ -126,11 +126,11 @@ gcc -Wl,-z,relro,-z,now       # RELRO（Full RELRO）
 
 ## なぜ重要か / コースでの位置づけ
 
-- **H04K5A（Development of Secure Software）**: C 系の脆弱性を「作る/読む/壊す/直す」ためには、
+- **Development of Secure Software**: C 系の脆弱性を「作る/読む/壊す/直す」ためには、
   コンパイル後のバイナリがどう動くかのイメージが必要。ラボでは実際にバイナリを解析する
-- **H05M8B（Capita Selecta: Secure Software）**: 前提として H04K5A 既修を要求。ソフトウェア攻撃と
+- **Capita Selecta: Secure Software**: 前提として Development of Secure Software 既修を要求。ソフトウェア攻撃と
   防御の高度なトピック（ROP, heap exploitation, fuzzing）を扱うため、ELF 構造の理解が前提
-- **H0Q31A（Software Lifecycle）**: 静的解析ツールの位置づけ理解（コード→バイナリのどの段階で
+- **Software Lifecycle**: 静的解析ツールの位置づけ理解（コード→バイナリのどの段階で
   何を検出するか）に役立つ
 
 ---

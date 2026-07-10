@@ -1,6 +1,6 @@
 # 02. 対称鍵暗号（ブロック暗号・ストリーム暗号・モード）
 
-> 対応科目: H05E1B, H03G5A Applied Cryptography and Cryptanalysis ｜ 前: [01 目標とプリミティブ](./01_goals-and-primitives.md) ｜ 次: [03 公開鍵暗号](./03_public-key-crypto/README.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Applied Cryptography and Cryptanalysis ｜ 前: [01 目標とプリミティブ](./01_goals-and-primitives.md) ｜ 次: [03 公開鍵暗号](./03_public-key-crypto/README.md) ｜ 層: 基礎(Layer 1)
 
 対称鍵暗号は**暗号化と復号に同じ鍵**を使う方式。公開鍵暗号（RSA。
 [`03_public-key-crypto/01_rsa/`](./03_public-key-crypto/01_rsa/README.md)）よりも

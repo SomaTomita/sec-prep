@@ -1,6 +1,6 @@
 # 03. セキュリティ部品（Root of Trust・TPM・RNG・PUF）
 
-> 対応科目: H0E85A, H09J6B ｜ 前: [02 ハードウェア攻撃](./02_hardware-attacks.md) ｜ 次: [04 サイドチャネル](./04_side-channels.md) ｜ 層: 基礎(Layer 1)
+> 前: [02 ハードウェア攻撃](./02_hardware-attacks.md) ｜ 次: [04 サイドチャネル](./04_side-channels.md) ｜ 層: 基礎(Layer 1)
 
 [02](./02_hardware-attacks.md) で見た攻撃に対抗するため、システムのどこかに
 **「これだけは信頼できる」という物理的な起点**を作る必要がある

@@ -1,9 +1,9 @@
 # 法務 — 領域地図
 
-> 対応科目: H0Q25A ｜ 層: 地図 (Layer 0)
+> 層: 地図 (Layer 0)
 
 サイバーセキュリティを取り巻く**EUの法的枠組み**を扱う領域。他の5本柱と違い、
-KU Leuvenのカリキュラム上も「軽め」（H0Q25A 1科目のみ）と位置づけられており、
+カリキュラム上も「軽め」（1科目のみ）と位置づけられており、
 本領域も広く浅い概観に留める（条文の逐条解説や訴訟実務には立ち入らない）。
 
 GDPRの詳細（7原則・適法根拠・データ主体の権利・DPIA）はすでに
@@ -22,10 +22,10 @@ GDPRの詳細（7原則・適法根拠・データ主体の権利・DPIA）は�
 
 ## 科目対応マップ
 
-| ファイル | 主要対応科目 | 他領域との接続 |
-|---|---|---|
-| 01 法務の全体地図 | H0Q25A | `../03_privacy/06_law-and-dpia.md`（GDPR詳細） |
-| 02 サイバー犯罪と知財 | H0Q25A | [`../06_systems-security/`](../06_systems-security/00_index.md)（インシデント対応・法執行連携） |
+| ファイル | 他領域との接続 |
+|---|---|
+| 01 法務の全体地図 | `../03_privacy/06_law-and-dpia.md`（GDPR詳細） |
+| 02 サイバー犯罪と知財 | [`../06_systems-security/`](../06_systems-security/00_index.md)（インシデント対応・法執行連携） |
 
 ---
 
@@ -46,6 +46,5 @@ GDPRの詳細（7原則・適法根拠・データ主体の権利・DPIA）は�
 
 ## 参考
 
-- KU Leuven H0Q25A シラバス（KU Leuven公式シラバスページで検索）
 - EUR-Lex（EU法令データベース）: https://eur-lex.europa.eu/
 - European Commission — Shaping Europe's digital future（政策解説）: https://digital-strategy.ec.europa.eu/en/policies

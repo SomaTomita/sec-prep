@@ -1,6 +1,6 @@
 # ネットワークスタック（OSI / TCP/IP）
 
-> 対応科目: H05E1B Cryptography and Network Security, H04K5A Development of Secure Software ｜ 次: [02 ネットワークサービス](./02_network-services.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Cryptography and Network Security, Development of Secure Software ｜ 次: [02 ネットワークサービス](./02_network-services.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
@@ -110,11 +110,11 @@ OSI を実用的に統合したモデル。実際のインターネットはこ�
 
 ## なぜ重要か / コースでの位置づけ
 
-**H05E1B（Cryptography and Network Security）**
+**Cryptography and Network Security**
 - TLS・IPSec・GSM などのプロトコルがどの層で動くかを理解するための土台。
 - IPSec はネットワーク層（L3）で動作。TLS は TCP（L4）の上に乗り、OSI では L5–6 相当の暗号化レイヤーとして機能する。
 
-**H04K5A（Development of Secure Software）**
+**Development of Secure Software**
 - インフラのセキュリティ技術（ファイアウォール・IDSなど）はどの層を監視するかが設計の鍵。
 
 **攻撃面として**
@@ -172,5 +172,3 @@ TCP/UDP の上に乗るアプリケーション層サービス（DNS・HTTP）�
 
 - Tanenbaum & Wetherall, *Computer Networks*, 5th ed. (Pearson, 2011) — 標準教科書
 - RFC 791 (IPv4), RFC 793 (TCP), RFC 768 (UDP) — IETF 一次資料
-- KU Leuven H05E1B シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H05E1BE.htm
-- KU Leuven H04K5A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H04K5AE.htm

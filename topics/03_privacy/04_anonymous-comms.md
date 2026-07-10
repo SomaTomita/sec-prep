@@ -1,6 +1,6 @@
 # 04. 匿名通信（Mixネットワーク・オニオンルーティング・Tor）
 
-> 対応科目: H00Y2A, H0Q29A, H0Q28A ｜ 前: [03 暗号的PET](./03_ppt-cryptographic.md) ｜ 次: [05 Web上のプライバシー](./05_web-privacy-tracking.md) ｜ 層: 基礎(Layer 1)
+> 前: [03 暗号的PET](./03_ppt-cryptographic.md) ｜ 次: [05 Web上のプライバシー](./05_web-privacy-tracking.md) ｜ 層: 基礎(Layer 1)
 
 これまでは**データの中身**や**問い合わせ内容**を隠す技術だった。ここでは
 「誰が誰と通信しているか」という**通信路のメタデータ**そのものを隠す。

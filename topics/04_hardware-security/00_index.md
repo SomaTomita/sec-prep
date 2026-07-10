@@ -1,6 +1,6 @@
 # ハードウェアセキュリティ — 領域地図
 
-> 対応科目: H09J6B Design of Digital Platforms: Concepts, H0Q34A Design Seminar, H0E85A Hardware Security ｜ 層: 地図 (Layer 0)
+> 対応科目: Design of Digital Platforms: Concepts, Design Seminar, Hardware Security ｜ 層: 地図 (Layer 0)
 
 [`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/00_index.md)
 の物理・設計の基礎の上に、「信頼をどう物理的に確立し、どう物理的に破られるか」を扱う。
@@ -20,12 +20,12 @@
 
 ## 科目対応マップ
 
-| ファイル | 主要対応科目 | 暗号/他領域との接続 |
-|---|---|---|
-| 01 設計 | H09J6B, H0Q34A | `01_prerequisites/03_hardware-digital-logic`のPPA/CMOS |
-| 02 攻撃 | H0E85A | `02_cryptography/03_public-key-crypto/01_rsa`（RSA-CRT） |
-| 03 部品 | H0E85A, H09J6B | `02_cryptography/04_hash-and-mac`（PCR拡張）・`04_digital-signatures`（RNG不備事例） |
-| 04 サイドチャネル | H0E85A | `02_cryptography/06_advanced-topics-map`（動機付け）・`03_privacy/03_ppt-cryptographic`（秘密分散） |
+| ファイル | 暗号/他領域との接続 |
+|---|---|
+| 01 設計 | `01_prerequisites/03_hardware-digital-logic`のPPA/CMOS |
+| 02 攻撃 | `02_cryptography/03_public-key-crypto/01_rsa`（RSA-CRT） |
+| 03 部品 | `02_cryptography/04_hash-and-mac`（PCR拡張）・`04_digital-signatures`（RNG不備事例） |
+| 04 サイドチャネル | `02_cryptography/06_advanced-topics-map`（動機付け）・`03_privacy/03_ppt-cryptographic`（秘密分散） |
 
 ---
 
@@ -49,4 +49,3 @@
 ## 参考（領域全体）
 
 - Mangard, S., Oswald, E., Popp, T. *Power Analysis Attacks: Revealing the Secrets of Smart Cards*.
-- KU Leuven H0E85A シラバス（シラバスページで検索）

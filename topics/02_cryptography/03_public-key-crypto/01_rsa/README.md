@@ -1,6 +1,6 @@
 # RSA 暗号
 
-> 対応科目: H05E1B / H0Q28A ｜ 層: 基礎(Layer 1)
+> 層: 基礎(Layer 1)
 > 親: [../README.md](../README.md)
 
 1977年 Rivest–Shamir–Adleman が発表。**素因数分解の困難さ**を安全性の根拠とする

@@ -1,6 +1,6 @@
 # 02. ソフトウェア脆弱性
 
-> 対応科目: H04K5A ｜ 前: [01 基本概念](./01_security-fundamentals.md) ｜ 次: [03 認証・認可・アクセス制御](./03_authn-authz-access-control.md) ｜ 層: 基礎(Layer 1)
+> 前: [01 基本概念](./01_security-fundamentals.md) ｜ 次: [03 認証・認可・アクセス制御](./03_authn-authz-access-control.md) ｜ 層: 基礎(Layer 1)
 
 [01](./01_security-fundamentals.md) の「脆弱性」を具体的に見る。ソフトウェアの脆弱性は大きく
 2系統に分かれる: Webアプリケーションの**論理的な脆弱性**（OWASP Top 10）と、

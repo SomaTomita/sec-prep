@@ -1,6 +1,6 @@
 # 03. 認証・認可・アクセス制御
 
-> 対応科目: H04K5A ｜ 前: [02 ソフトウェア脆弱性](./02_software-vulnerabilities.md) ｜ 次: [04 インフラセキュリティ](./04_infrastructure-security.md) ｜ 層: 基礎(Layer 1)
+> 前: [02 ソフトウェア脆弱性](./02_software-vulnerabilities.md) ｜ 次: [04 インフラセキュリティ](./04_infrastructure-security.md) ｜ 層: 基礎(Layer 1)
 
 「あなたは誰か」（認証）と「あなたは何をしてよいか」（認可）は別の問題。
 [01](./01_security-fundamentals.md) の First American Financial の事例は、認証すら不要な
@@ -114,7 +114,7 @@ First American Financial の事例に戻ると、あの欠陥は「認可モデ�
 
 ## なぜ重要か / コースでの位置づけ
 
-H04K5A の「認証とアクセス制御」の章がここに対応する。OWASP Top 10 の A01（Broken Access
+「認証とアクセス制御」の章がここに対応する。OWASP Top 10 の A01（Broken Access
 Control）・A07（Identification and Authentication Failures、[02](./02_software-vulnerabilities.md)）
 は、このセクションのモデルのどれかが欠落・誤実装された結果として発生する。
 setuidバイナリの脆弱性（`../01_prerequisites/02_low-level-c-os/02_process-and-os.md`）も

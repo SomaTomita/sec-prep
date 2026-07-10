@@ -1,6 +1,6 @@
 # 群・環・体（Groups, Rings, Fields）
 
-> 対応科目: H05E1B / H03G5A Advanced Methods in Cryptography / H0E74A Computer Algebra for Cryptography ｜ 層: 基礎(Layer 1)
+> 対応科目: Advanced Methods in Cryptography / Computer Algebra for Cryptography ｜ 層: 基礎(Layer 1)
 > 親: [../00_index.md](../00_index.md)
 
 ## 一言で
@@ -30,15 +30,15 @@
 
 ## なぜ重要か / コースでの位置づけ
 
-### H05E1B（暗号とネットワークセキュリティ）
+### 暗号とネットワークセキュリティ
 - RSA: Z_n^* という群の上の演算
 - DH: 巡回群 Z_p^* の生成元 g と位数の概念が必須
 
-### H03G5A（上級暗号手法）
+### 上級暗号手法
 - 格子ベース暗号（NTRU, Ring-LWE）は多項式環と整数の剰余環を組み合わせた構造
 - ECC（楕円曲線）は体上の点の集合が群をなすことを利用
 
-### H0E74A（計算機代数）
+### 計算機代数
 - GF(2^n) の構成と演算が Magma 実習で直接登場
 - Gröbner 基底は多項式環とイデアルの理論が基盤
 
@@ -66,4 +66,3 @@
 
 - Boneh & Shoup, *A Graduate Course in Applied Cryptography*, Ch. 2 (https://toc.cryptobook.us/)
 - Paar & Pelzl, *Understanding Cryptography*, Ch. 4（有限体とAES）
-- KU Leuven H0E74A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0E74AE.htm

@@ -1,6 +1,6 @@
 # 04. デジタル署名（RSA-PSS・ECDSA・EdDSA）
 
-> 対応科目: H05E1B / H0Q28A ｜ 前: [03 楕円曲線暗号](./03_ecc.md) ｜ 層: 基礎(Layer 1)
+> 前: [03 楕円曲線暗号](./03_ecc.md) ｜ 層: 基礎(Layer 1)
 > 親: [README](./README.md)
 
 [`../01_goals-and-primitives.md`](../01_goals-and-primitives.md) で見た通り、**否認防止は MAC では
@@ -174,4 +174,3 @@ RFC 8032（2017年）で標準化された **Ed25519**（[03](./03_ecc.md) の C
 - FIPS 186-5 — Digital Signature Standard (DSS)（ECDSA仕様）
 - RFC 8032 — Edwards-Curve Digital Signature Algorithm (EdDSA, 2017): https://www.rfc-editor.org/rfc/rfc8032.html
 - fail0verflow (2010). *Console Hacking 2010: PS3 Epic Fail*（Sony ECDSA nonce再利用の発表）
-- KU Leuven H0Q28A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q28AE.htm

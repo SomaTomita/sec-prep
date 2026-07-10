@@ -1,6 +1,6 @@
 # C言語とメモリ
 
-> 対応科目: H04K5A Development of Secure Software / H0Q31A Security Through the Software Lifecycle ｜ 次: [02 プロセスと OS](./02_process-and-os.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Development of Secure Software / Security Through the Software Lifecycle ｜ 次: [02 プロセスと OS](./02_process-and-os.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
@@ -123,7 +123,7 @@ C/C++ 標準では「特定の状況での動作は未定義」とされてお�
 
 ## なぜ重要か / コースでの位置づけ
 
-H04K5A の「C系低レベルソフトの脅威」（§6.7）の前提が、まさにここ。  
+「C系低レベルソフトの脅威」（§6.7）の前提が、まさにここ。  
 具体的には:
 
 - **スタックバッファオーバーフロー**: リターンアドレス上書き → シェルコード実行

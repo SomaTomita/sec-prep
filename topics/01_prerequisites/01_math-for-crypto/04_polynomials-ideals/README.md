@@ -1,6 +1,6 @@
 # 多項式環・イデアル（Polynomials and Ideals）
 
-> 対応科目: H0E74A Computer Algebra for Cryptography / H03G5A Advanced Methods in Cryptography ｜ 層: 基礎(Layer 1)
+> 対応科目: Computer Algebra for Cryptography / Advanced Methods in Cryptography ｜ 層: 基礎(Layer 1)
 > 親: [../00_index.md](../00_index.md)
 
 ## 一言で
@@ -8,7 +8,7 @@
 「多項式を整数のように扱う」代数構造が多項式環とイデアル。
 GF(2)[x] の筆算から既約多項式の分類、剰余環による有限体の一般構成、
 イデアル・Gröbner 基底、そして格子暗号への入口まで一本道で積み上げる。
-H0E74A の Magma 実習で最初に手を動かす対象そのものであり、H03G5A の
+Magma 実習で最初に手を動かす対象そのものであり、
 格子暗号（Ring-LWE/NTRU/Kyber）の前提知識にもなる。
 
 ---
@@ -26,13 +26,13 @@ H0E74A の Magma 実習で最初に手を動かす対象そのものであり、
 
 ## なぜ重要か / コースでの位置づけ
 
-### H0E74A（計算機代数）で直接使う
+### 計算機代数で直接使う
 - Magma の実習は GF(2^n)・多項式環・Gröbner 基底・因数分解が中心
 - プロジェクト課題で多項式演算アルゴリズムを実装・効率分析する（除算・既約性判定が最初のステップ）
 
-### H03G5A（上級暗号）での格子暗号
+### 上級暗号での格子暗号
 - Ring-LWE・NTRU の安全性議論に多項式環の知識が前提として必要
-- 格子簡約（LLL, BKZ）も H0E74A で扱い、H03G5A で安全性の文脈で再登場
+- 格子簡約（LLL, BKZ）も計算機代数で扱い、上級暗号で安全性の文脈で再登場
 - Kyber（ML-KEM）の Module-LWE 構造は、このフォルダの剰余環の考え方の延長線上にある
 
 ---
@@ -61,5 +61,4 @@ H0E74A の Magma 実習で最初に手を動かす対象そのものであり、
 ## 参考
 
 - Paar & Pelzl, *Understanding Cryptography*, Ch. 4（GF(2^8) と AES）
-- KU Leuven H0E74A シラバス（Gröbner 基底, Buchberger, 多項式因数分解）: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0E74AE.htm
 - NIST PQC Kyber 仕様（Ring-LWE 構造の参考）: https://pq-crystals.org/kyber/
