@@ -1,6 +1,6 @@
 # 03. セキュリティ設計パターンとアーキテクチャ
 
-> 対応科目: H0Q32A Advanced Methods for Security and Privacy by Design ｜ 前: [02 脅威モデリング](./02_threat-modeling.md) ｜ 次: [04 セキュリティテスト](./04_security-testing.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Advanced Methods for Security and Privacy by Design ｜ 前: [02 脅威モデリング](./02_threat-modeling.md) ｜ 次: [04 セキュリティテスト](./04_security-testing.md) ｜ 層: 基礎(Layer 1)
 
 [02](./02_threat-modeling.md)で洗い出した脅威に対して、毎回ゼロから対策を設計するのは
 非効率で漏れも出やすい。デザインパターンがソフトウェア設計の再利用可能な定石であるように、
@@ -52,7 +52,7 @@ Meltdown向け）——脅威モデリング（[02](./02_threat-modeling.md)）�
 
 ## なぜ重要か / コースでの位置づけ
 
-H0Q32A はワークショップ形式で「設計レベルでセキュリティ・プライバシーをどう達成するか」
+この科目はワークショップ形式で「設計レベルでセキュリティ・プライバシーをどう達成するか」
 を扱う——本ファイルの「原則から構造への落とし込み」がその実践部分にあたる。
 Spectre/Meltdownの事例は[`../04_hardware-security/`](../04_hardware-security/00_index.md)
 （ハードウェア攻撃そのものの機構）と本領域（ソフトウェア側の応答）の橋渡しになる。

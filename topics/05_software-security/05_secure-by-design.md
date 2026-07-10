@@ -1,6 +1,6 @@
 # 05. Secure by Design / Privacy by Design
 
-> 対応科目: H0Q32A Advanced Methods for Security and Privacy by Design ｜ 前: [04 セキュリティテスト](./04_security-testing.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Advanced Methods for Security and Privacy by Design ｜ 前: [04 セキュリティテスト](./04_security-testing.md) ｜ 層: 基礎(Layer 1)
 
 [01](./01_secure-sdlc.md)〜[04](./04_security-testing.md)は「開発プロセスのどこで」
 「何を検証するか」を見てきた。本ファイルはさらに手前、**設計の出発点そのもの**に
@@ -132,4 +132,3 @@ Privacy by Design視点:
 - Saltzer, J., Schroeder, M. (1975). *The Protection of Information in Computer Systems*. Proceedings of the IEEE, 63(9), 1278-1308.
 - Cavoukian, A. *Privacy by Design: The 7 Foundational Principles*. https://gpsbydesigncentre.com/the-seven-foundational-principles/
 - GDPR 第5条（原則）: https://gdpr-info.eu/art-5-gdpr/（詳細は[`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)）
-- KU Leuven H0Q32A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q32A

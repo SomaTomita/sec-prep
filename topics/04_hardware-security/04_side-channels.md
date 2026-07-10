@@ -1,6 +1,6 @@
 # 04. サイドチャネル攻撃と対策
 
-> 対応科目: H0E85A ｜ 前: [03 セキュリティ部品](./03_security-building-blocks.md) ｜ 層: 基礎(Layer 1)
+> 前: [03 セキュリティ部品](./03_security-building-blocks.md) ｜ 層: 基礎(Layer 1)
 
 [`../02_cryptography/06_advanced-topics-map.md`](../02_cryptography/06_advanced-topics-map.md)
 でタイミング攻撃（Kocher, 1996年）・DPA（Kocher, Jaffe, Jun, 1999年）を「暗号側の入口」

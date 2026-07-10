@@ -1,6 +1,6 @@
 # プライバシー — 領域地図
 
-> 対応科目: H00Y2A, H09L2A, H0Q29A ｜ 層: 地図 (Layer 0)
+> 層: 地図 (Layer 0)
 
 「個人と関係性（誰が誰と何をしたか）」を守る領域。
 [`../02_cryptography/`](../02_cryptography/00_index.md) の道具（MPC・FHE等）を応用しつつ、
@@ -21,14 +21,14 @@
 
 ## 科目対応マップ
 
-| ファイル | 主要対応科目 | 暗号/他領域との接続 |
-|---|---|---|
-| 01 概念 | H00Y2A, H09L2A, H0Q29A | — |
-| 02 匿名化・DP | H00Y2A, H09L2A | — |
-| 03 暗号的PET | H00Y2A, H0Q29A | `02_cryptography/06`のMPC/FHEを応用 |
-| 04 匿名通信 | H00Y2A, H0Q29A, H0Q28A | `02_cryptography`のECDH・AES-CTRを利用 |
-| 05 Webトラッキング | H00Y2A, H09L2A | — |
-| 06 GDPR・DPIA | H0Q29A, H09L2A | [`../07_legal/`](../07_legal/00_index.md)・`05_software-security`(LINDDUN)へ接続 |
+| ファイル | 暗号/他領域との接続 |
+|---|---|
+| 01 概念 | — |
+| 02 匿名化・DP | — |
+| 03 暗号的PET | `02_cryptography/06`のMPC/FHEを応用 |
+| 04 匿名通信 | `02_cryptography`のECDH・AES-CTRを利用 |
+| 05 Webトラッキング | — |
+| 06 GDPR・DPIA | [`../07_legal/`](../07_legal/00_index.md)・`05_software-security`(LINDDUN)へ接続 |
 
 ---
 
@@ -51,5 +51,4 @@
 
 ## 参考（領域全体）
 
-- KU Leuven H00Y2A / H09L2A / H0Q29A シラバス（各科目のシラバスページで検索）
 - GDPR 全文: https://gdpr-info.eu/

@@ -1,6 +1,6 @@
 # 合同算術（Modular Arithmetic）
 
-> 対応科目: H05E1B Cryptography and Network Security / H0Q28A Cryptographic Protocols ｜ 層: 基礎(Layer 1)
+> 対応科目: Cryptography and Network Security / Cryptographic Protocols ｜ 層: 基礎(Layer 1)
 > 親: [../00_index.md](../00_index.md)
 
 ## 一言で
@@ -41,7 +41,7 @@ RSA・DH・AES など現代暗号のほぼ全てがこの演算の上に成り�
 - 共有秘密 g^{ab} mod p の計算にべき乗 mod が登場
 - 安全性の根拠は離散対数問題（`../03_number-theory/05_hard-problems.md` で詳述）
 
-### H0E74A（計算機代数）での再登場
+### 計算機代数での再登場
 - 高速乗算（Karatsuba, Schönhage–Strassen）や素因数分解アルゴリズムは
   多倍長整数の mod 演算を効率化するもの
 
@@ -71,4 +71,3 @@ RSA・DH・AES など現代暗号のほぼ全てがこの演算の上に成り�
 
 - Stallings, *Cryptography and Network Security* (7th ed.), Chapter 4 — Basic Concepts in Number Theory
 - Boneh & Shoup, *A Graduate Course in Applied Cryptography*, Chapter 1（ドラフト無料公開: https://toc.cryptobook.us/）
-- KU Leuven H05E1B シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H05E1BE.htm

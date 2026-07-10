@@ -2,7 +2,7 @@
 
 > 対応: プログラム全体 ｜ 層: 地図 (Layer 0)
 
-KU Leuven Master of Cybersecurity の全体像と、本リポジトリの出発点。
+サイバーセキュリティ修士コースの全体像と、本リポジトリの出発点。
 
 ## このフォルダのファイル
 
@@ -34,5 +34,4 @@ KU Leuven Master of Cybersecurity の全体像と、本リポジトリの出発�
 
 ## 参考
 
-- KU Leuven 公式プログラムページ: https://www.kuleuven.be/programmes/master-cybersecurity
-- 公式コースカタログ: https://onderwijsaanbod.kuleuven.be/opleidingen/e/SC_56224748.htm
+- 各領域の詳細は所属先の公式プログラム案内・シラバスを参照（本リポジトリでは出典を特定できるリンクは掲載しない）。

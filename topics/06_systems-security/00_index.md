@@ -1,10 +1,10 @@
 # システムセキュリティ — 領域地図
 
-> 対応科目: H04K5A Development of Secure Software, H0Q33A Security and Privacy in Contemporary Distributed Software Systems ｜ 層: 地図 (Layer 0)
+> 対応科目: Development of Secure Software, Security and Privacy in Contemporary Distributed Software Systems ｜ 層: 地図 (Layer 0)
 
-H04K5A のシラバスは「脅威・対策・リスクの定義 → Web/C系ソフトウェアの脅威 → 認証・アクセス制御 →
+対応科目のシラバスは「脅威・対策・リスクの定義 → Web/C系ソフトウェアの脅威 → 認証・アクセス制御 →
 インフラ系セキュリティ技術」という順で構成される。本領域はこの流れをそのままなぞる。
-最後の `05` だけは H0Q33A（クラウド・ブロックチェーン・車載を題材にした分散システム演習科目）に対応する。
+最後の `05` だけは分散システム演習科目（クラウド・ブロックチェーン・車載を題材にした）に対応する。
 
 [`../01_prerequisites/02_low-level-c-os/`](../01_prerequisites/02_low-level-c-os/00_index.md)
 がC言語のメモリレイアウトを、[`../04_hardware-security/`](../04_hardware-security/00_index.md)
@@ -26,13 +26,13 @@ H04K5A のシラバスは「脅威・対策・リスクの定義 → Web/C系ソ
 
 ## 科目対応マップ
 
-| ファイル | 主要対応科目 | 他領域との接続 |
-|---|---|---|
-| 01 基本概念 | H04K5A | `../04_hardware-security/`（物理・サイドチャネルは別領域） |
-| 02 ソフトウェア脆弱性 | H04K5A | `../01_prerequisites/02_low-level-c-os/01_c-and-memory.md`（メモリレイアウトの前提） |
-| 03 認証・認可・アクセス制御 | H04K5A | `../01_prerequisites/02_low-level-c-os/02_process-and-os.md`（Lampsonマトリックスの予告） |
-| 04 インフラセキュリティ | H04K5A | `../01_prerequisites/04_networks-probability/`（TCP/IPの基礎） |
-| 05 分散システムセキュリティ | H0Q33A | `../02_cryptography/05_protocols-overview.md`（Bitcoinの暗号プリミティブ） |
+| ファイル | 他領域との接続 |
+|---|---|
+| 01 基本概念 | `../04_hardware-security/`（物理・サイドチャネルは別領域） |
+| 02 ソフトウェア脆弱性 | `../01_prerequisites/02_low-level-c-os/01_c-and-memory.md`（メモリレイアウトの前提） |
+| 03 認証・認可・アクセス制御 | `../01_prerequisites/02_low-level-c-os/02_process-and-os.md`（Lampsonマトリックスの予告） |
+| 04 インフラセキュリティ | `../01_prerequisites/04_networks-probability/`（TCP/IPの基礎） |
+| 05 分散システムセキュリティ | `../02_cryptography/05_protocols-overview.md`（Bitcoinの暗号プリミティブ） |
 
 ---
 
@@ -46,6 +46,3 @@ H04K5A のシラバスは「脅威・対策・リスクの定義 → Web/C系ソ
 ---
 
 ## 参考
-
-- KU Leuven H04K5A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H04K5A.htm
-- KU Leuven H0Q33A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q33A.htm

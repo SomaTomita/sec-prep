@@ -1,6 +1,6 @@
 # 02. ハードウェア攻撃と攻撃者能力
 
-> 対応科目: H0E85A Hardware Security ｜ 前: [01 プラットフォーム設計](./01_digital-platform-design.md) ｜ 次: [03 セキュリティ部品](./03_security-building-blocks.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Hardware Security ｜ 前: [01 プラットフォーム設計](./01_digital-platform-design.md) ｜ 次: [03 セキュリティ部品](./03_security-building-blocks.md) ｜ 層: 基礎(Layer 1)
 
 暗号アルゴリズムが数学的に安全でも、それを動かす**物理的なチップ**に触れられれば
 話が変わる。攻撃者が「どこまで物理的にアクセスできるか」で防御の考え方が大きく変わるため、

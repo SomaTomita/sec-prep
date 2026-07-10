@@ -1,6 +1,6 @@
 # 06. GDPR概観とDPIA
 
-> 対応科目: H0Q29A, H09L2A ｜ 前: [05 Web上のプライバシー](./05_web-privacy-tracking.md) ｜ 層: 基礎(Layer 1)
+> 前: [05 Web上のプライバシー](./05_web-privacy-tracking.md) ｜ 層: 基礎(Layer 1)
 
 [05](./05_web-privacy-tracking.md) で見た Do Not Track の失敗（法的強制力のない技術的意思表示は
 無視される）が象徴する通り、**技術だけでは不十分**。GDPR（EU一般データ保護規則）は

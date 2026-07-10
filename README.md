@@ -1,8 +1,8 @@
-# sec-prep — KU Leuven Master of Cybersecurity 予習リポジトリ
+# sec-prep — サイバーセキュリティ修士コース予習リポジトリ
 
 📖 **公開サイト**: https://somatomita.github.io/sec-prep/
 
-KU Leuven「Master of Cybersecurity (Leuven)」受講に向けた予習用の学習リポジトリ。
+サイバーセキュリティ修士コース受講に向けた予習用の学習リポジトリ。
 MDファイルで分野別に学び、詰まった所を深掘りで枝分かれさせていく。
 
 ## 何を目指すか（深度ポリシー）
@@ -51,7 +51,7 @@ topics/
 
 ## 出典の扱い
 
-各ファイルの「参考」節に、KU Leuven公式シラバスや一次資料へのリンクを残す。
+各ファイルの「参考」節に、一次資料へのリンクを残す。
 事実は無料の WebSearch / 一次資料で検証し、不確実な点は明示する。
 
 ## エントリポイント

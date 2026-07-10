@@ -1,6 +1,6 @@
 # 04. セキュリティテスト：静的解析・ファジング・ペネトレーションテスト
 
-> 対応科目: H0Q31A, H05M8B ｜ 前: [03 セキュリティパターン](./03_security-patterns.md) ｜ 次: [05 Secure/Privacy by Design](./05_secure-by-design.md) ｜ 層: 基礎(Layer 1)
+> 前: [03 セキュリティパターン](./03_security-patterns.md) ｜ 次: [05 Secure/Privacy by Design](./05_secure-by-design.md) ｜ 層: 基礎(Layer 1)
 
 設計にパターンを適用しても（[03](./03_security-patterns.md)）、実装した**コードそのもの**に
 欠陥が紛れ込んでいないかは別途検証が要る。「いつ・何を・どう壊すか」の違いで
@@ -72,7 +72,7 @@ Apache側のセキュリティ研究で発見されたものだが、**自社が
 
 ## なぜ重要か / コースでの位置づけ
 
-H0Q31A のライフサイクル全体の中で、本ファイルは「検証(Verification)」フェーズの中身。
+ライフサイクル全体の中で、本ファイルは「検証(Verification)」フェーズの中身。
 複数の手法が互いの弱点を補い合う構造は、[03](./03_security-patterns.md)のDefense in Depth
 と同じ発想——単一のテスト手法だけに頼らないことが実務上の標準。
 

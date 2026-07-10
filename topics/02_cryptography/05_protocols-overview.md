@@ -1,11 +1,11 @@
 # 05. プロトコルの地図（TLS・IPsec・SSH・Signal・EMV・Blockchain）
 
-> 対応科目: H0Q28A Cryptographic Protocols, H05E1B ｜ 前: [04 ハッシュ・MAC](./04_hash-and-mac.md) ｜ 次: [06 上級トピックの地図](./06_advanced-topics-map.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Cryptographic Protocols ｜ 前: [04 ハッシュ・MAC](./04_hash-and-mac.md) ｜ 次: [06 上級トピックの地図](./06_advanced-topics-map.md) ｜ 層: 基礎(Layer 1)
 
 これまでのファイルで個別のプリミティブ（RSA・DH・ECC・AES・ハッシュ・MAC・署名）を見てきた。
 実世界のプロトコルはこれらを**組み合わせて**特定の問題を解く。本ファイルは深掘りせず、
 「どのプロトコルが何のためにどのプリミティブを使うか」の地図に徹する。各プロトコル自体は
-H0Q28A で個別に深く扱われる。
+専門科目で個別に深く扱われる。
 
 ---
 

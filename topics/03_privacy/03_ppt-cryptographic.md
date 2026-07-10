@@ -1,6 +1,6 @@
 # 03. 暗号的プライバシー強化技術（PIR・OT・MPC/FHE応用）
 
-> 対応科目: H00Y2A, H0Q29A ｜ 前: [02 匿名化と差分プライバシー](./02_anonymization-and-dp.md) ｜ 次: [04 匿名通信](./04_anonymous-comms.md) ｜ 層: 基礎(Layer 1)
+> 前: [02 匿名化と差分プライバシー](./02_anonymization-and-dp.md) ｜ 次: [04 匿名通信](./04_anonymous-comms.md) ｜ 層: 基礎(Layer 1)
 
 [02](./02_anonymization-and-dp.md) は「公開するデータをどう加工するか」だった。ここでは逆に、
 **問い合わせ・計算そのものを暗号的に隠す**道具を見る。

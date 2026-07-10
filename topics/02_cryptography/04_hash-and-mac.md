@@ -1,6 +1,6 @@
 # 04. ハッシュ関数と MAC
 
-> 対応科目: H05E1B, H0Q28A ｜ 前: [03 公開鍵暗号](./03_public-key-crypto/README.md) ｜ 層: 基礎(Layer 1)
+> 前: [03 公開鍵暗号](./03_public-key-crypto/README.md) ｜ 層: 基礎(Layer 1)
 
 これまでの全ファイルが実は前提にしてきた道具がハッシュ関数。ECDSA の署名対象は
 `H(m)`（[`03_public-key-crypto/04_digital-signatures.md`](./03_public-key-crypto/04_digital-signatures.md)）、

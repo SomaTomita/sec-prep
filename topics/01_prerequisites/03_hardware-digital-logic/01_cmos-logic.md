@@ -1,6 +1,6 @@
 # CMOS 論理・消費電力・遅延
 
-> 対応科目: H0E85A Hardware Security ／ H09J6B Design of Digital Platforms: Concepts ｜ 次: [02 組合せ回路と順序回路](./02_combinational-sequential.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Hardware Security ／ Design of Digital Platforms: Concepts ｜ 次: [02 組合せ回路と順序回路](./02_combinational-sequential.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
@@ -101,11 +101,11 @@ P_dynamic ≈ α · C_L · V_DD² · f
 | 消費電力 | Power | V_DD 低下・f 低下 | 性能低下 |
 | 面積 | Area | ゲート縮小 | リーク増大・製造コスト |
 
-H09J6B の中心テーマ「遅延・スループット・面積・エネルギー・柔軟性のトレードオフ」はここが出発点。
+この分野の中心テーマ「遅延・スループット・面積・エネルギー・柔軟性のトレードオフ」はここが出発点。
 
 ## なぜ重要か / コースでの位置づけ
 
-### H0E85A Hardware Security への直接接続
+### Hardware Security への直接接続
 
 1. **電力サイドチャネル攻撃（SPA/DPA）**  
    AES の S-box 演算で α（スイッチングアクティビティ）がデータ依存 → 電力波形を測定して鍵ビットを推定できる。
@@ -118,7 +118,7 @@ H09J6B の中心テーマ「遅延・スループット・面積・エネルギ�
    製造ばらつき（トランジスタ特性の個体差）を意図的に利用した識別子。
    CMOS の遅延ばらつきが「指紋」になる（→ `deep/puf/` 候補）。
 
-### H09J6B Design of Digital Platforms への接続
+### Design of Digital Platforms への接続
 
 設計フロー全体の消費電力・遅延見積もりは CMOS の基礎モデルに基づく。
 HW/SW 協調設計でも「どこをハードウェアにするか」の判断に電力・遅延の直感が必要。
@@ -158,6 +158,4 @@ CMOS の電力・遅延モデルは、この後の組合せ回路・順序回路
 
 - Neil Weste & David Harris, *CMOS VLSI Design: A Circuits and Systems Perspective* (4th ed.), Addison-Wesley — CMOS 設計の標準教科書
 - Jan M. Rabaey et al., *Digital Integrated Circuits: A Design Perspective* (2nd ed.), Prentice Hall
-- KU Leuven H09J6B シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H09J6BE.htm
-- KU Leuven H0E85A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0E85AE.htm
 - Paul Kocher et al., "Differential Power Analysis," CRYPTO 1999（DPA 原著論文）

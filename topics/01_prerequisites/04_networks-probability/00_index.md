@@ -1,6 +1,6 @@
 # ネットワーク・確率統計 — 地図
 
-> 対応科目: H05E1B / H0Q28A / H09L2A / H04K5A ｜ 層: 地図 (Layer 0)
+> 層: 地図 (Layer 0)
 
 ## このサブ領域の位置づけ
 
@@ -12,11 +12,11 @@
 
 ## 対応科目マップ
 
-| ファイル | 主な対応科目 | 接続するセキュリティ概念 |
-|---|---|---|
-| `01_network-stack.md` | H05E1B, H04K5A | MitM・スプーフィング・パケット盗聴の土台 |
-| `02_network-services.md` | H05E1B, H0Q28A | TLS/PKI・暗号プロトコルの実装層 |
-| `03_probability-statistics.md` | H09L2A, H05E1B | 差分プライバシー・誕生日攻撃・統計的攻撃 |
+| ファイル | 接続するセキュリティ概念 |
+|---|---|
+| `01_network-stack.md` | MitM・スプーフィング・パケット盗聴の土台 |
+| `02_network-services.md` | TLS/PKI・暗号プロトコルの実装層 |
+| `03_probability-statistics.md` | 差分プライバシー・誕生日攻撃・統計的攻撃 |
 
 ---
 

@@ -1,6 +1,6 @@
 # 05. Web上のプライバシー（Cookie・フィンガープリンティング・トラッキング）
 
-> 対応科目: H00Y2A, H09L2A ｜ 前: [04 匿名通信](./04_anonymous-comms.md) ｜ 次: [06 GDPR概観・DPIA](./06_law-and-dpia.md) ｜ 層: 基礎(Layer 1)
+> 前: [04 匿名通信](./04_anonymous-comms.md) ｜ 次: [06 GDPR概観・DPIA](./06_law-and-dpia.md) ｜ 層: 基礎(Layer 1)
 
 Tor（[04](./04_anonymous-comms.md)）でネットワーク層の「誰が誰と通信したか」を隠せても、
 **アプリケーション層**（ブラウザ）に別の追跡経路が残っていれば元も子もない。

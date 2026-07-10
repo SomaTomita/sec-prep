@@ -1,12 +1,12 @@
 # 組合せ回路と順序回路
 
-> 対応科目: H09J6B Design of Digital Platforms: Concepts ／ H0Q34A Design Seminar ｜ 前: [01 CMOS 論理](./01_cmos-logic.md) ｜ 次: [03 HDL・アーキテクチャ](./03_hdl-and-architecture/README.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Design of Digital Platforms: Concepts ／ Design Seminar ｜ 前: [01 CMOS 論理](./01_cmos-logic.md) ｜ 次: [03 HDL・アーキテクチャ](./03_hdl-and-architecture/README.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
 デジタル回路は「現在の入力だけで出力が決まる組合せ回路」と「状態（記憶）を持つ順序回路」に大別される。
 フリップフロップが時間の基本単位を作り、有限状態機械（FSM）が制御を担う。
-設計の基本単位を知ることで、H09J6B で扱う抽象レベルとトレードオフが見えてくる。
+設計の基本単位を知ることで、この分野で扱う抽象レベルとトレードオフが見えてくる。
 
 ## 押さえる概念
 
@@ -28,7 +28,7 @@
 キャリー先見加算器（CLA）: 遅延 O(log n)、面積増加
 ```
 
-遅延-面積トレードオフはここでも現れる（H09J6B のコアテーマ）。
+遅延-面積トレードオフはここでも現れる（この分野のコアテーマ）。
 
 ### 順序回路 (Sequential Logic)
 
@@ -122,17 +122,17 @@ One-hot エンコーディングは FPGA での実装に有利（組合せロジ
                         レイテンシ = 3T                          ← レイテンシ増大
 ```
 
-パイプライン化は CPU 設計の中核でもあり、H09J6B のトレードオフ分析につながる。
+パイプライン化は CPU 設計の中核でもあり、トレードオフ分析につながる。
 
 ## なぜ重要か / コースでの位置づけ
 
-### H09J6B / H0Q34A Design of Digital Platforms
+### Design of Digital Platforms
 
 - 設計の「抽象レベル」（ゲートレベル / RTL / アーキテクチャレベル）はすべて組合せ+順序回路の上に立つ
 - HW/SW 協調設計でどのブロックをハードウェア化するかの判断に、回路特性の直感が必要
 - Design Seminar では FPGA 上での協調シミュレーションを行うため FSM・パイプライン設計が直接使われる
 
-### H0E85A Hardware Security への接続
+### Hardware Security への接続
 
 1. **タイミング攻撃の根拠**: クリティカルパス遅延がデータ依存 → 演算時間の差が鍵情報を漏らす
 2. **故障攻撃（Fault Injection）**: クロックグリッチ・電圧グリッチでセットアップ/ホールド違反を意図的に発生させ、
@@ -171,5 +171,4 @@ One-hot エンコーディングは FPGA での実装に有利（組合せロジ
 
 - M. Morris Mano & Michael D. Ciletti, *Digital Design* (6th ed.), Pearson — 組合せ/順序回路の標準教科書
 - David Patterson & John Hennessy, *Computer Organization and Design* (RISC-V ed.), Morgan Kaufmann — FSM・パイプライン設計の実践例
-- KU Leuven H09J6B シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H09J6BE.htm
 - Eli Bozorgzadeh, UC Irvine lecture notes on Sequential Logic（Web 上で広く参照される入門資料）

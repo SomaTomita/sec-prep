@@ -4,9 +4,9 @@ hide:
   - toc
 ---
 
-# KU Leuven Cybersecurity 予習ノート
+# サイバーセキュリティ修士コース予習ノート
 
-**Master of Cybersecurity (Leuven) 受講前に、学部基礎から実践レベルまでを日本語で積み上げる学習ノート。**
+**サイバーセキュリティ修士コース受講前に、学部基礎から実践レベルまでを日本語で積み上げる学習ノート。**
 分野別に読み進め、詰まった所は深掘りページへ枝分かれしていく。
 
 [学習を始める](00_overview/00_index.md){ .md-button .md-button--primary }

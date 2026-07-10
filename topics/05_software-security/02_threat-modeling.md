@@ -1,6 +1,6 @@
 # 02. 脅威モデリング：STRIDE・attack tree・LINDDUN
 
-> 対応科目: H0Q31A, H0Q32A ｜ 前: [01 Secure SDLC](./01_secure-sdlc.md) ｜ 次: [03 セキュリティパターン](./03_security-patterns.md) ｜ 層: 基礎(Layer 1)
+> 前: [01 Secure SDLC](./01_secure-sdlc.md) ｜ 次: [03 セキュリティパターン](./03_security-patterns.md) ｜ 層: 基礎(Layer 1)
 
 「どこにどんな脅威がありうるか」を場当たり的な思いつきではなく、**データフロー図(DFD)**
 を土台に体系的に洗い出す方法論群。セキュリティ側の代表がSTRIDE、そこから派生した
@@ -75,10 +75,10 @@ STRIDEで見つけた個々の脅威（S, T, E等）が、attack treeでは**1�
 
 ---
 
-## LINDDUN（Deng, Wuyts, Scandariato, Preneel, Joosen; KU Leuven, 2011年）
+## LINDDUN（Deng, Wuyts, Scandariato, Preneel, Joosen; 2011年）
 
 *Requirements Engineering* 誌に発表された、STRIDEをプライバシー版に翻案した方法論。
-KU Leuven COSIC/DistriNetの研究がそのまま出典という、本コースと直結した方法論。
+確立されたプライバシー工学の研究に基づく、実務でも広く使われる方法論。
 STRIDEと同じくDFD上で各要素を7分類の脅威で総当たりするが、対象が「セキュリティ特性の破れ」
 ではなく「プライバシー特性の破れ」になる。
 

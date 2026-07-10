@@ -1,6 +1,6 @@
 # 02. 運用管理・IAM・BCP/DR・サードパーティリスク
 
-> 対応科目: H0Q27A, H0O37A ｜ 前: [01 リスク管理フレームワーク](./01_risk-management.md) ｜ 次: [03 認証制度とセキュリティ経済学](./03_certification-economics.md) ｜ 層: 基礎(Layer 1)
+> 前: [01 リスク管理フレームワーク](./01_risk-management.md) ｜ 次: [03 認証制度とセキュリティ経済学](./03_certification-economics.md) ｜ 層: 基礎(Layer 1)
 
 [01](./01_risk-management.md) で識別・評価したリスクを実際に**低減・移転**するための
 日常運用の柱を3つ見る: 「誰が何にアクセスできるか」を管理するIAM、「止まった後どう

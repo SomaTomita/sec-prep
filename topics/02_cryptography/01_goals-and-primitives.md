@@ -1,6 +1,6 @@
 # 01. セキュリティ目標とプリミティブの分類
 
-> 対応科目: H05E1B Cryptography and Network Security, H0Q28A Cryptographic Protocols ｜ 次: [02 対称鍵暗号](./02_symmetric-crypto.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Cryptography and Network Security, Cryptographic Protocols ｜ 次: [02 対称鍵暗号](./02_symmetric-crypto.md) ｜ 層: 基礎(Layer 1)
 
 暗号を学ぶ前に「何を達成したいのか（目標）」と「何を組み合わせて達成するのか（プリミティブ）」を
 先に地図として持っておく。CIA トライアド（用語は
@@ -120,7 +120,7 @@ Claude Shannon はこれを **"the enemy knows the system"**（敵はシステ�
 
 「教科書 RSA は決定論的だから危険」（[`03_public-key-crypto/01_rsa/04_padding-and-attacks.md`](./03_public-key-crypto/01_rsa/04_padding-and-attacks.md)）
 という指摘は、実は「CPA下での安全性（IND-CPA）を満たさない」という話を平易に言い換えたもの。
-形式的な安全性定義（IND-CPA・IND-CCA）は H0Q28A で本格的に扱う。
+形式的な安全性定義（IND-CPA・IND-CCA）は専門科目で本格的に扱う。
 
 ---
 
@@ -159,4 +159,3 @@ Claude Shannon はこれを **"the enemy knows the system"**（敵はシステ�
 - Stallings, *Cryptography and Network Security* (7th ed.), Chapter 1 — Overview
 - Menezes, van Oorschot, Vanstone, *Handbook of Applied Cryptography*, Chapter 1（プリミティブの分類）
 - Kerckhoffs, A. (1883). *La cryptographie militaire*. Journal des sciences militaires.
-- KU Leuven H05E1B シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H05E1BE.htm

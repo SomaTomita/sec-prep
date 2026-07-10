@@ -1,6 +1,6 @@
 # 01. Secure SDLC と SecDevOps
 
-> 対応科目: H0Q31A Security Through the Software Lifecycle ｜ 次: [02 脅威モデリング](./02_threat-modeling.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Security Through the Software Lifecycle ｜ 次: [02 脅威モデリング](./02_threat-modeling.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
@@ -60,7 +60,7 @@ Secure SDLC が「開発フェーズだけ」ではなく「廃棄まで」を�
 
 ## なぜ重要か / コースでの位置づけ
 
-H0Q31A "Security Through the Software Lifecycle" はこのファイルのテーマそのものが
+"Security Through the Software Lifecycle" はこのファイルのテーマそのものが
 科目名になっている。「設計時にどんな脅威があるか」を体系的に洗い出す方法論
 （[02 脅威モデリング](./02_threat-modeling.md)）と、「作ったコードに欠陥がないか」を
 検証する方法論（[04 セキュリティテスト](./04_security-testing.md)）は、いずれも
@@ -112,4 +112,3 @@ PW（Produce Well-Secured Software）の最初の一歩は「設計段階でど�
 - NIST SP 800-218, *Secure Software Development Framework (SSDF) Version 1.1*, 2022. https://csrc.nist.gov/pubs/sp/800/218/final
 - Black Duck Blog, *Equifax, Apache Struts, and CVE-2017-5638 Vulnerability*: https://www.blackduck.com/blog/equifax-apache-struts-vulnerability-cve-2017-5638.html
 - CSO Online, *Equifax data breach FAQ*: https://www.csoonline.com/article/567833/equifax-data-breach-faq-what-happened-who-was-affected-what-was-the-impact.html
-- KU Leuven H0Q31A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q31AE

@@ -1,6 +1,6 @@
 # HDL・合成・コンピュータアーキテクチャ概観
 
-> 対応科目: H09J6B Design of Digital Platforms: Concepts ／ H0Q34A Design Seminar ／ H0E85A Hardware Security ｜ 層: 基礎(Layer 1)
+> 対応科目: Design of Digital Platforms: Concepts ／ Design Seminar ／ Hardware Security ｜ 層: 基礎(Layer 1)
 > 親: [../00_index.md](../00_index.md)
 
 ## 一言で
@@ -25,13 +25,13 @@ HDL → ゲートネットリスト → FPGA/ASIC へと変換する。コンピ
 
 ## なぜ重要か / コースでの位置づけ
 
-### H09J6B / H0Q34A
+### 設計実習との接続
 
 - HDL を読み書きできること、合成フローを理解していることが Design Seminar の実習の前提
-- FPGA 上のプロトタイピングは H0Q34A の 60h セミナー全体の実習軸
+- FPGA 上のプロトタイピングは Design Seminar の 60h セミナー全体の実習軸
 - パイプライン・メモリ階層は HW/SW 協調設計での性能トレードオフ分析の共通言語（`01_cmos-logic.md` の PPA モデルと直結）
 
-### H0E85A Hardware Security への接続
+### Hardware Security への接続
 
 1. **暗号コアの HDL 実装**: AES / SHA などの暗号ハードウェアは HDL で記述され、
    その実装に電力マスキング・デュアルレール等のサイドチャネル対策を組み込む
@@ -70,6 +70,4 @@ HDL・アーキテクチャの基礎はここに置くが、以下は本体を�
 - David Patterson & John Hennessy, *Computer Organization and Design RISC-V Edition* (2nd ed.), Morgan Kaufmann — パイプライン・メモリ階層の定番
 - Frank Vahid & Tony Givargis, *Embedded System Design*, Wiley — HW/SW 協調設計入門
 - M. D. Ciletti, *Advanced Digital Design with the Verilog HDL* (2nd ed.), Prentice Hall — Verilog 設計の実践
-- KU Leuven H09J6B シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H09J6BE.htm
-- KU Leuven H0Q34A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q34AE.htm
 - Paul Kocher et al., "Spectre Attacks: Exploiting Speculative Execution," IEEE S&P 2019（投機実行攻撃の原著論文）

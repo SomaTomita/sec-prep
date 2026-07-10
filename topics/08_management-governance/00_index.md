@@ -1,6 +1,6 @@
 # マネジメント・ガバナンス — 領域地図
 
-> 対応科目: H0Q27A, H0O37A ｜ 層: 地図 (Layer 0)
+> 層: 地図 (Layer 0)
 
 セキュリティを「技術」ではなく「組織の意思決定・プロセス・経済合理性」として扱う横断領域。
 計画書上は**軽め**（必須選択だが深掘りは薄く）と位置づけられており、他の5本柱ほど
@@ -19,11 +19,11 @@
 
 ## 科目対応マップ
 
-| ファイル | 主要対応科目 | 他領域との接続 |
-|---|---|---|
-| 01 リスク管理 | H0Q27A, H0O37A | 法的リスク評価は [`../07_legal/01_legal-landscape.md`](../07_legal/01_legal-landscape.md) へ |
-| 02 運用・IAM・BCP/DR | H0Q27A, H0O37A | サードパーティ契約の法的要件は [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)（GDPR第28条） |
-| 03 認証・経済学 | H0Q27A, H0O37A | Common CriteriaのTPM評価例は [`../04_hardware-security/03_security-building-blocks.md`](../04_hardware-security/03_security-building-blocks.md) |
+| ファイル | 他領域との接続 |
+|---|---|
+| 01 リスク管理 | 法的リスク評価は [`../07_legal/01_legal-landscape.md`](../07_legal/01_legal-landscape.md) へ |
+| 02 運用・IAM・BCP/DR | サードパーティ契約の法的要件は [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)（GDPR第28条） |
+| 03 認証・経済学 | Common CriteriaのTPM評価例は [`../04_hardware-security/03_security-building-blocks.md`](../04_hardware-security/03_security-building-blocks.md) |
 
 ---
 
@@ -44,6 +44,5 @@
 
 ## 参考
 
-- KU Leuven H0Q27A / H0O37A シラバス（各科目のシラバスページで検索）
 - NIST Cybersecurity Framework 2.0: https://www.nist.gov/cyberframework
 - ISO/IEC 27001: https://www.iso.org/standard/27001

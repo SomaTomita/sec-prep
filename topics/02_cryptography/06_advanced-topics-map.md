@@ -1,6 +1,6 @@
 # 06. 上級トピックの地図（耐量子・FHE・MPC・サイドチャネル）
 
-> 対応科目: H03G5A Applied Cryptography and Cryptanalysis, H0E74A ｜ 前: [05 プロトコルの地図](./05_protocols-overview.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Applied Cryptography and Cryptanalysis ｜ 前: [05 プロトコルの地図](./05_protocols-overview.md) ｜ 層: 基礎(Layer 1)
 
 RSA・DH・ECC・AES・署名・プロトコルという基礎が一通り揃った。最後に、コースで
 本格的に深掘りされる4つのフロンティア領域を地図として押さえる。それぞれ独立した

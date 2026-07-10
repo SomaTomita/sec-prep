@@ -1,9 +1,9 @@
 # 01. セキュリティの基本概念
 
-> 対応科目: H04K5A ｜ 次: [02 ソフトウェア脆弱性](./02_software-vulnerabilities.md) ｜ 層: 基礎(Layer 1)
+> 次: [02 ソフトウェア脆弱性](./02_software-vulnerabilities.md) ｜ 層: 基礎(Layer 1)
 
 「なんとなく危険」を「どれくらい危険で、何をすれば下がるか」に変換するための語彙を揃える。
-H04K5A のシラバスも threat（脅威）・countermeasure（対策）・risk（リスク）の定義から始まる。
+対応科目のシラバスも threat（脅威）・countermeasure（対策）・risk（リスク）の定義から始まる。
 この語彙が、`02`〜`05` で扱う個別の攻撃・防御をすべて同じ枠組みで整理する土台になる。
 
 ---
@@ -76,7 +76,7 @@ NIST SP 800-12 Rev.1 の定義:
 
 ## なぜ重要か / コースでの位置づけ
 
-H04K5A の講義は必ずこの語彙の定義から始まる。「脆弱性」と「リスク」を混同すると、
+対応科目の講義は必ずこの語彙の定義から始まる。「脆弱性」と「リスク」を混同すると、
 例えば「CVSSスコアが高い脆弱性なら即対応すべき」のような誤った優先順位付けをしてしまう
 （資産の重要度や実際の攻撃可能性を無視しているため）。この土台の上に `02`〜`05` の
 個別技術が積み上がる。
@@ -120,4 +120,3 @@ H04K5A の講義は必ずこの語彙の定義から始まる。「脆弱性」�
 - NIST SP 800-12 Rev.1, *An Introduction to Information Security*: https://csrc.nist.gov/pubs/sp/800/12/r1/final
 - ISO/IEC 27000:2018, *Information technology — Security techniques — ISMS — Overview and vocabulary*: https://www.iso.org/standard/73906.html
 - Krebs, B. (2019). *First American Financial Corp. Leaked Hundreds of Millions of Title Insurance Records*. KrebsOnSecurity. https://krebsonsecurity.com/2019/05/first-american-financial-corp-leaked-hundreds-of-millions-of-title-insurance-records/
-- KU Leuven H04K5A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H04K5A.htm

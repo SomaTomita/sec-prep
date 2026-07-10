@@ -1,6 +1,6 @@
 # セキュアソフトウェア — 領域地図
 
-> 対応科目: H0Q31A Security Through the Software Lifecycle, H0Q32A Advanced Methods for Security and Privacy by Design, H05M8B ｜ 層: 地図 (Layer 0)
+> 対応科目: Security Through the Software Lifecycle, Advanced Methods for Security and Privacy by Design ｜ 層: 地図 (Layer 0)
 
 「ソフトウェアを作る**プロセス**そのものにセキュリティをどう組み込むか」を扱う領域。
 [`../04_hardware-security/`](../04_hardware-security/00_index.md) が「チップの上でどう守るか」、
@@ -23,13 +23,13 @@
 
 ## 科目対応マップ
 
-| ファイル | 主要対応科目 | 他領域との接続 |
-|---|---|---|
-| 01 Secure SDLC | H0Q31A | [`../08_management-governance/01_risk-management.md`](../08_management-governance/01_risk-management.md)のリスク管理と接続 |
-| 02 脅威モデリング | H0Q31A, H0Q32A | `../03_privacy/01_privacy-concepts.md`（LINDDUNの用語的基盤） |
-| 03 セキュリティパターン | H0Q32A | `../04_hardware-security/02_hardware-attacks.md`・`04_side-channels.md`（Spectre/Meltdown） |
-| 04 セキュリティテスト | H0Q31A, H05M8B | [`../06_systems-security/02_software-vulnerabilities.md`](../06_systems-security/02_software-vulnerabilities.md)の脆弱性クラスと接続 |
-| 05 Secure/Privacy by Design | H0Q32A | `../03_privacy/06_law-and-dpia.md`（GDPR詳細） |
+| ファイル | 他領域との接続 |
+|---|---|
+| 01 Secure SDLC | [`../08_management-governance/01_risk-management.md`](../08_management-governance/01_risk-management.md)のリスク管理と接続 |
+| 02 脅威モデリング | `../03_privacy/01_privacy-concepts.md`（LINDDUNの用語的基盤） |
+| 03 セキュリティパターン | `../04_hardware-security/02_hardware-attacks.md`・`04_side-channels.md`（Spectre/Meltdown） |
+| 04 セキュリティテスト | [`../06_systems-security/02_software-vulnerabilities.md`](../06_systems-security/02_software-vulnerabilities.md)の脆弱性クラスと接続 |
+| 05 Secure/Privacy by Design | `../03_privacy/06_law-and-dpia.md`（GDPR詳細） |
 
 ---
 
@@ -53,6 +53,4 @@
 
 ## 参考
 
-- KU Leuven H0Q31A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q31AE
-- KU Leuven H0Q32A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q32A
 - NIST SP 800-218, *Secure Software Development Framework (SSDF) Version 1.1*, 2022.

@@ -1,6 +1,6 @@
 # ネットワークサービス（DNS・HTTP・TLS・PKI）
 
-> 対応科目: H05E1B Cryptography and Network Security, H0Q28A Cryptographic Protocols ｜ 前: [01 ネットワークスタック](./01_network-stack.md) ｜ 次: [03 確率・統計の基礎](./03_probability-statistics.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Cryptography and Network Security, Cryptographic Protocols ｜ 前: [01 ネットワークスタック](./01_network-stack.md) ｜ 次: [03 確率・統計の基礎](./03_probability-statistics.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
@@ -120,15 +120,15 @@ ServerHello 直後の **EncryptedExtensions** から暗号化が始まり、サ�
 
 ## なぜ重要か / コースでの位置づけ
 
-**H05E1B（Cryptography and Network Security）**
+**Cryptography and Network Security**
 - SSL/TLS, IPSec が応用例として扱われる。TLS の層モデル上の位置と、ハンドシェイクでどの暗号プリミティブが使われるかを理解することが必須。
 
-**H0Q28A（Cryptographic Protocols）**
+**Cryptographic Protocols**
 - TLS, IPSec, SSH, Signal, 4G が直接の講義内容。これらが「鍵共有プロトコル + 認証プロトコル + 対称鍵通信」の組み合わせで成立することを PKI の知識と合わせて読む。
 
 **攻撃シナリオとの接続**
-- TLS に対する攻撃（BEAST, POODLE, Heartbleed, CRIME/BREACH）はプロトコルの詳細な理解を要求する。H0Q28A ではプロトコルの弱点分析が試験に出る。
-- DNS スプーフィング → フィッシング → PKI で防ぐ、という防御の連鎖は H04K5A（インフラセキュリティ）でも扱われる。
+- TLS に対する攻撃（BEAST, POODLE, Heartbleed, CRIME/BREACH）はプロトコルの詳細な理解を要求する。プロトコルの弱点分析が試験に出ることも多い。
+- DNS スプーフィング → フィッシング → PKI で防ぐ、という防御の連鎖はインフラセキュリティの文脈でも扱われる。
 
 ---
 
@@ -176,5 +176,4 @@ TLS の安全性は「鍵長がどれだけの探索コストに耐えるか」�
 - RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3 — IETF 一次資料
 - RFC 5280: Internet X.509 Public Key Infrastructure Certificate — IETF 一次資料
 - Rescorla, E., *SSL and TLS: Designing and Building Secure Systems* (Addison-Wesley, 2001)
-- KU Leuven H0Q28A シラバス: https://onderwijsaanbod.kuleuven.be/syllabi/e/H0Q28AE.htm
 - Let's Encrypt による CA/PKI の平易な解説: https://letsencrypt.org/how-it-works/

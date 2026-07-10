@@ -1,6 +1,6 @@
 # 01. EU法務の全体地図（NIS2・Cybersecurity Act・GDPR・ePrivacy）
 
-> 対応科目: H0Q25A ｜ 次: [02 サイバー犯罪と知的財産](./02_cybercrime-and-ip.md) ｜ 層: 基礎(Layer 1)
+> 次: [02 サイバー犯罪と知的財産](./02_cybercrime-and-ip.md) ｜ 層: 基礎(Layer 1)
 
 サイバーセキュリティに関わるEU法令は1つではなく、**規律対象が異なる複数の法令が
 重なり合って**成立している。GDPR（個人データ）の詳細はすでに

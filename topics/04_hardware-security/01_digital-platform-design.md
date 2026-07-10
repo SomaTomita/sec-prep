@@ -1,6 +1,6 @@
 # 01. ディジタルプラットフォーム設計とセキュリティ
 
-> 対応科目: H09J6B Design of Digital Platforms: Concepts, H0Q34A Design Seminar ｜ 次: [02 ハードウェア攻撃](./02_hardware-attacks.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Design of Digital Platforms: Concepts, Design Seminar ｜ 次: [02 ハードウェア攻撃](./02_hardware-attacks.md) ｜ 層: 基礎(Layer 1)
 
 [`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/00_index.md)
 で CMOS・組合せ/順序回路・HDL・パイプライン・メモリ階層という「部品」を見た。
@@ -104,4 +104,3 @@ RTL/振る舞いレベル（HDLで記述、01_prerequisites/03_hdl-and-architect
 ## 参考
 
 - Rushby, J. (1981). *Design and Verification of Secure Systems*（TCBの概念の古典）。
-- KU Leuven H09J6B / H0Q34A シラバス（各科目のシラバスページで検索）
