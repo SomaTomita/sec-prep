@@ -1,6 +1,6 @@
 # 確率・統計の基礎
 
-> 対応科目: Privacy Technologies, Cryptography and Network Security ｜ 前: [02 ネットワークサービス](./02_network-services.md) ｜ 次: [02_cryptography](../../02_cryptography/00_index.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Privacy Technologies, Cryptography and Network Security ｜ 前: [02 ネットワークサービス](./02_network-services.md) ｜ 次: [02_cryptography](../../02_cryptography/index.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
@@ -174,7 +174,7 @@ P(衝突なし) = 365/365 × 364/365 × 363/365 × … × 343/365   （365 か�
 ## 次への接続
 
 誕生日境界とベイズ的な安全性の議論は、暗号プリミティブの安全性証明で全面的に使われる道具になる。
-Layer 1（基礎）はここまで——次は暗号分野の本体へ。→ [`../../02_cryptography/`](../../02_cryptography/00_index.md)（作成後は `00_index.md` から）
+Layer 1（基礎）はここまで——次は暗号分野の本体へ。→ [`../../02_cryptography/`](../../02_cryptography/index.md)（作成後は `index.md` から）
 
 ---
 

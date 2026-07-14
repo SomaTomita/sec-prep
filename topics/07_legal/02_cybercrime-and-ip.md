@@ -148,8 +148,8 @@ EU域外に本拠を置く事業者も、EU域内で事業を行う限り**法�
 
 これで `07_legal/` の基礎パート（EU法令の全体地図・サイバー犯罪・知財）が
 一通り揃った。実際のインシデント対応が法執行機関との連携にどうつながるかは
-[`../06_systems-security/`](../06_systems-security/00_index.md)で、セキュリティ運用のガバナンス面は
-[`../08_management-governance/`](../08_management-governance/00_index.md)で扱っていく。
+[`../06_systems-security/`](../06_systems-security/index.md)で、セキュリティ運用のガバナンス面は
+[`../08_management-governance/`](../08_management-governance/index.md)で扱っていく。
 
 ---
 

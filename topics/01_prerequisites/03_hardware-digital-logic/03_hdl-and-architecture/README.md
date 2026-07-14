@@ -1,7 +1,7 @@
 # HDL・合成・コンピュータアーキテクチャ概観
 
 > 対応科目: Design of Digital Platforms: Concepts ／ Design Seminar ／ Hardware Security ｜ 層: 基礎(Layer 1)
-> 親: [../00_index.md](../00_index.md)
+> 親: [../index.md](../index.md)
 
 ## 一言で
 

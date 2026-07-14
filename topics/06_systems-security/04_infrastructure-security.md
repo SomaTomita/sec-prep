@@ -5,7 +5,7 @@
 [03](./03_authn-authz-access-control.md) までは「1台のシステムの中で誰が何をしてよいか」を
 見てきた。ここからはネットワーク全体で「どのトラフィックを通し、どの侵入を検知し、
 被害をどう局所化するか」というインフラ層の技術を見る。
-[`../01_prerequisites/04_networks-probability/`](../01_prerequisites/04_networks-probability/00_index.md)
+[`../01_prerequisites/04_networks-probability/`](../01_prerequisites/04_networks-probability/index.md)
 のTCP/IPの基礎の上に積む。
 
 ---

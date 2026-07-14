@@ -1,7 +1,7 @@
 # 情報理論基礎（Information Theory）
 
 > 対応科目: Cryptography and Network Security / Cryptographic Protocols ｜ 層: 基礎(Layer 1)
-> 親: [../00_index.md](../00_index.md)
+> 親: [../index.md](../index.md)
 
 ## 一言で
 
@@ -48,7 +48,7 @@ Shannon が 1948〜49 年に確立したこの枠組みは、
 唯一の境界:
 
 - **「計算量的安全性」の詳細な暗号アルゴリズム分析**（AES/RSA が実際にどれだけ強いか等）は
-  [`../../../02_cryptography/`](../../../02_cryptography/00_index.md)に置く。このフォルダが扱うのはあくまで
+  [`../../../02_cryptography/`](../../../02_cryptography/index.md)に置く。このフォルダが扱うのはあくまで
   情報理論的な土台（完全秘匿・エントロピー・鍵長の直感）まで。
 
 ---

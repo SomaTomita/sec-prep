@@ -1,6 +1,6 @@
 # システムソフトウェア（コンパイル・リンク・実行形式）
 
-> 対応科目: Development of Secure Software / Capita Selecta: Secure Software ｜ 前: [02 プロセスと OS](./02_process-and-os.md) ｜ 次: [00_index](../03_hardware-digital-logic/00_index.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Development of Secure Software / Capita Selecta: Secure Software ｜ 前: [02 プロセスと OS](./02_process-and-os.md) ｜ 次: [index.md](../03_hardware-digital-logic/index.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
@@ -166,7 +166,7 @@ gcc -Wl,-z,relro,-z,now       # RELRO（Full RELRO）
 ここまで前提としてきた「メモリ」「命令」「レジスタ」を支えるハードウェア層（CMOS 論理・組み合わせ/
 順序回路・命令セットアーキテクチャ）を見ていく。ELF の命令バイト列が最終的にどんな論理回路で
 解釈されるかがここでつながる。
-→ [00_index](../03_hardware-digital-logic/00_index.md)
+→ [index.md](../03_hardware-digital-logic/index.md)
 
 ---
 

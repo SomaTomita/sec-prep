@@ -1,7 +1,7 @@
 # 群・環・体（Groups, Rings, Fields）
 
 > 対応科目: Advanced Methods in Cryptography / Computer Algebra for Cryptography ｜ 層: 基礎(Layer 1)
-> 親: [../00_index.md](../00_index.md)
+> 親: [../index.md](../index.md)
 
 ## 一言で
 

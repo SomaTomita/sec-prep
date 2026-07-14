@@ -2,9 +2,9 @@
 
 > 対応科目: Design of Digital Platforms: Concepts, Design Seminar, Hardware Security ｜ 層: 地図 (Layer 0)
 
-[`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/00_index.md)
+[`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/index.md)
 の物理・設計の基礎の上に、「信頼をどう物理的に確立し、どう物理的に破られるか」を扱う。
-[`../02_cryptography/`](../02_cryptography/00_index.md) が数学的に証明した安全性が、
+[`../02_cryptography/`](../02_cryptography/index.md) が数学的に証明した安全性が、
 実際のチップの上でどう崩れうるか（そしてどう守るか）が本領域の核心。
 
 ---
@@ -31,7 +31,7 @@
 
 ## このドメインで「本体」を置かないもの（DRY）
 
-- **CMOS・組合せ/順序回路・パイプライン・メモリ階層の基礎** → [`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/00_index.md)（本領域はその上のセキュリティ応用）
+- **CMOS・組合せ/順序回路・パイプライン・メモリ階層の基礎** → [`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/index.md)（本領域はその上のセキュリティ応用）
 - **MPC・秘密分散の一般論** → [`../02_cryptography/06_advanced-topics-map.md`](../02_cryptography/06_advanced-topics-map.md)（マスキングとの関係のみ本領域で言及）
 - **Spectre/Meltdownへのソフトウェア側の緩和策** → [`../05_software-security/03_security-patterns.md`](../05_software-security/03_security-patterns.md)
 

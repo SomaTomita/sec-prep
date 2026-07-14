@@ -57,7 +57,7 @@ NIST SP 800-12 Rev.1 の定義:
 | 最小権限 (Least Privilege) | 必要最小限の権限だけ与える | [03](./03_authn-authz-access-control.md) のRBAC |
 | フェイルセーフ・デフォルト | デフォルトは「拒否」にする | ファイアウォールの暗黙拒否ルール（[04](./04_infrastructure-security.md)） |
 | 完全な仲介 (Complete Mediation) | すべてのアクセスを毎回チェックする | Lampsonマトリックスの参照モニタ概念（[03](./03_authn-authz-access-control.md)） |
-| オープンな設計 (Open Design) | 秘密は鍵にだけ置き、設計自体は公開してよい | Kerckhoffsの原理（[`../02_cryptography/`](../02_cryptography/00_index.md)と同じ発想） |
+| オープンな設計 (Open Design) | 秘密は鍵にだけ置き、設計自体は公開してよい | Kerckhoffsの原理（[`../02_cryptography/`](../02_cryptography/index.md)と同じ発想） |
 | 権限の分離 (Separation of Privilege) | 1つの条件でなく複数条件を要求する | MFA（[03](./03_authn-authz-access-control.md)） |
 | 最小共通メカニズム | 共有する仕組みを減らす | クラウドのマルチテナント分離（[05](./05_distributed-systems-security.md)） |
 | 心理的受容性 | 使いにくい対策は回避される | パスワード運用の失敗例全般 |
@@ -69,7 +69,7 @@ NIST SP 800-12 Rev.1 の定義:
 - 認証・認可の失敗（IDORもここに含まれる） → [03](./03_authn-authz-access-control.md)
 - インフラ層への攻撃と対策 → [04](./04_infrastructure-security.md)
 - 分散システム特有の脅威（クラウド・ブロックチェーン・車載） → [05](./05_distributed-systems-security.md)
-- 物理・サイドチャネル攻撃（別の攻撃者モデル） → [`../04_hardware-security/`](../04_hardware-security/00_index.md)
+- 物理・サイドチャネル攻撃（別の攻撃者モデル） → [`../04_hardware-security/`](../04_hardware-security/index.md)
 - 体系的な脅威モデリング手法（STRIDE等） → [`../05_software-security/02_threat-modeling.md`](../05_software-security/02_threat-modeling.md)
 
 ---

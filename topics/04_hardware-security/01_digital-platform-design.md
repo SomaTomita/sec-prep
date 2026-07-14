@@ -2,7 +2,7 @@
 
 > 対応科目: Design of Digital Platforms: Concepts, Design Seminar ｜ 次: [02 ハードウェア攻撃](./02_hardware-attacks.md) ｜ 層: 基礎(Layer 1)
 
-[`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/00_index.md)
+[`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/index.md)
 で CMOS・組合せ/順序回路・HDL・パイプライン・メモリ階層という「部品」を見た。
 ここではそれらをシステムとして設計する際、**セキュリティが性能・電力・面積と並ぶ
 設計上の制約条件**になることを見る。

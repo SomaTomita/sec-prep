@@ -54,7 +54,7 @@ Meltdown向け）——脅威モデリング（[02](./02_threat-modeling.md)）�
 
 この科目はワークショップ形式で「設計レベルでセキュリティ・プライバシーをどう達成するか」
 を扱う——本ファイルの「原則から構造への落とし込み」がその実践部分にあたる。
-Spectre/Meltdownの事例は[`../04_hardware-security/`](../04_hardware-security/00_index.md)
+Spectre/Meltdownの事例は[`../04_hardware-security/`](../04_hardware-security/index.md)
 （ハードウェア攻撃そのものの機構）と本領域（ソフトウェア側の応答）の橋渡しになる。
 
 ---

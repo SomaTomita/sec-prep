@@ -133,10 +133,10 @@ Ross Anderson は2001年の論文 "Why Information Security Is Hard—An Economi
 ## 次への接続
 
 これで `08_management-governance/` の基礎パート（リスク管理・運用・認証と経済学）が
-一通り揃った。法制度の詳細は [`../07_legal/`](../07_legal/00_index.md)、
+一通り揃った。法制度の詳細は [`../07_legal/`](../07_legal/index.md)、
 GDPR・DPIAの詳細は [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)
 へ接続していく。「軽め」領域のため、深掘り（Layer 2）は
-[`00_index.md`](./00_index.md) の深掘りキューに必要が生じた時点で追記する。
+[`index.md`](./index.md) の深掘りキューに必要が生じた時点で追記する。
 
 ---
 

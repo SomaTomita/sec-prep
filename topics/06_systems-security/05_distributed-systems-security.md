@@ -149,8 +149,8 @@ Wired誌上で実演され、Fiat Chrysler社は140万台のリコールを実�
 これで `06_systems-security/` の基礎パート（脅威の語彙・ソフトウェア脆弱性・認証認可・
 インフラ・分散システム）が一通り揃った。ソフトウェアを設計段階から安全に作る手法
 （Secure SDLC・脅威モデリング・セキュアデザインパターン）は
-[`../05_software-security/`](../05_software-security/00_index.md)、
-法規制・国際的なサイバーセキュリティ法制は [`../07_legal/`](../07_legal/00_index.md) へ接続していく。
+[`../05_software-security/`](../05_software-security/index.md)、
+法規制・国際的なサイバーセキュリティ法制は [`../07_legal/`](../07_legal/index.md) へ接続していく。
 
 ---
 

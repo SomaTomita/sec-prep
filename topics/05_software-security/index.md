@@ -3,11 +3,11 @@
 > 対応科目: Security Through the Software Lifecycle, Advanced Methods for Security and Privacy by Design ｜ 層: 地図 (Layer 0)
 
 「ソフトウェアを作る**プロセス**そのものにセキュリティをどう組み込むか」を扱う領域。
-[`../04_hardware-security/`](../04_hardware-security/00_index.md) が「チップの上でどう守るか」、
-[`../06_systems-security/`](../06_systems-security/00_index.md)が「動いているシステムをどう守るか」
+[`../04_hardware-security/`](../04_hardware-security/index.md) が「チップの上でどう守るか」、
+[`../06_systems-security/`](../06_systems-security/index.md)が「動いているシステムをどう守るか」
 だとすれば、本領域は「作る過程（要件→設計→実装→検証→運用）でどう欠陥を作り込まないか」
 という時間軸に沿った視点が核心。STRIDE/LINDDUN による脅威モデリングは
-[`../03_privacy/`](../03_privacy/00_index.md) から続く「方法論の本体」をここで引き受ける。
+[`../03_privacy/`](../03_privacy/index.md) から続く「方法論の本体」をここで引き受ける。
 
 ---
 

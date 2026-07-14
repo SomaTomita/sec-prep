@@ -90,4 +90,4 @@ CRT で合成すると、扱う数が約半分の桁になり **およそ 4 倍�
 余り（[01](./01_division-with-remainder.md)）→ 合同式（[02](./02_congruence-definition.md)）→ 演算規則（[03](./03_congruence-arithmetic.md)）
 → gcd（[04](./04_gcd-euclidean.md)）→ 拡張ユークリッド（[05](./05_extended-euclidean.md)）→ 逆元（[06](./06_modular-inverse.md)）→ CRT（本章）
 と繋がり、これらが揃うと **RSA の鍵生成・暗号化・復号・高速化** がすべて道具として説明できる。
-RSA 本体は [`../../../02_cryptography/`](../../../02_cryptography/00_index.md) へ。
+RSA 本体は [`../../../02_cryptography/`](../../../02_cryptography/index.md) へ。

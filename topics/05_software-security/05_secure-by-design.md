@@ -115,7 +115,7 @@ Privacy by Design視点:
 [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)、
 最小共通メカニズムとサイドチャネルの物理的機構は
 [`../04_hardware-security/04_side-channels.md`](../04_hardware-security/04_side-channels.md)、
-実装時の脆弱性クラスと認可の実装詳細は[`../06_systems-security/`](../06_systems-security/00_index.md)で
+実装時の脆弱性クラスと認可の実装詳細は[`../06_systems-security/`](../06_systems-security/index.md)で
 それぞれ引き続き扱う。
 
 ---

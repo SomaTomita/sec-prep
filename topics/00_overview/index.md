@@ -14,17 +14,17 @@
 
 | # | 領域 | フォルダ |
 |---|---|---|
-| 1 | 暗号 (Cryptography) | [../02_cryptography/00_index.md](../02_cryptography/00_index.md) |
-| 2 | プライバシー (Privacy) | [../03_privacy/00_index.md](../03_privacy/00_index.md) |
-| 3 | ハードウェアセキュリティ | [../04_hardware-security/00_index.md](../04_hardware-security/00_index.md) |
-| 4 | セキュアソフトウェア | [../05_software-security/00_index.md](../05_software-security/00_index.md) |
-| 5 | システムセキュリティ | [../06_systems-security/00_index.md](../06_systems-security/00_index.md) |
+| 1 | 暗号 (Cryptography) | [../02_cryptography/index.md](../02_cryptography/index.md) |
+| 2 | プライバシー (Privacy) | [../03_privacy/index.md](../03_privacy/index.md) |
+| 3 | ハードウェアセキュリティ | [../04_hardware-security/index.md](../04_hardware-security/index.md) |
+| 4 | セキュアソフトウェア | [../05_software-security/index.md](../05_software-security/index.md) |
+| 5 | システムセキュリティ | [../06_systems-security/index.md](../06_systems-security/index.md) |
 
-横断科目: [法務](../07_legal/00_index.md) ／ [マネジメント・ガバナンス](../08_management-governance/00_index.md)
+横断科目: [法務](../07_legal/index.md) ／ [マネジメント・ガバナンス](../08_management-governance/index.md)
 
 ## 前提知識
 
-5本柱に入る前の学部レベルの土台 → [../01_prerequisites/](../01_prerequisites/00_index.md)
+5本柱に入る前の学部レベルの土台 → [../01_prerequisites/](../01_prerequisites/index.md)
 
 ## 深掘りキュー（このフォルダ起点）
 

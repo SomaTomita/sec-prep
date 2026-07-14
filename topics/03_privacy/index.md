@@ -3,7 +3,7 @@
 > 層: 地図 (Layer 0)
 
 「個人と関係性（誰が誰と何をしたか）」を守る領域。
-[`../02_cryptography/`](../02_cryptography/00_index.md) の道具（MPC・FHE等）を応用しつつ、
+[`../02_cryptography/`](../02_cryptography/index.md) の道具（MPC・FHE等）を応用しつつ、
 匿名化の数理・匿名通信の設計・Web上の実際の攻防・法制度までを一気通貫で扱う。
 
 ---
@@ -28,7 +28,7 @@
 | 03 暗号的PET | `02_cryptography/06`のMPC/FHEを応用 |
 | 04 匿名通信 | `02_cryptography`のECDH・AES-CTRを利用 |
 | 05 Webトラッキング | — |
-| 06 GDPR・DPIA | [`../07_legal/`](../07_legal/00_index.md)・`05_software-security`(LINDDUN)へ接続 |
+| 06 GDPR・DPIA | [`../07_legal/`](../07_legal/index.md)・`05_software-security`(LINDDUN)へ接続 |
 
 ---
 
@@ -36,7 +36,7 @@
 
 - **MPC・FHE・Yao/Shamirの仕組み自体** → [`../02_cryptography/06_advanced-topics-map.md`](../02_cryptography/06_advanced-topics-map.md)（本領域はプライバシー応用のみ）
 - **STRIDE/LINDDUN脅威モデリングの方法論** → [`../05_software-security/02_threat-modeling.md`](../05_software-security/02_threat-modeling.md)
-- **GDPR以外の法務詳細（NIS2・Cybersecurity Act・ePrivacy指令・国際データ移転・サイバー犯罪・知財等）** → [`../07_legal/`](../07_legal/00_index.md)
+- **GDPR以外の法務詳細（NIS2・Cybersecurity Act・ePrivacy指令・国際データ移転・サイバー犯罪・知財等）** → [`../07_legal/`](../07_legal/index.md)
 
 ---
 

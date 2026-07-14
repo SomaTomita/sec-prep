@@ -25,7 +25,7 @@ GDPRの詳細（7原則・適法根拠・データ主体の権利・DPIA）は�
 | ファイル | 他領域との接続 |
 |---|---|
 | 01 法務の全体地図 | `../03_privacy/06_law-and-dpia.md`（GDPR詳細） |
-| 02 サイバー犯罪と知財 | [`../06_systems-security/`](../06_systems-security/00_index.md)（インシデント対応・法執行連携） |
+| 02 サイバー犯罪と知財 | [`../06_systems-security/`](../06_systems-security/index.md)（インシデント対応・法執行連携） |
 
 ---
 

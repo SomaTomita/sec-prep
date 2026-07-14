@@ -6,11 +6,11 @@
 インフラ系セキュリティ技術」という順で構成される。本領域はこの流れをそのままなぞる。
 最後の `05` だけは分散システム演習科目（クラウド・ブロックチェーン・車載を題材にした）に対応する。
 
-[`../01_prerequisites/02_low-level-c-os/`](../01_prerequisites/02_low-level-c-os/00_index.md)
-がC言語のメモリレイアウトを、[`../04_hardware-security/`](../04_hardware-security/00_index.md)
+[`../01_prerequisites/02_low-level-c-os/`](../01_prerequisites/02_low-level-c-os/index.md)
+がC言語のメモリレイアウトを、[`../04_hardware-security/`](../04_hardware-security/index.md)
 がサイドチャネルを既に扱っている。本領域はそれらの上に「攻撃者はどう突破口を作るか」
 「システムはどう認証・認可・防御を組むか」を積み上げる。ソフトウェアを設計段階から
-安全に作る話（Secure SDLC・脅威モデリング）は [`../05_software-security/`](../05_software-security/00_index.md) に譲る。
+安全に作る話（Secure SDLC・脅威モデリング）は [`../05_software-security/`](../05_software-security/index.md) に譲る。
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## 深掘りキュー（Layer 2 候補）
 
-- [ ] ROPチェーンの実装詳細（`../01_prerequisites/02_low-level-c-os/00_index.md` の深掘りキューと統合）→ `deep/rop-chains/`
+- [ ] ROPチェーンの実装詳細（`../01_prerequisites/02_low-level-c-os/index.md` の深掘りキューと統合）→ `deep/rop-chains/`
 - [ ] PBFTの3フェーズプロトコル（Pre-prepare/Prepare/Commit）の詳細トレース → `deep/pbft-protocol/`
 - [ ] 車載セキュリティ標準（AUTOSAR SecOC, CAN-FD の認証拡張）→ `deep/can-security/`
 - [ ] Lampsonマトリックスの実装例（Linux capabilities, POSIX ACL）→ `deep/lampson-matrix-impl/`

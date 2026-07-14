@@ -19,7 +19,7 @@ Webアプリ脅威ランキング。最新の正式版は2021年版（次版は�
 | # | カテゴリ | 一言で |
 |---|---|---|
 | A01 | Broken Access Control | 認可チェックの欠落・不備（[03](./03_authn-authz-access-control.md)で詳述） |
-| A02 | Cryptographic Failures | 暗号の誤用・平文保存（[`../02_cryptography/`](../02_cryptography/00_index.md)で詳述） |
+| A02 | Cryptographic Failures | 暗号の誤用・平文保存（[`../02_cryptography/`](../02_cryptography/index.md)で詳述） |
 | A03 | Injection | 信頼できない入力をコード/クエリの一部として実行してしまう |
 | A04 | Insecure Design | 実装以前の設計段階の欠陥 |
 | A05 | Security Misconfiguration | デフォルト設定放置・不要機能の有効化 |
