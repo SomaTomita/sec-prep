@@ -1,7 +1,7 @@
 #!/bin/bash
 # topics/ 配下 Markdown のフォーマット検証
 # usage: tools/check-format.sh <file.md|dir> ...
-# 種別自動判定: 00_index.md/README.md → map ／ 同階層に README.md → concept ／ それ以外 → flat
+# 種別自動判定: index.md/README.md → map ／ 同階層に README.md → concept ／ それ以外 → flat
 set -u
 FAIL=0
 
