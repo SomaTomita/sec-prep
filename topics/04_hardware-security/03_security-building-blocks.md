@@ -6,15 +6,21 @@
 **「これだけは信頼できる」という物理的な起点**を作る必要がある
 （[01](./01_digital-platform-design.md) の TCB の考え方）。その起点になる部品を見る。
 
+**この1ページで分かること**
+
+- Root of Trust（信頼の起点）と、起動ソフトウェアを段階ごとに測定・記録する Measured Boot / TPM
+- 全ての鍵の土台になる乱数生成器（TRNG＝物理現象から真の乱数を作る回路 / CSPRNG）
+- PUF（製造ばらつきをチップの「指紋」にする回路）による「鍵を保存しない」という発想
+
 ---
 
 ## Root of Trust（信頼の起点）
 
-```
-RoT for Measurement:  システムの状態（起動したソフトウェアのハッシュ等）を測定する
-RoT for Storage:      鍵や測定結果を安全に保持する
-RoT for Reporting:    測定結果を外部に証明（証言）する
-```
+| RoT の種類 | 役割 |
+|---|---|
+| RoT for Measurement | システムの状態（起動したソフトウェアのハッシュ等）を測定する |
+| RoT for Storage | 鍵や測定結果を安全に保持する |
+| RoT for Reporting | 測定結果を外部に証明（証言）する |
 
 工場出荷時に焼き込まれたハードウェア／ファームウェアが起点になる——これより下の層は
 検証しようがないため、**信頼するしかない土台**として設計する。
@@ -23,6 +29,13 @@ RoT for Reporting:    測定結果を外部に証明（証言）する
 
 起動プロセスの各段階（ブートローダ→OSカーネル→…）のハッシュ値を、TPM内の
 **PCR（Platform Configuration Register）**という特殊なレジスタに記録していく。
+
+```mermaid
+flowchart LR
+    ROT["起点となるHW/FW<br>（工場出荷時に固定）"] -->|測定してPCRへextend| BL["ブートローダ"]
+    BL -->|測定してextend| OS["OSカーネル"]
+    OS -->|測定してextend| NEXT["以降のソフトウェア"]
+```
 
 ```
 PCR の更新は「上書き」ではなく「拡張（extend）」:
@@ -45,8 +58,8 @@ TCG（Trusted Computing Group）が標準化したチップ。鍵の安全な保
 ## RNG（乱数生成器）：全ての鍵の出発点
 
 ```
-TRNG（True/Hardware RNG）: 熱雑音・リングオシレータのジッタ等、物理現象を
-  エントロピー源として真の乱数を生成する
+TRNG（True/Hardware RNG）: 熱雑音・リングオシレータのジッタ（発振周期の微小な揺らぎ）等、
+  物理現象をエントロピー源（予測不能さの供給源）として真の乱数を生成する
 PRNG（擬似乱数生成器）: 決定論的アルゴリズムでシード値から乱数列を展開する
   （CSPRNGは暗号用途に十分な統計的性質・予測困難性を持つよう設計されたPRNG）
 ```
@@ -55,7 +68,7 @@ PRNG（擬似乱数生成器）: 決定論的アルゴリズムでシード値�
 
 **なぜ重要か**: [`../02_cryptography/03_public-key-crypto/04_digital-signatures.md`](../02_cryptography/03_public-key-crypto/04_digital-signatures.md)
 で見た Android の Bitcoin ウォレット事件は、**この RNG が壊れていた**ことが根本原因
-だった——ECDSA の nonce `k` を生成する乱数源の初期化不備で `k` が再利用され、
+だった——ECDSA の nonce `k`（署名ごとに一度だけ使う乱数）を生成する乱数源の初期化不備で `k` が再利用され、
 署名2つから秘密鍵が丸ごと復元された。アルゴリズムがどれだけ正しくても、
 その入力である乱数の品質が全ての土台になる。
 
