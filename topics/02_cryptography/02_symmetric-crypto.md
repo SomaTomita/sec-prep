@@ -2,6 +2,12 @@
 
 > 対応科目: Applied Cryptography and Cryptanalysis ｜ 前: [01 目標とプリミティブ](./01_goals-and-primitives.md) ｜ 次: [03 公開鍵暗号](./03_public-key-crypto/README.md) ｜ 層: 基礎(Layer 1)
 
+**この1ページで分かること**
+
+- AES（SPN構造）と ChaCha20 が現在の対称鍵暗号の主役である理由と、DES/3DES の廃止経緯
+- ブロック暗号を任意長のデータに使う「モード」の比較と、ECB 禁止・GCM 推奨の根拠
+- CTR/GCM での nonce 使い回しがなぜ破局的か（OTP の鍵再利用と同型）
+
 対称鍵暗号は**暗号化と復号に同じ鍵**を使う方式。公開鍵暗号（RSA。
 [`03_public-key-crypto/01_rsa/`](./03_public-key-crypto/01_rsa/README.md)）よりも
 桁違いに高速なため、実際に大量データを暗号化するのは常に対称鍵の役目。
@@ -77,6 +83,9 @@ CTR (Counter):               カウンタを暗号化した値と平文を XOR�
 GCM (Galois/Counter Mode):   CTR + 認証（GMAC）を組み合わせた AEAD。ユニークな nonce が必要
 ```
 
+（IV＝初期化ベクトル：同じ平文でも暗号文が毎回変わるようにするための初期値。モードごとに使われ方が異なる。
+nonce＝number used once：同じ鍵の下で決して再利用してはいけない使い捨ての値。）
+
 ### ECB は使ってはいけない
 
 同じ平文ブロックは常に同じ暗号文ブロックになる（決定論的）ため、画像のような
@@ -106,7 +115,7 @@ CTR も GCM もブロック暗号を**ストリーム暗号のように**使う�
 ならない」という形で再登場している）。
 
 **GCM** は CTR に加えて **GMAC** による認証タグを付け、暗号化と改ざん検知を同時に行う
-**AEAD（Authenticated Encryption with Associated Data）**。TLS 1.3 では
+**AEAD（Authenticated Encryption with Associated Data、認証付き暗号）**。TLS 1.3 では
 AES-GCM・ChaCha20-Poly1305 が標準の暗号スイートになっている。
 
 ---

@@ -3,6 +3,12 @@
 > 前: [03 楕円曲線暗号](./03_ecc.md) ｜ 層: 基礎(Layer 1)
 > 親: [README](./README.md)
 
+**この1ページで分かること**
+
+- 署名スキームの構造（KeyGen / Sign / Verify）と安全性目標 EUF-CMA
+- 教科書 RSA 署名が計算だけで偽造できる理由と、RSA-PSS がその代数関係を壊す仕組み
+- ECDSA の nonce（＝署名ごとに使い捨てる秘密の乱数 `k`）再利用で秘密鍵が漏れる導出と実例（PS3・Bitcoin）
+
 [`../01_goals-and-primitives.md`](../01_goals-and-primitives.md) で見た通り、**否認防止は MAC では
 実現できず、公開鍵署名が必要**だった（受信者も同じ鍵を持つ MAC とは違い、秘密鍵は
 署名者だけが持つため）。ここでは RSA・ECC の両方の道具を使って実際に署名を組み立てる。
@@ -19,6 +25,16 @@ Verify(pk, m, σ) → true/false
 安全性目標: 存在的偽造不可能性 (EUF-CMA)
   攻撃者が「署名者に選んだメッセージを好きなだけ署名させられる」状況でも、
   署名させていない新しいメッセージに対する有効な署名を1つも作れないこと。
+```
+
+```mermaid
+sequenceDiagram
+    participant S as 署名者（sk を保持）
+    participant V as 検証者（pk を知っている）
+    S->>S: σ = Sign(sk, m)
+    S->>V: m と σ を送付
+    V->>V: Verify(pk, m, σ) が true なら受理
+    Note over V: sk を持つのは署名者だけ → 否認防止が成立
 ```
 
 ---

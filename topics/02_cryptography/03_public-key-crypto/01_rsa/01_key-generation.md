@@ -2,6 +2,12 @@
 
 > 親: [README](./README.md) ｜ 次: [02 暗号化・復号](./02_encryption-decryption.md) ｜ 層: 基礎(Layer 1)
 
+**この1ページで分かること**
+
+- RSA の鍵ペアを作る5ステップと、各パラメータ（n, λ(n), e, d）のどれが公開・どれが秘密か
+- `e = 65537` が慣習になっている理由と、`d` を拡張ユークリッドで計算すること
+- 素数 `p, q` の選び方の落とし穴（`p ≈ q`・smooth な `p−1`）
+
 受信者（Bob）が1回だけ行う処理。秘密鍵は自分で生成して手元に置き、**公開鍵だけを相手に渡す**。
 鍵共有が不要なことが RSA の出発点。
 
@@ -81,7 +87,8 @@ d = 3⁻¹ mod 20 = 7    （3·7 = 21 ≡ 1 (mod 20) ✓）
   [`03_number-theory/02_fermat-little-theorem.md`](../../../01_prerequisites/01_math-for-crypto/03_number-theory/02_fermat-little-theorem.md) 参照）で確認。
 - **`p ≈ q` はダメ**: `n = p·q` で `p ≈ q` のとき `p ≈ √n` となり、`√n` 周辺を探索すれば
   因数分解できる（Fermat's factorization）。
-- **`p−1`, `q−1` に大きな素因数が必要**（smooth number 攻撃への対策）。
+- **`p−1`, `q−1` に大きな素因数が必要**（smooth number＝小さな素因数だけからなる数。
+  `p−1` が smooth だと専用の因数分解法で破られるため、その対策）。
 - `p, q` を鍵生成後に廃棄するか、RSA–CRT（高速化。
   [`03_number-theory/04_crt.md`](../../../01_prerequisites/01_math-for-crypto/03_number-theory/04_crt.md)）のため厳重保管するかは実装方針による。
 

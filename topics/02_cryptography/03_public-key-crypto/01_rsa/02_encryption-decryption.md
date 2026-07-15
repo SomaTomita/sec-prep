@@ -2,6 +2,12 @@
 
 > 親: [README](./README.md) ｜ 前: [01 鍵生成](./01_key-generation.md) ｜ 次: [03 正しさ証明](./03_correctness-proof.md) ｜ 層: 基礎(Layer 1)
 
+**この1ページで分かること**
+
+- 暗号化 `c = mᵉ mod n`・復号 `m = cᵈ mod n` と、平文を数値化する前処理
+- 2乗繰り返し法により `e = 65537` のような大きな指数でも高速に計算できる理由
+- RSA を「共通鍵の受け渡し」に使うイメージ（実際の TLS では ECDH＋署名が主流）
+
 ---
 
 ## 平文の数値化
@@ -9,7 +15,8 @@
 RSA は**整数**に対して `mod n` の演算をするので、テキストを数値に変換する前処理が必要。
 
 - 概念確認用の単純化: 文字を ASCII コードや 26 進数で数値化し、それを `m` とする。
-- 実用: **PKCS#1 OAEP** パディングで乱数を混ぜた後、数値として扱う（[04](./04_padding-and-attacks.md)）。
+- 実用: **PKCS#1 OAEP** パディング（パディング＝平文に乱数などを詰めて整形する前処理）で
+  乱数を混ぜた後、数値として扱う（[04](./04_padding-and-attacks.md)）。
   教科書 RSA（パディングなし）は決定論的で脆弱。
 - 制約: `0 ≤ m < n`。`m` が `n` 以上なら分割して処理。
 
@@ -81,10 +88,14 @@ m' = 8⁷ mod 55
 
 ## RSA による鍵共有のイメージ
 
-```
-Alice が共通鍵 K を Bob に送りたい場合:
-1. Alice: c = Kᵉ mod n  （Bob の公開鍵で暗号化）
-2. Bob:   K = cᵈ mod n  （自分の秘密鍵で復号）
+```mermaid
+sequenceDiagram
+    participant A as Alice
+    participant B as Bob（鍵ペア所有）
+    B->>A: 公開鍵 (n, e) を配布
+    A->>B: c = Kᵉ mod n（共通鍵 K を暗号化して送付）
+    B->>B: K = cᵈ mod n（秘密鍵で復号）
+    Note over A,B: 以降は共通鍵 K で対称鍵暗号
 ```
 
 実際の TLS では RSA 直接より **ECDH 鍵共有 + RSA/ECDSA 署名** が主流（前方秘匿性のため）。
