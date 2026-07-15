@@ -6,6 +6,12 @@
 各ステージが同時並行で動くことでスループットが上がる一方、命令同士の依存関係が
 「ハザード」を生む。このハザードの一種（投機実行に伴うもの）が Spectre/Meltdown の根拠になる。
 
+**このページで分かること**
+
+- CPU の5段パイプライン（IF/ID/EX/MEM/WB）が、なぜ毎サイクル1命令ずつ完了できるか
+- 命令の依存が生むハザード（データ／制御）と、その回避策（フォワーディング＝結果を配線で先送り、分岐予測）
+- 分岐予測に伴う投機実行が Spectre/Meltdown の足がかりになる理由
+
 ---
 
 ## 命令セットアーキテクチャ（ISA）概観
@@ -16,9 +22,9 @@
 
 ## 5段パイプライン（IF/ID/EX/MEM/WB）
 
-```
-IF → ID → EX → MEM → WB
-(Fetch → Decode → Execute → Memory → Write Back)
+```mermaid
+flowchart LR
+    IF["IF<br/>Fetch"] --> ID["ID<br/>Decode"] --> EX["EX<br/>Execute"] --> MEM["MEM<br/>Memory"] --> WB["WB<br/>Write Back"]
 ```
 
 | 略 | ステージ名 | 役割 |
