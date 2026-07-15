@@ -3,6 +3,12 @@
 > 前: [02 Diffie–Hellman](./02_dh.md) ｜ 次: [04 デジタル署名](./04_digital-signatures.md) ｜ 層: 基礎(Layer 1)
 > 親: [README](./README.md)
 
+**この1ページで分かること**
+
+- 楕円曲線上の点の「加算」がどう定義され、それが暗号に使える群になる仕組み
+- ECDH ＝ DH の `g^a` を `aG` に置き換えるだけ、という載せ替えの実際（玩具曲線で計算）
+- 同じ安全性に必要な鍵長の RSA/DH との比較と、実用曲線（P-256 / Curve25519）の信頼性の論点
+
 [02](./02_dh.md) の最後で触れた通り、DH は `Z_p^*` に限らず**離散対数問題が定義できる巡回群**なら
 何でも使える。楕円曲線上の点がなす群を使うと、**同じ安全性をずっと短い鍵長**で達成できる
 （安全性の根拠は [`../../01_prerequisites/01_math-for-crypto/03_number-theory/05_hard-problems.md`](../../01_prerequisites/01_math-for-crypto/03_number-theory/05_hard-problems.md)
@@ -109,6 +115,14 @@ Pollard の ρ法（群の位数の平方根程度の指数時間）しかない
 （詳細比較は [`03_number-theory/05_hard-problems.md`](../../01_prerequisites/01_math-for-crypto/03_number-theory/05_hard-problems.md)）。
 結果として **256bit の楕円曲線 ≈ 3072bit の RSA/DH** という短さで同等の安全性になる。
 
+| 安全性レベル（対称鍵換算） | ECC 鍵長 | RSA/DH 鍵長 |
+|---|---|---|
+| 128 bit | 256 bit | 3072 bit |
+| 192 bit | 384 bit | 7680 bit |
+| 256 bit | 512 bit（実用曲線は P-521 の 521 bit） | 15360 bit |
+
+（NIST SP 800-57 の等価安全性の対応表より。）
+
 ---
 
 ## 実用の曲線：NIST P-256 と Curve25519
@@ -170,4 +184,5 @@ ECC は鍵共有（ECDH）だけでなく、**署名**（ECDSA・EdDSA）にも�
 - Miller, V. (1985). *Use of Elliptic Curves in Cryptography*. CRYPTO '85.
 - RFC 7748 — Elliptic Curves for Security (Curve25519/X25519, 2016): https://datatracker.ietf.org/doc/html/rfc7748
 - NIST SP 800-186 — Recommendations for Discrete Logarithm-based Cryptography: Elliptic Curve Domain Parameters
+- NIST SP 800-57 Part 1 — Recommendation for Key Management（等価安全性の鍵長対応表）
 - Dual_EC_DRBG — Wikipedia（NSA疑惑の経緯まとめ）: https://en.wikipedia.org/wiki/Dual_EC_DRBG

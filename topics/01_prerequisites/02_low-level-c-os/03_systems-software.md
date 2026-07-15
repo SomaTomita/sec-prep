@@ -1,11 +1,17 @@
 # システムソフトウェア（コンパイル・リンク・実行形式）
 
-> 対応科目: Development of Secure Software / Capita Selecta: Secure Software ｜ 前: [02 プロセスと OS](./02_process-and-os.md) ｜ 次: [00_index](../03_hardware-digital-logic/00_index.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Development of Secure Software / Capita Selecta: Secure Software ｜ 前: [02 プロセスと OS](./02_process-and-os.md) ｜ 次: [index.md](../03_hardware-digital-logic/index.md) ｜ 層: 基礎(Layer 1)
 
 ## 一言で
 
 「C ソースが CPU で動くまで」の5ステップ（前処理・コンパイル・アセンブル・リンク・ロード）と、
 ELF 実行形式の構造、呼び出し規約を押さえると、逆アセンブル解析や ROP 攻撃の構造が腑に落ちる。
+
+**この1ページで分かること**
+
+- C ソースが実行プロセスになるまでの5段階と、各段階を担うツール
+- ELF（Linux の実行ファイル形式）の主要セクションと、攻撃面になる GOT（外部関数のアドレス表）と PLT（それを参照する呼び出しスタブ）
+- ROP（既存コード片を繋いで攻撃する手法）が呼び出し規約とスタックの仕組みからどう成り立つか
 
 ---
 
@@ -108,8 +114,7 @@ NX により新しいシェルコードを実行できない場合、攻撃者�
 | `Ghidra`, `IDA` | 逆アセンブラ/デコンパイラ | バイナリ解析、マルウェア解析 |
 | `pwntools` | CTF/エクスプロイト支援ライブラリ | ROP チェーン自動構築、通信処理 |
 
-これらはラボ/プロジェクト（17時間分）および  
-Capita Selecta: Secure Software で実際に使われる可能性が高い。
+これらはラボ/プロジェクト（17時間分）および Capita Selecta: Secure Software で実際に使われる可能性が高い。
 
 ### コンパイラのセキュリティオプション
 
@@ -166,7 +171,7 @@ gcc -Wl,-z,relro,-z,now       # RELRO（Full RELRO）
 ここまで前提としてきた「メモリ」「命令」「レジスタ」を支えるハードウェア層（CMOS 論理・組み合わせ/
 順序回路・命令セットアーキテクチャ）を見ていく。ELF の命令バイト列が最終的にどんな論理回路で
 解釈されるかがここでつながる。
-→ [00_index](../03_hardware-digital-logic/00_index.md)
+→ [index.md](../03_hardware-digital-logic/index.md)
 
 ---
 

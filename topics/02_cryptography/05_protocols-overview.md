@@ -2,6 +2,12 @@
 
 > 対応科目: Cryptographic Protocols ｜ 前: [04 ハッシュ・MAC](./04_hash-and-mac.md) ｜ 次: [06 上級トピックの地図](./06_advanced-topics-map.md) ｜ 層: 基礎(Layer 1)
 
+**この1ページで分かること**
+
+- TLS・IPsec・SSH・Signal・EMV・Blockchain が「どの層で・何のために・どのプリミティブを使うか」
+- TLS（CA 証明書）と SSH（TOFU）という信頼モデルの対比
+- 前方秘匿性（＝長期鍵が将来漏れても過去の通信は復号されない性質）が TLS 1.3 の証明書ベースのハンドシェイクでは必須になった経緯
+
 これまでのファイルで個別のプリミティブ（RSA・DH・ECC・AES・ハッシュ・MAC・署名）を見てきた。
 実世界のプロトコルはこれらを**組み合わせて**特定の問題を解く。本ファイルは深掘りせず、
 「どのプロトコルが何のためにどのプリミティブを使うか」の地図に徹する。各プロトコル自体は
@@ -17,6 +23,17 @@
         1-RTTハンドシェイク、HKDF（RFC5869）による鍵スケジュール
 認証:   サーバ証明書 + RSA-PSS/ECDSA 署名でサーバの身元を検証
 本体:   AES-GCM または ChaCha20-Poly1305 でレコード層を暗号化
+```
+
+```mermaid
+sequenceDiagram
+    participant C as クライアント
+    participant S as サーバ
+    C->>S: ClientHello（対応方式の提示 + ECDHE 公開値）
+    S->>C: ServerHello（ECDHE 公開値）+ 証明書 + CertificateVerify（署名）+ Finished
+    Note over C,S: 双方が HKDF でセッション鍵を導出（1-RTT）
+    C->>S: Finished
+    Note over C,S: 以降 AES-GCM / ChaCha20-Poly1305 で暗号化通信
 ```
 
 これは [`02_symmetric-crypto.md`](./02_symmetric-crypto.md) で説明した**ハイブリッド暗号**の
@@ -57,7 +74,8 @@ SSH は多くの場合 **TOFU（Trust On First Use）**——初回接続時の�
 
 ## Signal Protocol — E2E暗号化メッセージング
 
-WhatsApp・Signal で使われる。2つの仕組みを組み合わせる:
+WhatsApp・Signal で使われる E2E 暗号化（＝端末から端末まで暗号化し、中継サーバも中身を読めない方式）。
+2つの仕組みを組み合わせる:
 
 ```
 X3DH（Extended Triple Diffie-Hellman）:

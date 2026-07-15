@@ -9,6 +9,12 @@ C言語の**メモリ安全性の欠如**に起因する低レベル脆弱性（
 [`../01_prerequisites/02_low-level-c-os/01_c-and-memory.md`](../01_prerequisites/02_low-level-c-os/01_c-and-memory.md)
 が「攻撃・防御手法は本領域で扱う」と予告していた内容の本体。
 
+**この1ページで分かること**
+
+- OWASP Top 10 の全体像と、Injection が実際に大事故になった例（Equifax）
+- スタックバッファオーバーフロー（境界チェックのない書き込みでリターンアドレスを乗っ取る攻撃）の仕組み
+- 各防御機構（カナリア・NX・ASLR等）を攻撃者がどう回避しようとするか
+
 ---
 
 ## Webアプリケーションの脅威：OWASP Top 10 (2021)
@@ -19,7 +25,7 @@ Webアプリ脅威ランキング。最新の正式版は2021年版（次版は�
 | # | カテゴリ | 一言で |
 |---|---|---|
 | A01 | Broken Access Control | 認可チェックの欠落・不備（[03](./03_authn-authz-access-control.md)で詳述） |
-| A02 | Cryptographic Failures | 暗号の誤用・平文保存（[`../02_cryptography/`](../02_cryptography/00_index.md)で詳述） |
+| A02 | Cryptographic Failures | 暗号の誤用・平文保存（[`../02_cryptography/`](../02_cryptography/index.md)で詳述） |
 | A03 | Injection | 信頼できない入力をコード/クエリの一部として実行してしまう |
 | A04 | Insecure Design | 実装以前の設計段階の欠陥 |
 | A05 | Security Misconfiguration | デフォルト設定放置・不要機能の有効化 |
@@ -85,7 +91,14 @@ void vulnerable(char *input) {
 ```
 
 `vulnerable()` がリターンする瞬間、CPUは書き換えられたアドレスへジャンプし、
-`buf` に仕込まれたシェルコード（`execve("/bin/sh", ...)` 等）を実行する。
+`buf` に仕込まれたシェルコード（攻撃者が実行させたい機械語片。`execve("/bin/sh", ...)` 等）を実行する。
+
+```mermaid
+flowchart LR
+    A["長い入力を送る"] --> B["strcpy が buf の<br>境界を超えて書き込み"]
+    B --> C["リターンアドレスが<br>攻撃者の値に上書きされる"]
+    C --> D["関数リターン時に<br>シェルコードへジャンプ"]
+```
 この手法を初めて系統的に解説したのが Aleph One の 1996年 Phrack 記事
 "Smashing the Stack for Fun and Profit"。
 
@@ -109,9 +122,9 @@ void vulnerable(char *input) {
 
 | 防御 | 攻撃者への影響 | 回避の糸口 |
 |---|---|---|
-| スタックカナリア | リターン直前に検証され上書きが露見する | カナリア値のリーク、カナリアを跨がない上書き |
-| NX/DEP | `buf` 上のシェルコードが実行できない | ROP（既存コード片を連鎖させる。`03_systems-software.md`参照） |
-| ASLR | ジャンプ先アドレスを予測できない | 情報リーク脆弱性と組み合わせて実アドレスを特定 |
+| スタックカナリア（リターンアドレス手前に置く見張り値） | リターン直前に検証され上書きが露見する | カナリア値のリーク、カナリアを跨がない上書き |
+| NX/DEP（データ領域でのコード実行を禁止するCPU/OS機能） | `buf` 上のシェルコードが実行できない | ROP（既存コード片を連鎖させる。`03_systems-software.md`参照） |
+| ASLR（メモリ配置を起動ごとにランダム化する仕組み） | ジャンプ先アドレスを予測できない | 情報リーク脆弱性と組み合わせて実アドレスを特定 |
 | 安全な言語（Rust, Go等） | 配列境界を実行時に検査し、境界外アクセスで例外を出す | バグクラス自体を設計上排除（`unsafe`ブロックを除く） |
 
 多層防御の考え方が[01](./01_security-fundamentals.md)の「機構の経済性」とは逆に見えるが、

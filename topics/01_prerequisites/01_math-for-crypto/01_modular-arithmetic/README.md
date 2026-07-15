@@ -1,7 +1,7 @@
 # 合同算術（Modular Arithmetic）
 
 > 対応科目: Cryptography and Network Security / Cryptographic Protocols ｜ 層: 基礎(Layer 1)
-> 親: [../00_index.md](../00_index.md)
+> 親: [../index.md](../index.md)
 
 ## 一言で
 

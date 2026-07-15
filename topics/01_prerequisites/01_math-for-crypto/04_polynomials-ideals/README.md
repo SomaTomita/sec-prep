@@ -1,7 +1,7 @@
 # 多項式環・イデアル（Polynomials and Ideals）
 
 > 対応科目: Computer Algebra for Cryptography / Advanced Methods in Cryptography ｜ 層: 基礎(Layer 1)
-> 親: [../00_index.md](../00_index.md)
+> 親: [../index.md](../index.md)
 
 ## 一言で
 

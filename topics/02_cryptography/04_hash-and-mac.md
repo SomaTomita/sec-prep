@@ -2,10 +2,17 @@
 
 > 前: [03 公開鍵暗号](./03_public-key-crypto/README.md) ｜ 層: 基礎(Layer 1)
 
+**この1ページで分かること**
+
+- ハッシュ関数に求められる3つの安全性と、出力長が原像耐性の2倍必要な理由（バースデー攻撃）
+- 自作 MAC `H(secret‖message)` が長さ拡張攻撃で破れる仕組みと、HMAC が安全な理由
+- MD5・SHA-1 が実際の衝突実証によって廃止されるまでの経緯
+
 これまでの全ファイルが実は前提にしてきた道具がハッシュ関数。ECDSA の署名対象は
 `H(m)`（[`03_public-key-crypto/04_digital-signatures.md`](./03_public-key-crypto/04_digital-signatures.md)）、
 RSA-OAEP/PSS もハッシュとマスク生成関数（[`01_rsa/04`](./03_public-key-crypto/01_rsa/04_padding-and-attacks.md)）が核。
-本ファイルでその「ハッシュ関数」自体の性質と、それを鍵付きにした **MAC** を扱う。
+本ファイルでその「ハッシュ関数」自体の性質と、それを鍵付きにした
+**MAC**（メッセージ認証コード：共有鍵を知る者だけが正しく計算できる改ざん検知タグ）を扱う。
 
 ---
 

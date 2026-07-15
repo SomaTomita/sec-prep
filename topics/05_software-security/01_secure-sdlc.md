@@ -2,6 +2,12 @@
 
 > 対応科目: Security Through the Software Lifecycle ｜ 次: [02 脅威モデリング](./02_threat-modeling.md) ｜ 層: 基礎(Layer 1)
 
+**この1ページで分かること**
+
+- セキュリティを開発ライフサイクル全体に埋め込む理由（shift-left）と、NIST SSDF の4つの実践グループ
+- 運用フェーズの1ステップの不備が全体を崩した実例（Equifax, 2017年）
+- CI/CD パイプラインに SAST・SCA・DAST を組み込む DevSecOps の形
+
 ## 一言で
 
 セキュリティを「最後にペネトレーションテストで見つける」のではなく、要件定義から
@@ -22,7 +28,7 @@ Microsoft SDL（2002年に社内プロセスとして採用）を業界横断で
 |---|---|---|
 | PO (Prepare the Organization) | 組織・人・ツールの準備 | セキュリティ教育、コーディング規約の整備 |
 | PS (Protect the Software) | ソフトウェア自体の完全性を守る | ソースコード管理のアクセス制御、ビルドの署名 |
-| PW (Produce Well-Secured Software) | 設計・実装・テストで欠陥を作り込まない | 脅威モデリング（[02](./02_threat-modeling.md)）、SAST/ファジング（[04](./04_security-testing.md)）、SBOMによる依存関係の追跡 |
+| PW (Produce Well-Secured Software) | 設計・実装・テストで欠陥を作り込まない | 脅威モデリング（[02](./02_threat-modeling.md)）、SAST/ファジング（[04](./04_security-testing.md)）、SBOM（ソフトウェア部品表＝構成するコンポーネント（依存ライブラリ含む）とバージョンの一覧）による依存関係の追跡 |
 | RV (Respond to Vulnerabilities) | 出荷後に見つかった脆弱性への対応 | 脆弱性開示窓口、パッチ配布、根本原因分析 |
 
 ### なぜ「ライフサイクル全体」が要るのか——Equifaxの事例（2017年）
@@ -44,9 +50,10 @@ Secure SDLC が「開発フェーズだけ」ではなく「廃棄まで」を�
 
 ### SecDevOps（DevSecOps）：CI/CDパイプラインへの組み込み
 
-```
-コミット → ビルド → [SAST: ソースコード解析] → [SCA: 依存ライブラリの既知脆弱性/SBOM照合]
-       → テスト → [DAST: 動作中アプリへの疑似攻撃] → デプロイ → [ランタイム監視]
+```mermaid
+flowchart LR
+    C["コミット"] --> B["ビルド"] --> S1["SAST<br>ソースコードを実行せず解析"] --> S2["SCA<br>依存ライブラリを既知脆弱性/SBOMと照合"]
+    S2 --> T["テスト"] --> S3["DAST<br>動作中アプリへの疑似攻撃"] --> D["デプロイ"] --> M["ランタイム監視"]
 ```
 
 各ステージにゲート（一定の重大度以上の脆弱性が見つかったらパイプラインを止める）を

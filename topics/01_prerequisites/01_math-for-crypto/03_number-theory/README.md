@@ -1,7 +1,7 @@
 # 整数論（Number Theory）
 
 > 層: 基礎(Layer 1)
-> 親: [../00_index.md](../00_index.md)
+> 親: [../index.md](../index.md)
 
 ## 一言で
 
@@ -51,7 +51,7 @@ Magma で実装・評価する。
 
 ## このフォルダで「本体」を置かないもの（DRY）
 
-- **RSA・DH・ECDSA などプロトコルそのもの** → [`../../../02_cryptography/`](../../../02_cryptography/00_index.md)（本フォルダは安全性の数学的根拠までを扱う）
+- **RSA・DH・ECDSA などプロトコルそのもの** → [`../../../02_cryptography/`](../../../02_cryptography/index.md)（本フォルダは安全性の数学的根拠までを扱う）
 - **合同算術の基礎（余り・合同式・拡張ユークリッド・逆元・CRTの入口）** → [`../01_modular-arithmetic/`](../01_modular-arithmetic/README.md)（本フォルダはその続き）
 - **群・環・体の一般論（`Z_n^*` が乗法群をなす理由など）** → `../02_groups-rings-fields.md`（昇格後は `../02_groups-rings-fields/`）
 - **Miller-Rabin・Pollard の ρ法・ECM などアルゴリズムの実装** → Magma 実習（下記深掘り候補参照）

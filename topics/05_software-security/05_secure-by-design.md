@@ -9,6 +9,12 @@ Security by Design（Saltzer & Schroeder）とPrivacy by Design（Cavoukian）�
 GDPRの条文詳細は[`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)に
 既にあるため、ここでは重複させず「設計方法論」に絞る。
 
+**この1ページで分かること**
+
+- Saltzer & Schroeder の8原則（1975年）——最小権限・フェイルセーフ等、今も現役の設計語彙
+- Cavoukian の Privacy by Design 7原則と、GDPR・Secure SDLC との対応関係
+- 同じ機能に両原則群を同時に適用する設計判断の例
+
 ---
 
 ## Security by Design：Saltzer & Schroeder の8原則（1975年）
@@ -30,7 +36,7 @@ GDPRの条文詳細は[`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-
 
 **最小共通メカニズムとサイドチャネルの関係**は原則同士のつながりが見えやすい例——
 クラウドの同居インスタンスがキャッシュを共有する（＝共有メカニズムを最小化していない）
-ことがFlush+Reload攻撃を可能にした、と読み替えられる。
+ことがFlush+Reload攻撃（＝キャッシュの追い出しと再読込の時間差から他者のメモリアクセスを推測するサイドチャネル攻撃）を可能にした、と読み替えられる。
 
 ---
 
@@ -39,23 +45,15 @@ GDPRの条文詳細は[`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-
 Ann Cavoukian（当時オンタリオ州情報プライバシー・コミッショナー）が提唱し、2010年の
 データ保護当局国際会議（ICDPPC）で決議として承認された、プライバシーの設計原則。
 
-```
-1. 事後対応でなく事前予防（Proactive not Reactive）
-     問題が起きてから対処するのではなく、起きる前に防ぐ設計にする
-2. プライバシーをデフォルト設定に（Privacy as the Default Setting）
-     ユーザが何もしなくても最大限のプライバシーが保たれる
-     → GDPRのデータ最小化原則（`../03_privacy/06_law-and-dpia.md`）の設計原則版
-3. 設計に埋め込む（Privacy Embedded into Design）
-     後付けの追加機能ではなく、アーキテクチャ自体に組み込む
-4. ゼロサムでなく積極的総和（Full Functionality: Positive-Sum, not Zero-Sum）
-     「プライバシー vs 機能性」の二者択一ではなく両立を目指す
-5. 全ライフサイクルの保護（End-to-End Security: Full Lifecycle Protection）
-     収集から廃棄まで一貫して保護する（`01_secure-sdlc.md`のライフサイクル思考と同型）
-6. 可視性と透明性（Visibility and Transparency）
-     何が・なぜ行われているかを関係者に開示する
-7. 利用者のプライバシーを尊重（Respect for User Privacy）
-     利用者の利益を最優先に、強いデフォルト・適切な通知・使いやすい選択肢を提供する
-```
+| # | 原則 | 内容 |
+|---|---|---|
+| 1 | 事後対応でなく事前予防（Proactive not Reactive） | 問題が起きてから対処するのではなく、起きる前に防ぐ設計にする |
+| 2 | プライバシーをデフォルト設定に（Privacy as the Default Setting） | ユーザが何もしなくても最大限のプライバシーが保たれる → GDPRのデータ最小化原則（[../03_privacy/06_law-and-dpia.md](../03_privacy/06_law-and-dpia.md)）の設計原則版 |
+| 3 | 設計に埋め込む（Privacy Embedded into Design） | 後付けの追加機能ではなく、アーキテクチャ自体に組み込む |
+| 4 | ゼロサムでなく積極的総和（Full Functionality: Positive-Sum, not Zero-Sum） | 「プライバシー vs 機能性」の二者択一ではなく両立を目指す |
+| 5 | 全ライフサイクルの保護（End-to-End Security: Full Lifecycle Protection） | 収集から廃棄まで一貫して保護する（[01_secure-sdlc.md](./01_secure-sdlc.md)のライフサイクル思考と同型） |
+| 6 | 可視性と透明性（Visibility and Transparency） | 何が・なぜ行われているかを関係者に開示する |
+| 7 | 利用者のプライバシーを尊重（Respect for User Privacy） | 利用者の利益を最優先に、強いデフォルト・適切な通知・使いやすい選択肢を提供する |
 
 **原則5「全ライフサイクルの保護」がSecure SDLC（[01](./01_secure-sdlc.md)）と同型**である点、
 **原則2「デフォルトでプライバシー」がGDPRのデータ最小化**を設計側から言い換えたものである点
@@ -115,7 +113,7 @@ Privacy by Design視点:
 [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)、
 最小共通メカニズムとサイドチャネルの物理的機構は
 [`../04_hardware-security/04_side-channels.md`](../04_hardware-security/04_side-channels.md)、
-実装時の脆弱性クラスと認可の実装詳細は[`../06_systems-security/`](../06_systems-security/00_index.md)で
+実装時の脆弱性クラスと認可の実装詳細は[`../06_systems-security/`](../06_systems-security/index.md)で
 それぞれ引き続き扱う。
 
 ---

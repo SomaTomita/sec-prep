@@ -2,24 +2,31 @@
 
 > 対応科目: Design of Digital Platforms: Concepts, Design Seminar ｜ 次: [02 ハードウェア攻撃](./02_hardware-attacks.md) ｜ 層: 基礎(Layer 1)
 
-[`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/00_index.md)
+[`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/index.md)
 で CMOS・組合せ/順序回路・HDL・パイプライン・メモリ階層という「部品」を見た。
 ここではそれらをシステムとして設計する際、**セキュリティが性能・電力・面積と並ぶ
 設計上の制約条件**になることを見る。
+
+**この1ページで分かること**
+
+- 設計抽象レベル（システム→RTL→ゲート→物理）と、弱点が「上位で作り込まれ、下位で悪用される」構図
+- 古典的な設計指標 PPA（Power・Performance・Area）に Security を加えた4軸トレードオフ
+- 「何を信頼するか」を明示的に選ぶ TCB（Trusted Computing Base＝信頼の基盤）の考え方
 
 ---
 
 ## 設計抽象レベル
 
+```mermaid
+flowchart TD
+    A["システムレベル（何を作るか・要件）"] --> B["RTL/振る舞いレベル（HDL＝ハードウェア記述言語で記述）"]
+    B --> C["ゲートレベル（論理合成後、AND/OR/FF等の回路）"]
+    C --> D["トランジスタ/物理レベル（CMOSレイアウト）"]
 ```
-システムレベル（何を作るか・要件）
-  ↓
-RTL/振る舞いレベル（HDLで記述、01_prerequisites/03_hdl-and-architecture/01_hdl-basics.md）
-  ↓
-ゲートレベル（論理合成後、AND/OR/FF等の回路）
-  ↓
-トランジスタ/物理レベル（CMOSレイアウト、01_prerequisites/01_cmos-logic.md）
-```
+
+HDL・CMOS の中身は
+[`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/index.md)
+で既習（`01_cmos-logic.md`, `03_hdl-and-architecture/01_hdl-basics.md`）。
 
 下位に行くほど詳細だが変更コストが高い。**セキュリティ上の弱点は上位で作り込まれ、
 下位（物理レベル）で悪用される**ことが多い——例えば「鍵をどこに置くか」という
@@ -37,11 +44,11 @@ RTL/振る舞いレベル（HDLで記述、01_prerequisites/03_hdl-and-architect
 
 現代のセキュアなハードウェア設計では、ここに **Security** を第4の軸として明示的に加える:
 
-```
-性能を上げる（並列化・投機実行）→ Spectre/Meltdown のような新しい攻撃面を生む（02）
-電力を下げる（電圧を絞る）    → フォールト注入への耐性が変わる（02）
-面積を減らす（回路を削る）    → マスキング等の対策回路を削らざるを得なくなる（04）
-```
+| 設計判断（PPAの改善） | セキュリティへの副作用 |
+|---|---|
+| 性能を上げる（並列化・投機実行＝分岐の結果を待たず命令を先読み実行する高速化） | Spectre/Meltdown のような新しい攻撃面を生む（[02](./02_hardware-attacks.md)） |
+| 電力を下げる（電圧を絞る） | フォールト注入（意図的に計算ミスを起こさせる攻撃）への耐性が変わる（[02](./02_hardware-attacks.md)） |
+| 面積を減らす（回路を削る） | マスキング等の対策回路を削らざるを得なくなる（[04](./04_side-channels.md)） |
 
 **トレードオフの具体例**: [04](./04_side-channels.md) で見るマスキング対策は、
 秘密値を複数のランダムな断片に分割して計算する（回路面積・電力・遅延が増える）。
