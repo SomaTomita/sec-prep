@@ -7,6 +7,19 @@
 プライバシー側の代表がLINDDUN——後者は[`../03_privacy/`](../03_privacy/index.md)が
 「作成後にリンクする」と予告していた本体をここで提供する。
 
+**この1ページで分かること**
+
+- 脅威モデリングの土台となるデータフロー図（DFD）の描き方と信頼境界の意味
+- STRIDE（セキュリティ脅威の6分類）・attack tree（ゴール起点の経路分解）・LINDDUN（プライバシー脅威の7分類）の使い分け
+- STRIDE の Repudiation と LINDDUN の Non-repudiation が正反対の脅威を指すという落とし穴
+
+```mermaid
+flowchart LR
+    A["DFD を描いて<br>系を分解する"] --> B["STRIDE / LINDDUN で<br>各要素を総当たり（網羅）"]
+    B --> C["attack tree で<br>ゴール別に経路を深掘り"]
+    C --> D["対策の設計へ<br>（03 セキュリティパターン）"]
+```
+
 ---
 
 ## 土台：データフロー図（DFD）で系を分解する

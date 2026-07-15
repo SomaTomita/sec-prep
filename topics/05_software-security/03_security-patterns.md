@@ -9,6 +9,11 @@
 本ファイルは「原則を組み合わせた構造」と、実例としてSpectre/Meltdownへの
 ソフトウェア側多層防御を見る。
 
+**この1ページで分かること**
+
+- 「よくある脅威への実証済みの構造的解決策」＝セキュリティ設計パターンの代表5つと対応する STRIDE 脅威
+- 単一対策では防げない Spectre/Meltdown に対し、コンパイラ・OS・ハードウェアの各層で緩和策を重ねる Defense in Depth の実例
+
 ---
 
 ## 押さえる概念
@@ -21,7 +26,7 @@ Schumacher et al. (2006) *Security Patterns* が体系化した、エンター�
 | パターン | 何を解決するか | 対応するSTRIDE脅威 |
 |---|---|---|
 | Single Access Point / Authentication Enforcer | 認証の入口を1箇所に集約し、迂回経路を作らない | Spoofing |
-| Check Point（完全な仲介） | すべてのアクセスを1つの参照モニタで検査する（[`../06_systems-security/03_authn-authz-access-control.md`](../06_systems-security/03_authn-authz-access-control.md)のアクセス制御と接続） | Elevation of Privilege |
+| Check Point（完全な仲介） | すべてのアクセスを1つの参照モニタ（＝全アクセスが必ず通過する検査点）で検査する（[`../06_systems-security/03_authn-authz-access-control.md`](../06_systems-security/03_authn-authz-access-control.md)のアクセス制御と接続） | Elevation of Privilege |
 | Fail Securely（フェイルセキュア） | エラー時に「開いて」しまうのではなく「閉じて」安全側に倒す | Elevation of Privilege, Information Disclosure |
 | Defense in Depth（多層防御） | 単一の防御層が破られても他の層が残るよう、独立した複数の対策を重ねる | 全般 |
 | Secure by Default（安全なデフォルト設定） | 設定を変えなければ最も安全な状態で動く | 全般（設定ミスに起因する漏洩の予防） |
@@ -32,7 +37,7 @@ Spectre/Meltdown対策は、まさに「単一の対策では防げないため�
 ### ケーススタディ：Spectre/Meltdownへのソフトウェア側多層防御
 
 [`../04_hardware-security/02_hardware-attacks.md`](../04_hardware-security/02_hardware-attacks.md)
-で見た通り、Spectre/Meltdown（2018年1月公開）は投機実行がキャッシュに残す痕跡を悪用する
+で見た通り、Spectre/Meltdown（2018年1月公開）は投機実行（＝分岐や例外の確定を待たず、予測に基づき先回りで命令を実行する高速化機構）がキャッシュに残す痕跡を悪用する
 攻撃。ハードウェア側の対策（マイクロコード更新等）だけでは全変種を防げないため、
 **コンパイラ・OS・ハードウェアの異なる層**でそれぞれ独立した緩和策を重ねている——
 まさにDefense in Depthの実例。
