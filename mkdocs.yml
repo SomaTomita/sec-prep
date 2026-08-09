@@ -81,6 +81,11 @@ validation:
 extra_css:
   - https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap
   - assets/stylesheets/extra.css
+  - assets/stylesheets/algo-stepper.css
+
+extra_javascript:
+  - path: assets/javascripts/algo-stepper.js
+    type: module
 
 extra:
   social:
