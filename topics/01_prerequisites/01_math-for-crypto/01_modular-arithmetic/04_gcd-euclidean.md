@@ -188,3 +188,7 @@ gcd_sub(a, b):
 互除法を逆にたどると `a·x + b·y = gcd(a, b)` の整数解が得られる（ベズーの等式）。
 これが逆元計算の正体。
 → [05 拡張ユークリッドの互除法](./05_extended-euclidean.md)
+
+## 動かして確認する
+
+<div class="algo-widget" data-algo="gcd-euclidean" data-inputs="a:48,b:18"></div>

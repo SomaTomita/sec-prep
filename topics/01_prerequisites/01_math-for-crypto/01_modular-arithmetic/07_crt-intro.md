@@ -97,3 +97,9 @@ CRT で合成すると、扱う数が約半分の桁になり **およそ 4 倍�
 → gcd（[04](./04_gcd-euclidean.md)）→ 拡張ユークリッド（[05](./05_extended-euclidean.md)）→ 逆元（[06](./06_modular-inverse.md)）→ CRT（本章）
 と繋がり、これらが揃うと **RSA の鍵生成・暗号化・復号・高速化** がすべて道具として説明できる。
 RSA 本体は [`../../../02_cryptography/`](../../../02_cryptography/index.md) へ。
+
+## 動かして確認する
+
+孫子の問題（`x≡2(mod3), x≡3(mod5), x≡2(mod7)`）をそのまま実行できます。
+
+<div class="algo-widget" data-algo="crt" data-inputs="remainders:[2,3,2],moduli:[3,5,7]"></div>

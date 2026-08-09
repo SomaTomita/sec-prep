@@ -118,3 +118,10 @@ d ≡ e⁻¹  (mod φ(n))
 複数の法に関する連立合同式を一気に解く道具が中国剰余定理。
 RSA 復号の高速化（CRT-RSA）にも使う。
 → [07 中国剰余定理（入口）](./07_crt-intro.md)
+
+## 動かして確認する
+
+拡張ユークリッドを内部で使って逆元を求める過程を追えます。
+`gcd(a, n) != 1` を入れると「存在しない」で止まることも確認してください。
+
+<div class="algo-widget" data-algo="modular-inverse" data-inputs="a:3,n:7"></div>

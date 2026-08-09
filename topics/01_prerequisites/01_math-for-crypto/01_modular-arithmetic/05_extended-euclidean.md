@@ -134,3 +134,9 @@ x = 2 + 3t,   y = −4 − 7t
 `a·x + n·y = 1`（`gcd(a, n) = 1` のとき）が解ければ、両辺を `mod n` で見ると
 `a·x ≡ 1 (mod n)`。この `x` こそ `a` の **逆元**。
 → [06 逆元（Modular Inverse）](./06_modular-inverse.md)
+
+## 動かして確認する
+
+`old_r, old_s, old_t` が1ステップごとにどう更新されるかを追えます。
+
+<div class="algo-widget" data-algo="extended-euclidean" data-inputs="a:35,b:15"></div>
