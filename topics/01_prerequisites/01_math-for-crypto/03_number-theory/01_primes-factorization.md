@@ -105,3 +105,9 @@ flowchart LR
 素因数分解の困難さだけでは RSA は動かない。暗号化・復号が「正しく元に戻る」ことを
 保証するには、素数が持つ別の性質 — **フェルマーの小定理** — が必要になる。
 → [02 フェルマーの小定理](./02_fermat-little-theorem.md)
+
+## 動かして確認する
+
+`91 = 7 × 13` を試し割りで求める過程を追えます。`221` や `197`（演習の答え）も試してください。
+
+<div class="algo-widget" data-algo="primes-factorization" data-inputs="n:91"></div>

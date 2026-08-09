@@ -110,3 +110,9 @@ flowchart TD
 フェルマーの小定理は法 `p` が **素数** のときしか使えない。しかし RSA の法は
 `n = p·q`（合成数）。この制約を外し、任意の合成数に一般化したのが次のオイラーの定理。
 → [03 オイラーの定理](./03_euler-phi-theorem.md)
+
+## 動かして確認する
+
+`3^6 mod 7` が1に戻る様子を1乗ずつ追えます。表の他の `a`（1〜6）も試してください。
+
+<div class="algo-widget" data-algo="fermat-little-theorem" data-inputs="a:3,exponent:6,m:7"></div>

@@ -135,3 +135,9 @@ CRT は「複数の法にどう分解して速く計算するか」という **�
 次は視点を変え、「なぜ暗号として安全なのか」という **困難性の根拠** そのものを見る —
 素因数分解問題と離散対数問題。
 → [05 困難な問題](./05_hard-problems.md)
+
+## 動かして確認する
+
+`x≡1(mod4), x≡2(mod9)` を CRT で合成する過程を追えます。
+
+<div class="algo-widget" data-algo="crt" data-inputs="remainders:[1,2],moduli:[4,9]"></div>
