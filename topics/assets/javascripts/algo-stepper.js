@@ -1,9 +1,26 @@
 const REGISTRY_BASE = new URL('./algo-steppers/', import.meta.url);
 
+function splitTopLevel(raw) {
+  const parts = [];
+  let depth = 0;
+  let start = 0;
+  for (let i = 0; i < raw.length; i += 1) {
+    const ch = raw[i];
+    if (ch === '[') depth += 1;
+    else if (ch === ']') depth -= 1;
+    else if (ch === ',' && depth === 0) {
+      parts.push(raw.slice(start, i));
+      start = i + 1;
+    }
+  }
+  parts.push(raw.slice(start));
+  return parts;
+}
+
 function parseInputDefaults(raw) {
   const inputs = {};
   if (!raw) return inputs;
-  raw.split(',').forEach((pair) => {
+  splitTopLevel(raw).forEach((pair) => {
     const [name, value] = pair.split(':');
     inputs[name.trim()] = value.trim();
   });
