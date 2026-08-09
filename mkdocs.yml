@@ -72,6 +72,11 @@ markdown_extensions:
 hooks:
   - mkdocs_hooks.py
 
+# ローカルで .py の検証実行をすると docs_dir 配下に __pycache__ ができる。
+# .gitignore 済みだが mkdocs build はそのまま site/ にコピーしてしまうため除外する。
+exclude_docs: |
+  __pycache__/
+
 validation:
   omitted_files: warn
   absolute_links: warn
