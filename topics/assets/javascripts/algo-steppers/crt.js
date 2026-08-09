@@ -1,28 +1,30 @@
+import { createTracer, pymod, pyFloorDiv } from './_shared.js';
+
 const PY_URL = new URL('../../interactive/py/crt.py', import.meta.url);
 
 export async function loadSource() {
   return (await fetch(PY_URL)).text();
 }
 
-function pymod(n, m) {
-  return ((n % m) + m) % m;
-}
-
+// Python の pow(a, -1, m) 相当。逆元が存在しない（gcd(a, m) != 1）場合は
+// Python が ValueError を投げるのに合わせて例外にする。
 function modInverse(a, m) {
   a = pymod(a, m);
   let oldR = a, r = m;
   let oldS = 1, s = 0;
   while (r !== 0) {
-    const q = Math.trunc(oldR / r);
+    const q = pyFloorDiv(oldR, r);
     [oldR, r] = [r, oldR - q * r];
     [oldS, s] = [s, oldS - q * s];
+  }
+  if (oldR !== 1) {
+    throw new Error('moduli が互いに素ではありません（CRT の前提条件を満たしません）');
   }
   return pymod(oldS, m);
 }
 
 export function run({ remainders, moduli }) {
-  const steps = [];
-  const trace = (line, vars, note) => steps.push({ line, vars: { ...vars }, note });
+  const { trace, getSteps } = createTracer();
 
   trace(1, { remainders, moduli }, '関数開始');
   let M = 1;
@@ -36,7 +38,7 @@ export function run({ remainders, moduli }) {
   remainders.forEach((a, i) => {
     const m = moduli[i];
     trace(6, { M, x, a, m }, `(a, m) = (${a}, ${m})`);
-    const Mi = Math.trunc(M / m);
+    const Mi = pyFloorDiv(M, m);
     trace(7, { M, x, a, m, Mi }, 'Mi = M // m');
     const yi = modInverse(Mi, m);
     trace(8, { M, x, a, m, Mi, yi }, 'yi = pow(Mi, -1, m)');
@@ -45,5 +47,5 @@ export function run({ remainders, moduli }) {
   });
   const result = pymod(x, M);
   trace(10, { M, x: result }, 'x % M を返す');
-  return steps;
+  return getSteps();
 }

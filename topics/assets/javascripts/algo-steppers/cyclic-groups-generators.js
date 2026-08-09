@@ -1,11 +1,10 @@
+import { createTracer, pymod } from './_shared.js';
+
 const PY_URL = new URL('../../interactive/py/cyclic-groups-generators.py', import.meta.url);
 export async function loadSource() { return (await fetch(PY_URL)).text(); }
 
-function pymod(n, m) { return ((n % m) + m) % m; }
-
 export function run({ g, p }) {
-  const steps = [];
-  const trace = (line, vars, note) => steps.push({ line, vars: { ...vars }, note });
+  const { trace, getSteps } = createTracer();
 
   trace(1, { g, p }, '関数開始');
   const values = [];
@@ -20,5 +19,5 @@ export function run({ g, p }) {
     trace(6, { g, p, values: [...values], x }, 'x = x * g mod p');
   }
   trace(7, { values: [...values] }, 'values を返す');
-  return steps;
+  return getSteps();
 }

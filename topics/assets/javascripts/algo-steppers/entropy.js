@@ -1,9 +1,10 @@
+import { createTracer } from './_shared.js';
+
 const PY_URL = new URL('../../interactive/py/entropy.py', import.meta.url);
 export async function loadSource() { return (await fetch(PY_URL)).text(); }
 
 export function run({ probabilities }) {
-  const steps = [];
-  const trace = (line, vars, note) => steps.push({ line, vars: { ...vars }, note });
+  const { trace, getSteps } = createTracer();
 
   trace(4, { probabilities }, '関数開始');
   let total = 0;
@@ -19,5 +20,5 @@ export function run({ probabilities }) {
     }
   });
   trace(9, { total: Number(total.toFixed(6)) }, 'total（= H(X)）を返す');
-  return steps;
+  return getSteps();
 }

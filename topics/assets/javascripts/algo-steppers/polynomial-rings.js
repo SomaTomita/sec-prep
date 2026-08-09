@@ -1,22 +1,14 @@
+import { createTracer, toPoly } from './_shared.js';
+
 const PY_URL = new URL('../../interactive/py/polynomial-rings.py', import.meta.url);
 export async function loadSource() { return (await fetch(PY_URL)).text(); }
 
-function toPoly(n) {
-  if (n === 0) return '0';
-  const terms = [];
-  for (let i = 31; i >= 0; i -= 1) {
-    if (n & (1 << i)) terms.push(i === 0 ? '1' : i === 1 ? 'x' : `x^${i}`);
-  }
-  return terms.join(' + ');
-}
-
 export function run({ a, b }) {
-  const steps = [];
-  const trace = (line, vars, note) => steps.push({
-    line,
-    vars: { a: `${vars.a}(${toPoly(vars.a)})`, b: `${vars.b}(${toPoly(vars.b)})`, result: `${vars.result}(${toPoly(vars.result)})` },
-    note,
-  });
+  const { trace, getSteps } = createTracer((vars) => ({
+    a: `${vars.a}(${toPoly(vars.a)})`,
+    b: `${vars.b}(${toPoly(vars.b)})`,
+    result: `${vars.result}(${toPoly(vars.result)})`,
+  }));
 
   trace(1, { a, b, result: 0 }, '関数開始');
   let result = 0;
@@ -36,5 +28,5 @@ export function run({ a, b }) {
   }
   trace(3, { a, b, result }, 'b == 0 になったのでループ終了');
   trace(8, { result }, 'result を返す');
-  return steps;
+  return getSteps();
 }

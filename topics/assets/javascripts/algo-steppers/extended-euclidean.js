@@ -1,3 +1,5 @@
+import { createTracer, pyFloorDiv } from './_shared.js';
+
 const PY_URL = new URL('../../interactive/py/extended-euclidean.py', import.meta.url);
 
 export async function loadSource() {
@@ -5,8 +7,7 @@ export async function loadSource() {
 }
 
 export function run({ a, b }) {
-  const steps = [];
-  const trace = (line, vars, note) => steps.push({ line, vars: { ...vars }, note });
+  const { trace, getSteps } = createTracer();
 
   trace(1, { a, b }, '関数開始');
   let oldR = a, r = b;
@@ -17,7 +18,7 @@ export function run({ a, b }) {
   trace(4, { oldR, r, oldS, s, oldT, t }, 'old_t, t = 0, 1');
   while (r !== 0) {
     trace(5, { oldR, r, oldS, s, oldT, t }, 'r != 0 を確認');
-    const q = Math.trunc(oldR / r);
+    const q = pyFloorDiv(oldR, r);
     trace(6, { oldR, r, oldS, s, oldT, t, q }, 'q = old_r // r');
     [oldR, r] = [r, oldR - q * r];
     trace(7, { oldR, r, oldS, s, oldT, t, q }, 'old_r, r を更新');
@@ -28,5 +29,5 @@ export function run({ a, b }) {
   }
   trace(5, { oldR, r, oldS, s, oldT, t }, 'r == 0 になったのでループ終了');
   trace(10, { gcd: oldR, x: oldS, y: oldT }, '(gcd, x, y) を返す');
-  return steps;
+  return getSteps();
 }

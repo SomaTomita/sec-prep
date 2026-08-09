@@ -1,11 +1,14 @@
+import { createTracer } from './_shared.js';
+
 const PY_URL = new URL('../../interactive/py/gf2n-and-aes.py', import.meta.url);
 export async function loadSource() { return (await fetch(PY_URL)).text(); }
 
 function hex(n) { return `0x${n.toString(16).toUpperCase()}`; }
 
 export function run({ a, b }) {
-  const steps = [];
-  const trace = (line, vars, note) => steps.push({ line, vars: { a: hex(vars.a), b: hex(vars.b), p: hex(vars.p) }, note });
+  const { trace, getSteps } = createTracer(
+    (vars) => ({ a: hex(vars.a), b: hex(vars.b), p: hex(vars.p) }),
+  );
 
   trace(1, { a, b, p: 0 }, '関数開始');
   let p = 0;
@@ -29,5 +32,5 @@ export function run({ a, b }) {
     trace(10, { a, b, p }, 'b を1ビット右シフト');
   }
   trace(11, { a, b, p }, 'p（= a * b in GF(2^8)）を返す');
-  return steps;
+  return getSteps();
 }

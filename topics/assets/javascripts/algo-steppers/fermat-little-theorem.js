@@ -1,11 +1,10 @@
+import { createTracer, pymod } from './_shared.js';
+
 const PY_URL = new URL('../../interactive/py/fermat-little-theorem.py', import.meta.url);
 export async function loadSource() { return (await fetch(PY_URL)).text(); }
 
-function pymod(n, m) { return ((n % m) + m) % m; }
-
 export function run({ a, exponent, m }) {
-  const steps = [];
-  const trace = (line, vars, note) => steps.push({ line, vars: { ...vars }, note });
+  const { trace, getSteps } = createTracer();
 
   trace(1, { a, exponent, m }, '関数開始');
   let result = 1;
@@ -16,5 +15,5 @@ export function run({ a, exponent, m }) {
     trace(4, { a, exponent, m, result }, 'result = result * a mod m');
   }
   trace(5, { a, exponent, m, result }, 'result を返す');
-  return steps;
+  return getSteps();
 }

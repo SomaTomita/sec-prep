@@ -1,5 +1,10 @@
 const REGISTRY_BASE = new URL('./algo-steppers/', import.meta.url);
 
+// Play 中の setInterval の ID をモジュール横断で保持する。instant navigation で
+// ページが差し替わっても DOM から外れたウィジェットのタイマーは動き続けるため、
+// boot() のたびに前ページ分をまとめて止める（下の boot() 冒頭を参照）。
+const livePlayTimers = new Set();
+
 function splitTopLevel(raw) {
   const parts = [];
   let depth = 0;
@@ -22,6 +27,9 @@ function parseInputDefaults(raw) {
   if (!raw) return inputs;
   splitTopLevel(raw).forEach((pair) => {
     const [name, value] = pair.split(':');
+    // コロンのない要素（例: data-inputs="a" ）は value が undefined になり、
+    // .trim() が意味の分からない TypeError を投げてしまう。先に弾く。
+    if (value === undefined) throw new Error(`data-inputs の形式が不正です: ${pair}`);
     inputs[name.trim()] = value.trim();
   });
   return inputs;
@@ -30,8 +38,13 @@ function parseInputDefaults(raw) {
 function parseArgValue(raw) {
   const trimmed = raw.trim();
   if (trimmed.startsWith('[')) return JSON.parse(trimmed);
-  if (trimmed.toLowerCase().startsWith('0x')) return parseInt(trimmed, 16);
-  return Number(trimmed);
+  const value = trimmed.toLowerCase().startsWith('0x')
+    ? parseInt(trimmed, 16)
+    : Number(trimmed);
+  // 全角数字（IME 経由で入りやすい）などは Number() が黙って NaN を返す。
+  // そのまま run() に渡すと NaN 比較でループが終わらないので、ここで止める。
+  if (!Number.isFinite(value)) throw new Error(`数値として認識できません: ${raw}`);
+  return value;
 }
 
 function mkButton(label) {
@@ -143,6 +156,7 @@ async function initWidget(el) {
   function stopPlay() {
     if (playTimer) {
       clearInterval(playTimer);
+      livePlayTimers.delete(playTimer);
       playTimer = null;
       playBtn.textContent = 'Play';
     }
@@ -179,12 +193,18 @@ async function initWidget(el) {
       cursor += 1;
       renderState();
     }, 900);
+    livePlayTimers.add(playTimer);
   });
 
   reset();
 }
 
 function boot() {
+  // 前のページのウィジェットが Play したまま遷移していたら、その setInterval は
+  // 外れた DOM に対して発火し続ける。新しいページを組み立てる前に全部止める。
+  livePlayTimers.forEach((id) => clearInterval(id));
+  livePlayTimers.clear();
+
   document.querySelectorAll('.algo-widget').forEach((el) => {
     initWidget(el).catch((e) => {
       el.textContent = `ウィジェットの読み込みに失敗しました: ${e.message}`;
