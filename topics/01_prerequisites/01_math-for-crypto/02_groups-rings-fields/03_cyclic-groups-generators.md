@@ -94,3 +94,9 @@ Z_p^*（p 素数）は必ず巡回群 → 生成元を「原始根（primitive r
 **環**（加法群＋もう1つの乗法）に進み、なぜ整数の mod n 演算が
 「n が素数か合成数か」で性質が変わるかを見る。
 → [04 環と零因子](./04_rings-and-zero-divisors.md)
+
+## 動かして確認する
+
+`g=3` は `Z_7^*` 全体を尽くし、`g=2` は途中で終わる（`values` の長さは同じでも重複が出る）ことを見比べてください。
+
+<div class="algo-widget" data-algo="cyclic-groups-generators" data-inputs="g:3,p:7"></div>

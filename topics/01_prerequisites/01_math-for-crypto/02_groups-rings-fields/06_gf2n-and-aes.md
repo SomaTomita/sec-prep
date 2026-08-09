@@ -121,3 +121,9 @@ flowchart LR
 群・環・体・有限体という代数の道具が揃った。次はこの土台の上に、
 RSA・DH の安全性を支える整数論（素数・フェルマー/オイラーの定理・離散対数問題）へ進む。
 → [`../03_number-theory/`](../03_number-theory/README.md)
+
+## 動かして確認する
+
+本文の手計算とは別の実装（xtimeを8回繰り返す方式、AES実装で標準的な形）で同じ `{57}・{83}={C1}` を再現します。
+
+<div class="algo-widget" data-algo="gf2n-and-aes" data-inputs="a:0x57,b:0x83"></div>

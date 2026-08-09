@@ -82,3 +82,9 @@ DH（Diffie–Hellman 鍵共有）や RSA の
 `Z_7^*` の表で `3` と `5` だけが位数 `6 = |Z_7^*|` を持っていた。
 つまりこの2元は「べき乗だけで群全体を作り出せる」特別な元 —— **生成元**。
 → [03 巡回群と生成元](./03_cyclic-groups-generators.md)
+
+## 動かして確認する
+
+`a` が単位元 `1` に戻るまでの累乗ステップを追えます。表の他の行（例: p=13, a=5）も試してください。
+
+<div class="algo-widget" data-algo="order-and-lagrange" data-inputs="a:3,p:7"></div>

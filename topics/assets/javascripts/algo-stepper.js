@@ -30,6 +30,7 @@ function parseInputDefaults(raw) {
 function parseArgValue(raw) {
   const trimmed = raw.trim();
   if (trimmed.startsWith('[')) return JSON.parse(trimmed);
+  if (trimmed.toLowerCase().startsWith('0x')) return parseInt(trimmed, 16);
   return Number(trimmed);
 }
 
