@@ -45,14 +45,14 @@
   border: 1px solid var(--md-accent-fg-color);
   border-radius: 4px;
   background: transparent;
-  color: var(--md-accent-fg-color);
+  color: var(--md-typeset-a-color, var(--md-accent-fg-color));
   font-weight: 600;
   cursor: pointer;
   transition: background-color .15s ease, color .15s ease;
 }
 
 .algo-widget__controls button:hover:not(:disabled) {
-  background: var(--md-accent-fg-color);
+  background: var(--md-typeset-a-color, var(--md-accent-fg-color));
   color: var(--md-default-bg-color);
 }
 
