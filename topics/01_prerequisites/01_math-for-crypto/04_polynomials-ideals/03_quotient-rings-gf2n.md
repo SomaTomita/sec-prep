@@ -120,3 +120,9 @@ GF(4) = GF(2)[x]/(x^2+x+1) 上で計算せよ。
 **`(f(x))` というイデアルで剰余環を作る**という代数の一般操作の特殊ケース。
 イデアルの言葉で見直すと、なぜ既約性が体になる条件なのかが明確になる。
 → [04 イデアルと Gröbner 基底](./04_ideals-groebner-intro.md)
+
+## 動かして確認する
+
+`x・(x+1) ≡ 1 (mod x²+x+1)` の還元ステップを追えます。乗算表の他の組み合わせも試してください。
+
+<div class="algo-widget" data-algo="quotient-rings-gf2n" data-inputs="a:2,b:3"></div>

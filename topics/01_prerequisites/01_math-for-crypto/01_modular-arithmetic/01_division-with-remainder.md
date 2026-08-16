@@ -126,3 +126,9 @@ a = b·q + r   ただし  0 ≤ r < b
 
 ここで定義した「`a` を `n` で割った余り」が等しい整数同士を `≡` で結ぶのが**合同式**。
 → [02 合同式の定義](./02_congruence-definition.md)
+
+## 動かして確認する
+
+負の数を割ったときに商・余りがどう決まるか、値を変えて確認できます。
+
+<div class="algo-widget" data-algo="division-with-remainder" data-inputs="a:-27,b:6"></div>
