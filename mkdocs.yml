@@ -81,6 +81,12 @@ validation:
 extra_css:
   - https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap
   - assets/stylesheets/extra.css
+  - assets/stylesheets/stream-lab.css
+
+extra_javascript:
+  # ES module。data-lab を見て stream-labs/<slug>.js を動的 import する。
+  - path: assets/javascripts/stream-lab.js
+    type: module
 
 extra:
   social:
