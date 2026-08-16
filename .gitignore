@@ -13,3 +13,8 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# Claude Code スキル（ローカルツール、公開しない）
+/.agents/
+/.claude/skills/
+/skills-lock.json
