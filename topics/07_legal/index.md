@@ -12,12 +12,16 @@
 |---|---|---|
 | 01 | [法務の全体地図](01_legal-landscape.md) | NIS2・Cybersecurity Act・GDPR・ePrivacy指令の全体地図、国際データ移転 |
 | 02 | [サイバー犯罪と知財](02_cybercrime-and-ip.md) | サイバー犯罪条約・法執行の越境捜査・ソフトウェアの知的財産 |
+| 03 | [規制の重なりとデジタル主権](03_regulatory-tsunami.md) | CRA・DORA・DSA・Data Act・AI Act、報告義務の多重化、国際データ移転の反復 |
+| 04 | [規制の読み方](04_how-to-read-regulation.md) | 規制手法の分類・最善努力義務・整合規格と適合性評価 |
 
 <details>
 <summary>進捗チェックリスト</summary>
 
 - [x] `01_legal-landscape.md` — NIS2・Cybersecurity Act・GDPR・ePrivacy指令の全体地図、国際データ移転
 - [x] `02_cybercrime-and-ip.md` — サイバー犯罪条約・法執行の越境捜査・ソフトウェアの知的財産
+- [ ] `03_regulatory-tsunami.md` — CRA・DORA・DSA・Data Act・AI Act、報告義務の多重化、国際データ移転の反復
+- [ ] `04_how-to-read-regulation.md` — 規制手法の分類・最善努力義務・整合規格と適合性評価
 
 </details>
 
@@ -37,6 +41,8 @@ GDPRの詳細（7原則・適法根拠・データ主体の権利・DPIA）は�
 |---|---|
 | 01 法務の全体地図 | `../03_privacy/06_law-and-dpia.md`（GDPR詳細） |
 | 02 サイバー犯罪と知財 | [`../06_systems-security/`](../06_systems-security/index.md)（インシデント対応・法執行連携） |
+| 03 規制の重なり | [`../08_management-governance/03_certification-economics.md`](../08_management-governance/03_certification-economics.md)（CRA＝市場の失敗への介入）／[`../00_overview/04_threat-landscape.md`](../00_overview/04_threat-landscape.md)（規制が解こうとしている問題） |
+| 04 規制の読み方 | [`../08_management-governance/01_risk-management.md`](../08_management-governance/01_risk-management.md)（最善努力義務の証跡＝リスク管理の文書） |
 
 ### このドメインで「本体」を置かないもの（DRY）
 

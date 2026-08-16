@@ -100,6 +100,17 @@ flowchart TD
     S["認証制度（CC・FIPS）＝シグナリング"] -.->|非対称性を緩和| A
 ```
 
+### コモンズの悲劇：他人が攻撃されるコストは自分が払わない
+
+レモン市場は「買い手が品質を見分けられない」問題だが、それとは別に、
+**安全でない機器の被害が所有者以外に及ぶ**という外部性がある。
+乗っ取られた機器が第三者への攻撃に使われても、所有者自身は困らない。
+自分が払わないコストのために追加費用を出す動機は働かず、共有資源が劣化する（コモンズの悲劇）。
+
+この2つの失敗——**情報の非対称性**と**外部性**——のうち、認証制度が扱えるのは前者だけである。
+後者には**製品への義務づけという規制的介入**が要る。EUのCyber Resilience Actが
+その方向の立法にあたる（詳細は [`../07_legal/03_regulatory-tsunami.md`](../07_legal/03_regulatory-tsunami.md)）。
+
 ### Ross Andersonのセキュリティ経済学
 
 Ross Anderson は2001年の論文 "Why Information Security Is Hard—An Economic Perspective"
@@ -122,6 +133,10 @@ Ross Anderson は2001年の論文 "Why Information Security Is Hard—An Economi
 理論的な裏付けを与える——技術だけでは市場の失敗（情報の非対称性）を解決できない、
 という点で[`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)で見た
 「技術だけでは不十分」という教訓とも通じる。
+
+なお、この分野で流通する「サイバー犯罪の年間被害額」の推計は調査手法の偏りで桁が大きく振れる。
+数値の検算の仕方は [`../00_overview/04_threat-landscape.md`](../00_overview/04_threat-landscape.md)
+の「損害額の桁を検算する」に置いた。
 
 ---
 
@@ -167,3 +182,4 @@ GDPR・DPIAの詳細は [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_la
 - Akerlof, G. A. (1970). "The Market for 'Lemons': Quality Uncertainty and the Market Mechanism." Quarterly Journal of Economics, 84(3), 488-500.
 - Anderson, R. (2001). "Why Information Security Is Hard—An Economic Perspective." ACSAC 2001: https://www.acsac.org/2001/papers/110.pdf
 - Anderson, R. & Moore, T. (2006). "The Economics of Information Security." Science, 314(5799), 610-613. DOI: 10.1126/science.1130992
+- Florêncio, D. & Herley, C. (2011). *Sex, Lies and Cyber-crime Surveys*. Microsoft Research MSR-TR-2011-75 / WEIS 2011（被害額調査に極端な回答が与えるバイアス）: https://www.microsoft.com/en-us/research/publication/sex-lies-and-cyber-crime-surveys/

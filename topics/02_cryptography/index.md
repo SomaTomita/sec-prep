@@ -52,3 +52,5 @@
 </details>
 
 ## 参考（サブ領域全体）
+
+- 講義ノート: [Coursera Crypto I（Dan Boneh）](../../courses/coursera-crypto1/README.md) — 本サブ領域を講義に沿って詳しく追う副読ノート（サイト非公開・リポジトリ内）

@@ -36,6 +36,7 @@ MPC / FHE＝データを秘匿したまま計算する暗号技術（秘密計�
 | TLS / ネットワークプロトコル | 暗号プリミティブ × 実システム | 暗号 ⇄ システム |
 | MPC / FHE | 暗号の高度構成 × プライバシー保護計算 | 暗号 ⇄ プライバシー |
 | アクセス制御 / 認証 | 理論モデル × 実装 | システム ⇄ ソフトウェア |
+| AI（攻撃自動化・アクセス統制） | 脅威環境の変化 × 匿名性 × 法的義務 | 全柱 ⇄ プライバシー ⇄ 法務 |
 
 ```mermaid
 graph LR
@@ -52,6 +53,9 @@ graph LR
 ```
 
 ※ 法務は5本柱の外にあるため図には含めない（GDPR ⇄ 法務は表を参照）
+
+※ AI は特定の2柱ではなく**全柱に横断的に**かかるため図には含めない（表と
+[04](04_threat-landscape.md) / [05](05_ai-and-security.md) を参照）
 
 > 重複トピックは片方に本体、もう片方からリンク（DRY）。本体の置き場は各領域 `index.md` で管理。
 
@@ -71,3 +75,5 @@ graph LR
 ## 参考
 
 - [01_program-structure.md](01_program-structure.md)
+- [04_threat-landscape.md](04_threat-landscape.md) — 脅威側から見た全体像
+- [05_ai-and-security.md](05_ai-and-security.md) — AI が攻防バランスに与える影響

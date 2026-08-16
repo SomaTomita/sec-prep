@@ -12,6 +12,8 @@
 | 01 | [プログラム構成](01_program-structure.md) | プログラム構成・単位配分・段階設計 |
 | 02 | [5本柱の地図](02_five-pillars-map.md) | 5本柱の関係と全体像 |
 | 03 | [用語集](03_glossary.md) | 共通用語集（読み進めながら追記する living doc） |
+| 04 | [脅威ランドスケープ](04_threat-landscape.md) | 攻撃者の分類・複雑性と脆弱性・予防から検知へ・損害額の桁の検算 |
+| 05 | [AI とセキュリティ](05_ai-and-security.md) | 攻撃自動化・AI 自体の脆弱性・経験的防御の限界・アクセス統制のジレンマ |
 
 <details>
 <summary>進捗チェックリスト</summary>
@@ -19,6 +21,8 @@
 - [ ] [01_program-structure.md](01_program-structure.md) — プログラム構成・単位配分・段階設計
 - [ ] [02_five-pillars-map.md](02_five-pillars-map.md) — 5本柱の関係と全体像
 - [ ] [03_glossary.md](03_glossary.md) — 共通用語集（読み進めながら追記する living doc）
+- [ ] [04_threat-landscape.md](04_threat-landscape.md) — 攻撃者の分類・複雑性と脆弱性・予防から検知へ・損害額の桁の検算
+- [ ] [05_ai-and-security.md](05_ai-and-security.md) — 攻撃自動化・AI 自体の脆弱性・経験的防御の限界・アクセス統制のジレンマ
 
 </details>
 
@@ -47,7 +51,9 @@
 
 読みながら出た「あとで掘る」項目をここに溜める。
 
-- （空）
+- [ ] MITRE ATT&CK の各フェーズと実事例の対応づけ → `deep/attack-phases/`
+- [ ] 敵対的サンプルがなぜモデル間で転移するのか → `deep/adversarial-transferability/`
+- [ ] AI の能力評価ベンチマークの設計（何を測っていないか） → `deep/ai-benchmark-design/`
 
 </details>
 
