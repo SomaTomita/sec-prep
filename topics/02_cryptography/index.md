@@ -16,6 +16,12 @@
 | 05 | [プロトコル概観](05_protocols-overview.md) | TLS1.3/IPsec/SSH/Signal/EMV/Blockchain の地図 |
 | 06 | [上級トピック地図](06_advanced-topics-map.md) | 耐量子(NIST 2024標準)・FHE(Gentry)・MPC(Yao/Shamir)・サイドチャネル |
 
+## 深掘り（Layer 2）
+
+| ページ | 内容（1行） |
+|---|---|
+| [ストリーム暗号](deep/stream-ciphers/README.md) | Vernam/OTP → 鍵長の問題 → PRG → FSM を、動かせるウィジェットで追う |
+
 <details>
 <summary>進捗チェックリスト</summary>
 
@@ -47,10 +53,11 @@
 
 ### 深掘りキュー（Layer 2 候補）
 
+- [x] ストリーム暗号（Vernam/OTP・PRG・FSM）→ `deep/stream-ciphers/` に作成済み
 - [ ] （読み進めながら追記）
 
 </details>
 
 ## 参考（サブ領域全体）
 
-- 講義ノート: Coursera Crypto I（Dan Boneh）→ リポジトリ内の `courses/coursera-crypto1/README.md` — 本サブ領域を講義に沿って詳しく追う副読ノート（サイト非公開のためリンクにしていない）
+- 講義ノート: [Coursera Crypto I（Dan Boneh）](../courses/coursera-crypto1/README.md) — 本サブ領域を講義に沿って詳しく追う副読ノート
