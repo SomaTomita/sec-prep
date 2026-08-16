@@ -9,7 +9,12 @@ export async function loadSource() { return (await fetch(PY_URL)).text(); }
 // gf4_mul 側のステップだけを追う。
 function gf2PolyMul(a, b) {
   let result = 0;
+  // ここも gf4_mul 側のステップ表示には出さないブラックボックスなので、
+  // この内部トレーサーは上限（MAX_STEPS）を効かせるためだけに使う
+  // （getSteps() は捨てる。呼べば MAX_STEPS 超過時に例外が飛ぶ）。
+  const { trace: boundLoop } = createTracer();
   while (b) {
+    boundLoop(0, {}, 'gf2PolyMul loop bound');
     if (b & 1) { result ^= a; }
     a <<= 1;
     b >>= 1;

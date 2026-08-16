@@ -12,7 +12,12 @@ function modInverse(a, m) {
   a = pymod(a, m);
   let oldR = a, r = m;
   let oldS = 1, s = 0;
+  // CRT のステップ表示では modInverse をブラックボックス扱いするため、この
+  // ループの trace は外側の trace とは別に、上限を効かせるためだけに作る
+  // （getSteps() は使わず捨てる。呼べば MAX_STEPS 超過時に例外が飛ぶ）。
+  const { trace: boundLoop } = createTracer();
   while (r !== 0) {
+    boundLoop(0, {}, 'modInverse loop bound');
     const q = pyFloorDiv(oldR, r);
     [oldR, r] = [r, oldR - q * r];
     [oldS, s] = [s, oldS - q * s];

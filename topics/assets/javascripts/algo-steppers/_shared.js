@@ -19,7 +19,7 @@ export function createTracer(formatVars) {
   const format = formatVars || ((vars) => ({ ...vars }));
   const trace = (line, vars, note) => {
     if (steps.length >= MAX_STEPS) {
-      throw new Error('ステップ数が上限を超えました（無限ループの可能性）');
+      throw new Error(`ステップ数が上限（${MAX_STEPS}）を超えました。入力を小さくするか、無限ループの可能性を確認してください`);
     }
     steps.push({ line, vars: format(vars), note });
   };
