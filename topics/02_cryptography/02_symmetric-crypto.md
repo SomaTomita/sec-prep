@@ -34,6 +34,9 @@ TLS などのプロトコルでは「鍵共有だけ公開鍵、本体は対称�
 ブロック暗号は「固定長ブロックしか暗号化できない」ため、任意長のメッセージを扱うには
 後述の **モード（暗号利用モード）** が必要。
 
+> 深掘り: Vernam/OTP から PRG・FSM までを1ビットずつ動かして追える教材を
+> [`deep/stream-ciphers/`](./deep/stream-ciphers/README.md) に置いた。
+
 ---
 
 ## AES（Advanced Encryption Standard）
