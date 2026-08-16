@@ -38,13 +38,13 @@ Coursera の [Cryptography I](https://www.coursera.org/learn/crypto)(Dan Boneh �
 
 ### 進捗チェックリスト(概念ファイル28本)
 
-- [ ] 01_introduction: 01_course-overview-and-applications / 02_what-crypto-can-do / 03_history-of-ciphers
-- [ ] 02_discrete-probability: 01_probability-basics / 02_xor-and-birthday-paradox
-- [ ] 03_stream-ciphers: 01_cipher-definition-and-otp / 02_prg-and-stream-ciphers / 03_attacks-on-otp / 04_real-world-stream-ciphers / 05_prg-security-definitions / 06_semantic-security
-- [ ] 04_block-ciphers: 01_block-cipher-and-prf-prp / 02_des / 03_exhaustive-search-and-3des / 04_advanced-attacks / 05_aes / 06_prg-to-prf-ggm
-- [ ] 05_block-cipher-modes: 01_one-time-key-and-ecb / 02_cpa-security-and-nonces / 03_cbc-mode / 04_counter-mode
-- [ ] 06_message-integrity: 01_mac-definitions / 02_prf-based-macs / 03_cbc-mac-and-nmac / 04_padding-and-cmac-pmac / 05_one-time-mac-carter-wegman
-- [ ] 07_collision-resistance: 01_collision-resistance-intro / 02_birthday-attack
+- [x] 01_introduction: 01_course-overview-and-applications / 02_what-crypto-can-do / 03_history-of-ciphers
+- [x] 02_discrete-probability: 01_probability-basics / 02_xor-and-birthday-paradox
+- [x] 03_stream-ciphers: 01_cipher-definition-and-otp / 02_prg-and-stream-ciphers / 03_attacks-on-otp / 04_real-world-stream-ciphers / 05_prg-security-definitions / 06_semantic-security
+- [x] 04_block-ciphers: 01_block-cipher-and-prf-prp / 02_des / 03_exhaustive-search-and-3des / 04_advanced-attacks / 05_aes / 06_prg-to-prf-ggm
+- [x] 05_block-cipher-modes: 01_one-time-key-and-ecb / 02_cpa-security-and-nonces / 03_cbc-mode / 04_counter-mode
+- [x] 06_message-integrity: 01_mac-definitions / 02_prf-based-macs / 03_cbc-mac-and-nmac / 04_padding-and-cmac-pmac / 05_one-time-mac-carter-wegman
+- [x] 07_collision-resistance: 01_collision-resistance-intro / 02_birthday-attack
 
 </details>
 

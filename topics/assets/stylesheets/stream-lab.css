@@ -1,0 +1,362 @@
+/* ストリーム暗号ビジュアル教材（topics/02_cryptography/deep/stream-ciphers/）用。
+   mkdocs-material の CSS 変数に乗せてライト/ダーク両対応にする。 */
+
+.stream-lab {
+  --lab-on: var(--md-accent-fg-color, #7c4dff);
+  --lab-off: var(--md-default-fg-color--lighter, rgba(0, 0, 0, .26));
+  --lab-line: var(--md-default-fg-color--lightest, rgba(0, 0, 0, .07));
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--lab-line);
+  border-radius: 8px;
+  background: var(--md-code-bg-color);
+}
+
+.stream-lab__title {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  opacity: .65;
+  margin-bottom: .75rem;
+}
+
+/* ---- 操作系 ---- */
+
+.stream-lab__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: flex-end;
+  margin-bottom: .9rem;
+}
+
+.stream-lab__controls button {
+  min-height: 40px;
+  padding: .35rem .85rem;
+  border: 1px solid var(--lab-on);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--md-typeset-a-color, var(--lab-on));
+  font-weight: 600;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.stream-lab__controls button:hover:not(:disabled) {
+  background: var(--md-typeset-a-color, var(--lab-on));
+  color: var(--md-default-bg-color);
+}
+
+.stream-lab__controls button:disabled { opacity: .4; cursor: not-allowed; }
+
+.stream-lab__field {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  font-size: .7rem;
+  opacity: .85;
+}
+
+.stream-lab__field input[type="text"] {
+  font-family: var(--md-code-font, monospace);
+  font-size: .95rem;
+  letter-spacing: .12em;
+  padding: .3rem .5rem;
+  border: 1px solid var(--md-default-fg-color--lighter, rgba(0, 0, 0, .15));
+  border-radius: 4px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  min-width: 11rem;
+}
+
+.stream-lab__controls button:focus-visible,
+.stream-lab input:focus-visible {
+  outline: 2px solid var(--lab-on);
+  outline-offset: 2px;
+}
+
+/* ---- ビット行 ---- */
+
+.stream-lab__rows { overflow-x: auto; padding-bottom: .25rem; }
+
+.stream-lab__row {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  margin-bottom: .3rem;
+  white-space: nowrap;
+}
+
+.stream-lab__rowlabel {
+  flex: 0 0 auto;
+  width: 7.5rem;
+  font-size: .72rem;
+  text-align: right;
+  padding-right: .4rem;
+  opacity: .8;
+}
+
+.stream-lab__bit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--lab-off);
+  border-radius: 4px;
+  font-family: var(--md-code-font, monospace);
+  font-size: .95rem;
+  font-weight: 600;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color--light, currentColor);
+  transition: transform .18s ease, background-color .18s ease, color .18s ease,
+              border-color .18s ease, opacity .18s ease;
+}
+
+.stream-lab__bit--one {
+  background: color-mix(in srgb, var(--lab-on) 78%, transparent);
+  border-color: var(--lab-on);
+  color: #fff;
+}
+
+.stream-lab__bit--blank { opacity: .22; }
+
+.stream-lab__bit--active {
+  transform: translateY(-3px) scale(1.14);
+  box-shadow: 0 0 0 2px var(--lab-on);
+  z-index: 1;
+}
+
+.stream-lab__bit--pop { animation: stream-lab-pop 380ms ease-out 1 both; }
+
+@keyframes stream-lab-pop {
+  0%   { transform: scale(.55) translateY(-10px); opacity: 0; }
+  60%  { transform: scale(1.18) translateY(0); opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.stream-lab__op {
+  flex: 0 0 auto;
+  width: 7.5rem;
+  text-align: right;
+  padding-right: .4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lab-on);
+}
+
+.stream-lab__rule {
+  height: 1px;
+  background: var(--lab-line);
+  margin: .45rem 0 .45rem 7.8rem;
+}
+
+/* ---- 説明表示 ---- */
+
+.stream-lab__note {
+  margin-top: .8rem;
+  padding: .5rem .75rem;
+  border-left: 3px solid var(--lab-on);
+  background: var(--md-default-bg-color);
+  font-family: var(--md-code-font, monospace);
+  font-size: .82rem;
+  line-height: 1.6;
+  min-height: 2.6em;
+}
+
+.stream-lab__note b { color: var(--lab-on); }
+
+.stream-lab__warn {
+  margin-top: .7rem;
+  font-size: .75rem;
+  opacity: .8;
+}
+
+/* ---- key-cost: 鍵長の比較バー ---- */
+
+.stream-lab__slider { width: 15rem; accent-color: var(--lab-on); }
+
+.stream-lab__bars { display: flex; flex-direction: column; gap: .6rem; }
+
+.stream-lab__barlabel { font-size: .72rem; opacity: .85; margin-bottom: .2rem; }
+
+.stream-lab__bartrack {
+  position: relative;
+  height: 1.7rem;
+  border-radius: 4px;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--lab-line);
+  overflow: hidden;
+}
+
+.stream-lab__barfill {
+  height: 100%;
+  border-radius: 3px 0 0 3px;
+  transition: width .3s cubic-bezier(.2, 0, 0, 1);
+}
+
+.stream-lab__bar--otp { background: color-mix(in srgb, #e5484d 72%, transparent); }
+.stream-lab__bar--stream { background: color-mix(in srgb, var(--lab-on) 72%, transparent); }
+
+.stream-lab__barvalue {
+  position: absolute;
+  inset: 0 .5rem 0 auto;
+  display: flex;
+  align-items: center;
+  font-family: var(--md-code-font, monospace);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+/* ---- prg-expand: キーストリームのテープ ---- */
+
+.stream-lab__tape { margin-top: .9rem; }
+
+.stream-lab__tapehead { font-size: .72rem; opacity: .85; margin-bottom: .25rem; }
+
+.stream-lab__taperow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem;
+}
+
+.stream-lab__taperow .stream-lab__bit {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: .8rem;
+}
+
+/* ---- fsm-stream: 2レーンのブロック図 ---- */
+
+.stream-lab__stage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.stream-lab__lane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .8rem .5rem;
+  border: 1px solid var(--lab-line);
+  border-radius: 6px;
+  background: var(--md-default-bg-color);
+}
+
+.stream-lab__lanetitle {
+  font-size: .78rem;
+  font-weight: 700;
+  margin-bottom: .6rem;
+  color: var(--lab-on);
+}
+
+.stream-lab__chips { display: flex; gap: .4rem; flex-wrap: wrap; justify-content: center; }
+
+.stream-lab__chip {
+  display: inline-block;
+  padding: .18rem .5rem;
+  border: 1px solid var(--lab-off);
+  border-radius: 999px;
+  font-family: var(--md-code-font, monospace);
+  font-size: .75rem;
+  white-space: nowrap;
+}
+
+.stream-lab__chip--z { border-color: var(--lab-on); color: var(--lab-on); font-weight: 700; }
+
+.stream-lab__box {
+  width: 100%;
+  max-width: 13rem;
+  padding: .45rem .5rem;
+  text-align: center;
+  border: 1px solid var(--lab-on);
+  border-radius: 5px;
+  font-size: .76rem;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--lab-on) 10%, transparent);
+}
+
+/* 縦のワイヤ。パルスは ::after の小さな点を下方向へ走らせて表す。 */
+.stream-lab__wire {
+  position: relative;
+  width: 2px;
+  height: 1.5rem;
+  background: var(--lab-off);
+  margin: .25rem 0;
+  overflow: visible;
+}
+
+.stream-lab__wire::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  border-radius: 50%;
+  background: var(--lab-on);
+  opacity: 0;
+}
+
+.stream-lab__wirelabel {
+  position: absolute;
+  left: .5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--md-code-font, monospace);
+  font-size: .7rem;
+  color: var(--lab-on);
+  white-space: nowrap;
+}
+
+/* 上から順に光らせて「信号が下りていく」ように見せる。
+   data-wire は JS 側が付ける通し番号（1..5）で、そのぶんだけ点火を遅らせる。 */
+.stream-lab__lane--pulse .stream-lab__wire::after {
+  animation: stream-lab-travel 420ms ease-in 1 both;
+}
+
+.stream-lab__lane--pulse .stream-lab__wire[data-wire="2"]::after { animation-delay: 140ms; }
+.stream-lab__lane--pulse .stream-lab__wire[data-wire="3"]::after { animation-delay: 280ms; }
+.stream-lab__lane--pulse .stream-lab__wire[data-wire="4"]::after { animation-delay: 420ms; }
+.stream-lab__lane--pulse .stream-lab__wire[data-wire="5"]::after { animation-delay: 560ms; }
+
+@keyframes stream-lab-travel {
+  0%   { opacity: 0; transform: translateY(-4px); }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(1.5rem); }
+}
+
+.stream-lab__staterow { display: flex; gap: .18rem; }
+
+.stream-lab__staterow .stream-lab__bit {
+  width: 1.35rem;
+  height: 1.35rem;
+  font-size: .75rem;
+}
+
+.stream-lab__xorrow { display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; justify-content: center; }
+
+.stream-lab__xorsign { font-size: 1.1rem; font-weight: 700; color: var(--lab-on); }
+
+.stream-lab__out {
+  padding: .3rem .7rem;
+  border: 2px solid var(--lab-on);
+  border-radius: 5px;
+  font-family: var(--md-code-font, monospace);
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stream-lab *,
+  .stream-lab *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
