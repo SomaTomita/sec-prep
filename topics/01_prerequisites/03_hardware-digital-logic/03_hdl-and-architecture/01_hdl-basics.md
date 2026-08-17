@@ -97,7 +97,7 @@ flowchart LR
 HDL 自体は同じでも、合成先を FPGA にするか ASIC にするかで最適化方針が変わる。
 暗号コアを ASIC のセキュアエレメントとして焼き込む場合、電力マスキング等の対策も
 この段階で回路構造に織り込む必要がある（詳細は
-[`../../../04_hardware-security/04_side-channels.md`](../../../04_hardware-security/04_side-channels.md)）。
+[`../../../04_hardware-security/04_side-channels/README.md`](../../../04_hardware-security/04_side-channels/README.md)）。
 
 ---
 

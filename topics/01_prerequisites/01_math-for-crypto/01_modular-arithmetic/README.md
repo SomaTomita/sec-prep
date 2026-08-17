@@ -61,7 +61,7 @@ RSA・DH・AES など現代暗号のほぼ全てがこの演算の上に成り�
 
 - [ ] べき乗の高速計算（fast exponentiation / square-and-multiply） → `deep/fast-exponentiation/`
 - [ ] 拡張ユークリッドの手計算ステップ（表計算法） → `deep/extended-euclidean/`
-- [x] 定数時間 GCD / 二進 GCD（サイドチャネル対策・safegcd） → [`../../../04_hardware-security/04_side-channels.md`](../../../04_hardware-security/04_side-channels.md)
+- [x] 定数時間 GCD / 二進 GCD（サイドチャネル対策・safegcd） → [`../../../04_hardware-security/04_side-channels/README.md`](../../../04_hardware-security/04_side-channels/README.md)
 - [ ] CRT の証明と構成的解法 → `deep/crt-proof/`
 - [ ] gcd と互いに素の意味 → `deep/coprime-basics/`
 

@@ -1,6 +1,6 @@
 # 03. セキュリティ部品（Root of Trust・TPM・RNG・PUF）
 
-> 前: [02 ハードウェア攻撃](./02_hardware-attacks.md) ｜ 次: [04 サイドチャネル](./04_side-channels.md) ｜ 層: 基礎(Layer 1)
+> 前: [02 ハードウェア攻撃](./02_hardware-attacks.md) ｜ 次: [04 サイドチャネル](./04_side-channels/README.md) ｜ 層: 基礎(Layer 1)
 
 [02](./02_hardware-attacks.md) で見た攻撃に対抗するため、システムのどこかに
 **「これだけは信頼できる」という物理的な起点**を作る必要がある
@@ -186,7 +186,7 @@ PUFは「鍵を守る」のではなく「**鍵を保存しない**」という�
 
 Root of Trust や PUF で鍵の保存自体は守れても、鍵を**使う瞬間**（計算中）に
 漏れる情報が残る。それがサイドチャネル。
-→ [04 サイドチャネル](./04_side-channels.md)
+→ [04 サイドチャネル](./04_side-channels/README.md)
 
 ---
 

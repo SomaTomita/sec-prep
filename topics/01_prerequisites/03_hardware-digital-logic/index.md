@@ -44,7 +44,7 @@ CMOSトランジスタからコンピュータアーキテクチャまでの「�
 
 ### 他領域とのリンク
 
-- 電力サイドチャネル・タイミング攻撃の詳細 → `../../04_hardware-security/04_side-channels.md`
+- 電力サイドチャネル・タイミング攻撃の詳細 → `../../04_hardware-security/04_side-channels/README.md`
 - HW/SW協調設計の応用 → `../../04_hardware-security/01_digital-platform-design.md`
 - root of trust・PUF の詳細 → `../../04_hardware-security/03_security-building-blocks.md`
 

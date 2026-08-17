@@ -136,7 +136,7 @@ WPA3 は WPA2 の問題に対処した現行世代で、パーソナルモード
 SAE の実装に対するタイミング・キャッシュ側のサイドチャネル攻撃（Dragonblood）を報告した。
 
 **新しい世代が出ても、実装の側から破られうる**という点は変わらない。
-サイドチャネルの一般論は [`../04_hardware-security/04_side-channels.md`](../04_hardware-security/04_side-channels.md) が本体。
+サイドチャネルの一般論は [`../04_hardware-security/04_side-channels/README.md`](../04_hardware-security/04_side-channels/README.md) が本体。
 
 ---
 

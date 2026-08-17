@@ -30,7 +30,7 @@ GDPRの条文詳細は[`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-
 | 完全な仲介 (Complete Mediation) | すべてのアクセスを毎回チェックする（キャッシュした許可を使い回さない） | Check Pointパターン |
 | オープンな設計 (Open Design) | 設計を秘密にすることに頼らない | [`../02_cryptography/01_goals-and-primitives.md`](../02_cryptography/01_goals-and-primitives.md)のKerckhoffsの原理と同じ発想 |
 | 権限の分離 (Separation of Privilege) | 1つの条件だけで許可を出さず、複数の独立した条件の合致を要求する | 多要素認証・複数承認者制 |
-| 最小共通メカニズム (Least Common Mechanism) | 複数主体で共有する仕組みを最小化する（共有資源はサイドチャネルにもなりうる——[`../04_hardware-security/04_side-channels.md`](../04_hardware-security/04_side-channels.md)のキャッシュ共有攻撃はこの原則違反の実例） | — |
+| 最小共通メカニズム (Least Common Mechanism) | 複数主体で共有する仕組みを最小化する（共有資源はサイドチャネルにもなりうる——[`../04_hardware-security/04_side-channels/README.md`](../04_hardware-security/04_side-channels/README.md)のキャッシュ共有攻撃はこの原則違反の実例） | — |
 | 心理的受容性 (Psychological Acceptability) | ユーザが使いにくい保護機構は回避される（付箋にパスワードを書く等） | — |
 | 経済性 (Economy of Mechanism) | 設計は可能な限り単純・小さく保つ（複雑さはバグと脆弱性の温床） | — |
 
@@ -112,7 +112,7 @@ Privacy by Design視点:
 テスト・by design原則）が一通り揃った。GDPRの条文詳細・DPIAの実施要件は
 [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)、
 最小共通メカニズムとサイドチャネルの物理的機構は
-[`../04_hardware-security/04_side-channels.md`](../04_hardware-security/04_side-channels.md)、
+[`../04_hardware-security/04_side-channels/README.md`](../04_hardware-security/04_side-channels/README.md)、
 実装時の脆弱性クラスと認可の実装詳細は[`../06_systems-security/`](../06_systems-security/index.md)で
 それぞれ引き続き扱う。
 

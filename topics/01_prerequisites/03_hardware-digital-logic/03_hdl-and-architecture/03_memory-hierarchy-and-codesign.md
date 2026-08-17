@@ -45,7 +45,7 @@ L1 ヒット（~1 ns）と DRAM までのミス（~100 ns）ではアクセス�
   （ページテーブルによるメモリ保護を、例外処理が完了する前に一瞬だけすり抜ける）。
 
 具体的な攻撃手順・対策（定数時間アクセス、キャッシュ分割等）は
-[`../../../04_hardware-security/04_side-channels.md`](../../../04_hardware-security/04_side-channels.md)
+[`../../../04_hardware-security/04_side-channels/README.md`](../../../04_hardware-security/04_side-channels/README.md)
 で扱う。ここでは「レイテンシの差＝観測可能な情報チャネルになる」という原理だけ押さえる。
 
 ## HW/SW 協調設計（HW/SW Co-Design）
@@ -91,4 +91,4 @@ PPA モデルと直結する。
 
 サイドチャネルの具体的な攻撃手順（Flush+Reload の実装、Spectre/Meltdown の変種、
 DPA との共通点）は、この領域の先にある専用ドメインで扱う。
-→ [`../../../04_hardware-security/04_side-channels.md`](../../../04_hardware-security/04_side-channels.md)
+→ [`../../../04_hardware-security/04_side-channels/README.md`](../../../04_hardware-security/04_side-channels/README.md)

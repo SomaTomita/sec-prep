@@ -158,7 +158,7 @@ CMOS の電力・遅延モデルは、この後の組合せ回路・順序回路
 - [ ] スタティック CMOS vs ダイナミック CMOS → `deep/cmos-advanced/`
 - [ ] パワーゲーティング・クロックゲーティングの実装 → `deep/low-power-design/`
 - [ ] PUF の設計と評価指標（uniqueness, reliability） → `deep/puf/`
-- [ ] DPA（差分電力解析）の具体的手順 → `../../04_hardware-security/04_side-channels.md` 参照後に `deep/dpa/`
+- [ ] DPA（差分電力解析）の具体的手順 → `../../04_hardware-security/04_side-channels/README.md` 参照後に `deep/dpa/`
 
 ## 参考
 

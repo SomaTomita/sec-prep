@@ -14,7 +14,7 @@
 | 01 | [デジタルプラットフォーム設計](01_digital-platform-design.md) | 設計抽象レベル・PPAからPPAS(Security)へ・HW/SW協調設計とTCB |
 | 02 | [ハードウェア攻撃](02_hardware-attacks.md) | 攻撃者能力の分類(非侵襲/半侵襲/侵襲)・攻撃者の作業手順・部品の真正性・フォールト注入(RSA-CRT)・Spectre/Meltdown |
 | 03 | [セキュリティ部品](03_security-building-blocks.md) | Root of Trust・TPM(PCR)・RNG（エントロピー評価と健全性テスト）・PUF |
-| 04 | [サイドチャネル](04_side-channels.md) | 電力解析(SPA/DPA/CPA)・キャッシュ攻撃(Flush+Reload/Prime+Probe)・定数時間実装・マスキング |
+| 04 | [サイドチャネル](04_side-channels/README.md) | 概念フォルダ（全4ファイル）— タイミング攻撃・電力解析(SPA/DPA/CPA)・キャッシュ攻撃・マスキングと耐量子実装 |
 
 <details>
 <summary>進捗チェックリスト</summary>
@@ -22,7 +22,11 @@
 - [x] `01_digital-platform-design.md` — 設計抽象レベル・PPAからPPAS(Security)へ・HW/SW協調設計とTCB
 - [x] `02_hardware-attacks.md` — 攻撃者能力の分類(非侵襲/半侵襲/侵襲)・攻撃者の作業手順・部品の真正性・フォールト注入(RSA-CRT)・Spectre/Meltdown
 - [x] `03_security-building-blocks.md` — Root of Trust・TPM(PCR)・RNG（エントロピー評価と健全性テスト）・PUF
-- [x] `04_side-channels.md` — 電力解析(SPA/DPA/CPA)・キャッシュ攻撃(Flush+Reload/Prime+Probe)・定数時間実装・マスキング
+- [x] `04_side-channels/` — サイドチャネル（概念フォルダ、全4ファイル完成）
+  - [ ] `01_timing-attacks.md` — 実行時間からの漏洩・PIN 検証を手で破る・定数時間実装
+  - [ ] `02_power-analysis.md` — SPA→DPA→CPA・RSA への SPA・テンプレート/内部衝突
+  - [ ] `03_cache-side-channels.md` — Prime+Probe / Flush+Reload・共有メモリという前提
+  - [ ] `04_countermeasures.md` — マスキングと probing model・耐量子実装の難しさ
 
 </details>
 
@@ -61,7 +65,7 @@ TCB を小さく保つ動機はここにある（→ [`../00_overview/03_glossar
 | 01 設計 | `01_prerequisites/03_hardware-digital-logic`のPPA/CMOS |
 | 02 攻撃 | `02_cryptography/03_public-key-crypto/01_rsa`（RSA-CRT） |
 | 03 部品 | `02_cryptography/04_hash-and-mac`（PCR拡張）・`04_digital-signatures`（RNG不備事例） |
-| 04 サイドチャネル | `02_cryptography/06_advanced-topics-map`（動機付け）・`03_privacy/03_ppt-cryptographic`（秘密分散） |
+| 04 サイドチャネル | `02_cryptography/06_advanced-topics-map`（動機付け）・`03_privacy/03_ppt-cryptographic`（秘密分散）・`02_cryptography/06`（耐量子実装） |
 
 ### このドメインで「本体」を置かないもの（DRY）
 

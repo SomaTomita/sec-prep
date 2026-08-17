@@ -49,7 +49,7 @@ HDL → ゲートネットリスト → FPGA/ASIC へと変換する。コンピ
 HDL・アーキテクチャの基礎はここに置くが、以下は本体を持たずリンクで誘導する。
 
 - **サイドチャネル攻撃の詳細メカニズム（DPA・Flush+Reload・Spectre/Meltdown の再現手順など）** →
-  [`../../../04_hardware-security/04_side-channels.md`](../../../04_hardware-security/04_side-channels.md) / [`02_hardware-attacks.md`](../../../04_hardware-security/02_hardware-attacks.md)
+  [`../../../04_hardware-security/04_side-channels/README.md`](../../../04_hardware-security/04_side-channels/README.md) / [`02_hardware-attacks.md`](../../../04_hardware-security/02_hardware-attacks.md)
 - **CMOS の電力・遅延モデルそのもの** → `../01_cmos-logic.md`
 - **組合せ/順序回路・タイミング制約の基礎** → `../02_combinational-sequential.md`
 

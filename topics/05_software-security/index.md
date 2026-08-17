@@ -45,14 +45,14 @@
 |---|---|
 | 01 Secure SDLC | [`../08_management-governance/01_risk-management.md`](../08_management-governance/01_risk-management.md)のリスク管理と接続 |
 | 02 脅威モデリング | `../03_privacy/01_privacy-concepts.md`（LINDDUNの用語的基盤） |
-| 03 セキュリティパターン | `../04_hardware-security/02_hardware-attacks.md`・`04_side-channels.md`（Spectre/Meltdown） |
+| 03 セキュリティパターン | `../04_hardware-security/02_hardware-attacks.md`・`04_side-channels/README.md`（Spectre/Meltdown） |
 | 04 セキュリティテスト | [`../06_systems-security/02_software-vulnerabilities.md`](../06_systems-security/02_software-vulnerabilities.md)の脆弱性クラスと接続 |
 | 05 Secure/Privacy by Design | `../03_privacy/06_law-and-dpia.md`（GDPR詳細） |
 
 ### このドメインで「本体」を置かないもの（DRY）
 
 - **GDPRの条文詳細（7原則・適法根拠・データ主体の権利・DPIA）** → [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)（本領域はPrivacy by Designの設計方法論のみ）
-- **MPC・秘密分散・サイドチャネルの物理的機構** → [`../02_cryptography/06_advanced-topics-map.md`](../02_cryptography/06_advanced-topics-map.md)・[`../04_hardware-security/04_side-channels.md`](../04_hardware-security/04_side-channels.md)（本領域はSpectre/Meltdownの**ソフトウェア側**緩和策のみ）
+- **MPC・秘密分散・サイドチャネルの物理的機構** → [`../02_cryptography/06_advanced-topics-map.md`](../02_cryptography/06_advanced-topics-map.md)・[`../04_hardware-security/04_side-channels/README.md`](../04_hardware-security/04_side-channels/README.md)（本領域はSpectre/Meltdownの**ソフトウェア側**緩和策のみ）
 - **Pfitzmann-Hansenのプライバシー用語（匿名性・非連結性等）の定義そのもの** → [`../03_privacy/01_privacy-concepts.md`](../03_privacy/01_privacy-concepts.md)（本領域はLINDDUNへの応用のみ）
 - **アクセス制御・認証の実装詳細** → [`../06_systems-security/03_authn-authz-access-control.md`](../06_systems-security/03_authn-authz-access-control.md)
 

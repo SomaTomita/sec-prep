@@ -108,7 +108,7 @@ FHE が「1人が暗号化データを計算」なのに対し、MPC は「**複
   観測から漏れる」という一段階違う脅威モデル。
 
 サイドチャネルの本体（回路・ハードウェア側の対策）は
-[`../04_hardware-security/04_side-channels.md`](../04_hardware-security/04_side-channels.md)
+[`../04_hardware-security/04_side-channels/README.md`](../04_hardware-security/04_side-channels/README.md)
 で扱う。ここでは「暗号側から見た入口」だけを示した。
 
 ---
