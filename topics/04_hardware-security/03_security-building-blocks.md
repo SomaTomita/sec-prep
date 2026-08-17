@@ -64,13 +64,63 @@ PRNG（擬似乱数生成器）: 決定論的アルゴリズムでシード値�
   （CSPRNGは暗号用途に十分な統計的性質・予測困難性を持つよう設計されたPRNG）
 ```
 
-エントロピー源の品質は NIST SP 800-90B 等で健全性検証される。
-
 **なぜ重要か**: [`../02_cryptography/03_public-key-crypto/04_digital-signatures.md`](../02_cryptography/03_public-key-crypto/04_digital-signatures.md)
 で見た Android の Bitcoin ウォレット事件は、**この RNG が壊れていた**ことが根本原因
 だった——ECDSA の nonce `k`（署名ごとに一度だけ使う乱数）を生成する乱数源の初期化不備で `k` が再利用され、
 署名2つから秘密鍵が丸ごと復元された。アルゴリズムがどれだけ正しくても、
 その入力である乱数の品質が全ての土台になる。
+
+### 「ランダムに見える」では不十分
+
+TRNG の評価で最も誤解されやすい点。**統計テスト群に通ることは、
+十分なエントロピーがあることの証明にはならない。**
+
+理由は単純で、**決定論的な擬似乱数生成器も統計テストを通過する**。
+シードを知っていれば完全に予測できる系列でも、統計的性質は真の乱数と区別がつかない。
+
+```
+統計テスト通過   = 出力に明らかな偏りや周期が無い（必要条件にすぎない）
+十分なエントロピー = 攻撃者が次の出力を予測できない（本当に必要なもの）
+```
+
+したがって評価は「出力を検定する」だけでは済まず、
+**エントロピーがどこから来ているかを物理で説明する**ことが要求される。
+
+### エントロピー源をどう評価するか
+
+現行の2つの枠組みは、アプローチが対照的である。
+
+| 枠組み | 考え方 |
+|---|---|
+| **NIST SP 800-90B** | エントロピー源に仮定を置かず、**出力の統計から min-entropy を推定**する。まず IID（独立同分布）かを検定し、IID/非IID それぞれの推定器群を適用する |
+| **BSI AIS 31** | エントロピー源の**確率モデル（stochastic model）の提出を要求**する。物理（例: リングオシレータのジッタ）をモデル化し、理論からエントロピーを導く |
+
+**min-entropy で評価する**のが共通点。平均的な予測困難さ（Shannon エントロピー）ではなく、
+**最も当たりやすい値の確率で決まる最悪ケース**を使う——攻撃者は最も当たりやすい値を狙うため。
+情報理論的なエントロピーの定義は
+[`../01_prerequisites/01_math-for-crypto/05_info-theory/01_entropy.md`](../01_prerequisites/01_math-for-crypto/05_info-theory/01_entropy.md) を参照。
+
+### 稼働中の故障をどう検知するか：健全性テスト
+
+エントロピー源はアナログ回路なので、**経年劣化・温度・電圧・外部からの意図的な操作**で
+品質が落ちうる。しかも出力は相変わらずランダムに見えるため、故障は自動では気づけない。
+
+そこで SP 800-90B は2種類のテストを**必須**としている。
+
+| テスト | いつ | 何を検出するか |
+|---|---|---|
+| 起動時テスト (startup test) | 出力を使う前に一度 | 初期状態の健全性 |
+| 連続テスト (continuous test) | 稼働中つねに背景で | 稼働中に生じた劣化・故障 |
+
+連続テストの中身は2つ。
+
+```
+Repetition Count Test  : 同じ値が続く「貼り付き (stuck)」を素早く検出する
+Adaptive Proportion Test: 特定の値の出現比率の偏り＝大きなエントロピー低下を検出する
+```
+
+**TRNG は「作って終わり」ではなく、動作中に自分を監視し続ける部品**である点が、
+他の暗号部品と大きく違う。
 
 ---
 
@@ -145,4 +195,5 @@ Root of Trust や PUF で鍵の保存自体は守れても、鍵を**使う瞬�
 - Trusted Computing Group (TCG) — TPM 2.0 Library Specification.
 - Pappu, R. et al. (2002). *Physical One-Way Functions*. Science.
 - Gassend, B. et al. (2002). *Silicon Physical Random Functions*. ACM CCS.
-- NIST SP 800-90B — Recommendation for the Entropy Sources Used for Random Bit Generation.
+- NIST SP 800-90B — Recommendation for the Entropy Sources Used for Random Bit Generation: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/nist.sp.800-90b.pdf
+- BSI AIS 31 — Funktionalitätsklassen und Evaluationsmethodologie für physikalische Zufallszahlengeneratoren（確率モデルの提出を要求する枠組み）
