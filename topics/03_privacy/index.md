@@ -10,20 +10,20 @@
 
 | # | ページ | 内容（1行） |
 |---|---|---|
-| 01 | [プライバシー概念](01_privacy-concepts.md) | 匿名性・非連結性・非検知性・非観測性・仮名性(Pfitzmann-Hansen)・PII |
+| 01 | [プライバシー概念](01_privacy-concepts.md) | 匿名性・非連結性・非検知性・非観測性・仮名性(Pfitzmann-Hansen)・Solove の害の類型・PII |
 | 02 | [匿名化と差分プライバシー](02_anonymization-and-dp.md) | k-匿名化・l-多様性・t-近接性・差分プライバシー(ε, ラプラスメカニズム) |
 | 03 | [暗号的PET](03_ppt-cryptographic.md) | PIR・Oblivious Transfer・MPC/FHEのプライバシー応用(PSI等) |
-| 04 | [匿名通信](04_anonymous-comms.md) | Mixネットワーク(Chaum)・オニオンルーティング・Tor・トラフィック相関攻撃 |
+| 04 | [匿名通信](04_anonymous-comms.md) | メタデータを守る理由・Mixネットワーク(Chaum)・Tor・トラフィック相関攻撃・例外アクセスの反復 |
 | 05 | [Webプライバシーとトラッキング](05_web-privacy-tracking.md) | Cookie・スーパークッキー・ブラウザフィンガープリンティング・DNTの失敗 |
 | 06 | [法とDPIA](06_law-and-dpia.md) | GDPR概観(7原則・適法根拠・データ主体の権利)・DPIA |
 
 <details>
 <summary>進捗チェックリスト</summary>
 
-- [x] `01_privacy-concepts.md` — 匿名性・非連結性・非検知性・非観測性・仮名性(Pfitzmann-Hansen)・PII
+- [x] `01_privacy-concepts.md` — 匿名性・非連結性・非検知性・非観測性・仮名性(Pfitzmann-Hansen)・Solove の害の類型・PII
 - [x] `02_anonymization-and-dp.md` — k-匿名化・l-多様性・t-近接性・差分プライバシー(ε, ラプラスメカニズム)
 - [x] `03_ppt-cryptographic.md` — PIR・Oblivious Transfer・MPC/FHEのプライバシー応用(PSI等)
-- [x] `04_anonymous-comms.md` — Mixネットワーク(Chaum)・オニオンルーティング・Tor・トラフィック相関攻撃
+- [x] `04_anonymous-comms.md` — メタデータを守る理由・Mixネットワーク(Chaum)・Tor・トラフィック相関攻撃・例外アクセスの反復
 - [x] `05_web-privacy-tracking.md` — Cookie・スーパークッキー・ブラウザフィンガープリンティング・DNTの失敗
 - [x] `06_law-and-dpia.md` — GDPR概観(7原則・適法根拠・データ主体の権利)・DPIA
 
@@ -54,6 +54,8 @@
 - [ ] 匿名性の定量化（エントロピーベースの匿名性尺度、Serjantov-Danezis） → `deep/anonymity-metrics/`
 - [ ] 単一サーバPIRの構成（FHEを使った具体的なプロトコル） → `deep/single-server-pir/`
 - [ ] Torの隠しサービス（rendezvous point）の仕組み → `deep/tor-hidden-services/`
+- [ ] Solove の16類型と技術的4性質の詳細な対応づけ → `deep/privacy-taxonomy/`
+- [ ] クライアントサイドスキャンの技術的批判（誤検知率とスコープ拡大の議論） → `deep/client-side-scanning/`
 - [x] LINDDUN脅威モデリングの7カテゴリ詳細 → [`../05_software-security/02_threat-modeling.md`](../05_software-security/02_threat-modeling.md)
 
 </details>

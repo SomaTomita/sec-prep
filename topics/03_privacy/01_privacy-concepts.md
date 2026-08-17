@@ -89,6 +89,23 @@ flowchart TD
     UD -->|部外者に対して成り立つ| UO
 ```
 
+### 別の分類軸：どんな行為が害になるか
+
+上の4性質は「**システムが満たすべき技術的性質**」の分類である。法学側には
+「**どんな行為がプライバシーの害になるか**」という別の軸の分類がある。
+Solove (2006) は個人情報のライフサイクルに沿って4群に整理した（各群はさらに細分され、
+全体で16の類型になる）。
+
+| 群 | 何が起きるか | 技術側の対応 |
+|---|---|---|
+| 情報収集 | 監視・尋問 | データ最小化、[`04_anonymous-comms.md`](./04_anonymous-comms.md) |
+| 情報処理 | 集約・二次利用・排除・（保護の）不備 | [`02_anonymization-and-dp.md`](./02_anonymization-and-dp.md)、[`03_ppt-cryptographic.md`](./03_ppt-cryptographic.md) |
+| 情報拡散 | 暴露・開示・恐喝・歪曲 | アクセス制御、[`06_law-and-dpia.md`](./06_law-and-dpia.md) |
+| 侵入 | 私生活への侵入・意思決定への干渉 | **技術だけでは解けない** |
+
+> 4群目の「侵入」に技術的対策がほとんど効かない点が重要。
+> **技術で解ける範囲の外側がある**ことを示すのが、この枠組みの実務上の価値である。
+
 ---
 
 ## 仮名性 (Pseudonymity) ── 匿名性とは違う中間状態
@@ -178,3 +195,4 @@ Tor の実際の設計は [04 匿名通信](./04_anonymous-comms.md) で、匿�
   (IETF草稿): https://www.ietf.org/archive/id/draft-hansen-privacy-terminology-01.html
 - NIST — Personally Identifiable Information (PII) 定義: https://csrc.nist.rip/glossary/term/personally_identifiable_information
 - GDPR 第4条（定義）: https://gdpr-info.eu/art-4-gdpr/
+- Solove, D. J. (2006). "A Taxonomy of Privacy." University of Pennsylvania Law Review, 154(3), 477-560.
