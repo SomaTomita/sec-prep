@@ -143,9 +143,11 @@ Boolean マスキングが必要になる。1つの方式の中で両者を行�
 
 ## 暗号での出口
 
-これで `04_hardware-security/` の基礎パート（設計・攻撃者能力・信頼の起点・サイドチャネル）が
-一通り揃った。Spectre/Meltdown への**ソフトウェア側**の緩和策
-（Retpoline・KPTI 等）は
+物理計測器を使わず、同じ CPU 上のソフトウェアだけで秘密を取る攻撃と、
+それに抗するはずだった TEE は次のファイルで扱う。
+→ [`../05_microarchitecture-and-tee.md`](../05_microarchitecture-and-tee.md)
+
+Spectre/Meltdown への**ソフトウェア側**の緩和策（Retpoline・KPTI 等）は
 [`../../05_software-security/03_security-patterns.md`](../../05_software-security/03_security-patterns.md)、
 耐量子アルゴリズム自体は
 [`../../02_cryptography/06_advanced-topics-map.md`](../../02_cryptography/06_advanced-topics-map.md) で扱う。

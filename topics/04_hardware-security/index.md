@@ -15,6 +15,7 @@
 | 02 | [ハードウェア攻撃](02_hardware-attacks.md) | 攻撃者能力の分類(非侵襲/半侵襲/侵襲)・攻撃者の作業手順・部品の真正性・フォールト注入(RSA-CRT)・Spectre/Meltdown |
 | 03 | [セキュリティ部品](03_security-building-blocks.md) | Root of Trust・TPM(PCR)・RNG（エントロピー評価と健全性テスト）・PUF |
 | 04 | [サイドチャネル](04_side-channels/README.md) | 概念フォルダ（全4ファイル）— タイミング攻撃・電力解析(SPA/DPA/CPA)・キャッシュ攻撃・マスキングと耐量子実装 |
+| 05 | [マイクロアーキと TEE](05_microarchitecture-and-tee.md) | ISA が規定しないもの・分離の2軸・メモリ安全性を破らない攻撃・TEE と機密計算 |
 
 <details>
 <summary>進捗チェックリスト</summary>
@@ -27,6 +28,7 @@
   - [ ] `02_power-analysis.md` — SPA→DPA→CPA・RSA への SPA・テンプレート/内部衝突
   - [ ] `03_cache-side-channels.md` — Prime+Probe / Flush+Reload・共有メモリという前提
   - [ ] `04_countermeasures.md` — マスキングと probing model・耐量子実装の難しさ
+- [ ] `05_microarchitecture-and-tee.md` — ISA が規定しないもの・分離の2軸・TEE（SGX/TDX/SEV/CCA）と機密計算
 
 </details>
 
@@ -66,6 +68,7 @@ TCB を小さく保つ動機はここにある（→ [`../00_overview/03_glossar
 | 02 攻撃 | `02_cryptography/03_public-key-crypto/01_rsa`（RSA-CRT） |
 | 03 部品 | `02_cryptography/04_hash-and-mac`（PCR拡張）・`04_digital-signatures`（RNG不備事例） |
 | 04 サイドチャネル | `02_cryptography/06_advanced-topics-map`（動機付け）・`03_privacy/03_ppt-cryptographic`（秘密分散）・`02_cryptography/06`（耐量子実装） |
+| 05 マイクロアーキと TEE | `01_prerequisites/03_hardware-digital-logic/03_hdl-and-architecture`（投機実行の原理）・`06_systems-security/05`（マルチテナント分離） |
 
 ### このドメインで「本体」を置かないもの（DRY）
 
