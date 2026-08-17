@@ -14,7 +14,7 @@
 | 02 | [ソフトウェア脆弱性](02_software-vulnerabilities.md) | OWASP Top 10（Web）とスタック/ヒープバッファオーバーフロー（C系）の攻撃・防御 |
 | 03 | [認証・認可・アクセス制御](03_authn-authz-access-control.md) | 認証（NIST 800-63B）、Lampsonのアクセス制御マトリックス、DAC/MAC/RBAC/ABAC |
 | 04 | [インフラセキュリティ](04_infrastructure-security.md) | ファイアウォール、IDS/IPS、ネットワークセグメンテーション、ゼロトラスト |
-| 05 | [分散システムセキュリティ](05_distributed-systems-security.md) | クラウド責任共有モデル、ビザンチン耐性合意、車載CANバスセキュリティ |
+| 05 | [分散システムセキュリティ](05_distributed-systems-security.md) | クラウド責任共有モデル、ビザンチン耐性合意、二重支払いと PoW/PoS、車載CANバスセキュリティ |
 
 <details>
 <summary>進捗チェックリスト</summary>
@@ -23,7 +23,7 @@
 - [x] `02_software-vulnerabilities.md` — OWASP Top 10（Web）とスタック/ヒープバッファオーバーフロー（C系）の攻撃・防御
 - [x] `03_authn-authz-access-control.md` — 認証（NIST 800-63B）、Lampsonのアクセス制御マトリックス、DAC/MAC/RBAC/ABAC
 - [x] `04_infrastructure-security.md` — ファイアウォール、IDS/IPS、ネットワークセグメンテーション、ゼロトラスト
-- [x] `05_distributed-systems-security.md` — クラウド責任共有モデル、ビザンチン耐性合意、車載CANバスセキュリティ
+- [x] `05_distributed-systems-security.md` — クラウド責任共有モデル、ビザンチン耐性合意、二重支払いと PoW/PoS、車載CANバスセキュリティ
 
 </details>
 
@@ -54,6 +54,8 @@
 
 - [ ] ROPチェーンの実装詳細（`../01_prerequisites/02_low-level-c-os/index.md` の深掘りキューと統合）→ `deep/rop-chains/`
 - [ ] PBFTの3フェーズプロトコル（Pre-prepare/Prepare/Commit）の詳細トレース → `deep/pbft-protocol/`
+- [ ] PoS の具体的な安全性議論（スラッシング条件と finality）→ `deep/proof-of-stake/`
+- [ ] 軽量クライアントの検証手法（SPV と sync committee）→ `deep/light-clients/`
 - [ ] 車載セキュリティ標準（AUTOSAR SecOC, CAN-FD の認証拡張）→ `deep/can-security/`
 - [ ] Lampsonマトリックスの実装例（Linux capabilities, POSIX ACL）→ `deep/lampson-matrix-impl/`
 

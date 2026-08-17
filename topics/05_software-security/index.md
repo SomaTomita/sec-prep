@@ -10,18 +10,18 @@
 
 | # | ページ | 内容（1行） |
 |---|---|---|
-| 01 | [Secure SDLC](01_secure-sdlc.md) | Secure SDLC・NIST SSDF・DevSecOps・Equifax事例 |
+| 01 | [Secure SDLC](01_secure-sdlc.md) | セキュリティ問題が成立する3条件・対策と攻撃の共進化・NIST SSDF・DevSecOps・Equifax事例 |
 | 02 | [脅威モデリング](02_threat-modeling.md) | STRIDE・attack tree・データフロー脅威分析・LINDDUN全7カテゴリ |
-| 03 | [セキュリティパターン](03_security-patterns.md) | セキュリティ設計パターン・Spectre/Meltdownのソフトウェア側緩和策 |
+| 03 | [セキュリティパターン](03_security-patterns.md) | セキュリティ機構の4つの柱・設計パターン・Spectre/Meltdownのソフトウェア側緩和策 |
 | 04 | [セキュリティテスト](04_security-testing.md) | SAST/DAST・ファジング・ペネトレーションテスト |
 | 05 | [Secure by Design](05_secure-by-design.md) | Security by Design（Saltzer & Schroeder）・Privacy by Design（Cavoukian） |
 
 <details>
 <summary>進捗チェックリスト</summary>
 
-- [x] `01_secure-sdlc.md` — Secure SDLC・NIST SSDF・DevSecOps・Equifax事例
+- [x] `01_secure-sdlc.md` — セキュリティ問題が成立する3条件・対策と攻撃の共進化・NIST SSDF・DevSecOps・Equifax事例
 - [x] `02_threat-modeling.md` — STRIDE・attack tree・データフロー脅威分析・LINDDUN全7カテゴリ
-- [x] `03_security-patterns.md` — セキュリティ設計パターン・Spectre/Meltdownのソフトウェア側緩和策
+- [x] `03_security-patterns.md` — セキュリティ機構の4つの柱・設計パターン・Spectre/Meltdownのソフトウェア側緩和策
 - [x] `04_security-testing.md` — SAST/DAST・ファジング・ペネトレーションテスト
 - [x] `05_secure-by-design.md` — Security by Design（Saltzer & Schroeder）・Privacy by Design（Cavoukian）
 

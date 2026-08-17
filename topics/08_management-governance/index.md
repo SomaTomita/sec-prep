@@ -10,15 +10,15 @@
 
 | # | ページ | 内容（1行） |
 |---|---|---|
-| 01 | [リスク管理](01_risk-management.md) | リスク管理フレームワーク・NIST CSF 2.0/SP 800-30・ISO 27000シリーズ |
-| 02 | [セキュリティ運用](02_security-operations.md) | 運用管理・IAM・BCP/DR・アウトソーシング/サードパーティリスク |
+| 01 | [リスク管理](01_risk-management.md) | リスク管理フレームワーク・リスク回避の実例（データを集めない設計）・NIST CSF 2.0/SP 800-30・ISO 27000 |
+| 02 | [セキュリティ運用](02_security-operations.md) | 運用管理・IAM・BCP/DR・サードパーティリスク・マルチクラウドの統制分断 |
 | 03 | [認証と経済学](03_certification-economics.md) | Common Criteria・FIPS 140-3・セキュリティ経済学 |
 
 <details>
 <summary>進捗チェックリスト</summary>
 
-- [x] `01_risk-management.md` — リスク管理フレームワーク・NIST CSF 2.0/SP 800-30・ISO 27000シリーズ
-- [x] `02_security-operations.md` — 運用管理・IAM・BCP/DR・アウトソーシング/サードパーティリスク
+- [x] `01_risk-management.md` — リスク管理フレームワーク・リスク回避の実例（データを集めない設計）・NIST CSF 2.0/SP 800-30・ISO 27000
+- [x] `02_security-operations.md` — 運用管理・IAM・BCP/DR・サードパーティリスク・マルチクラウドの統制分断
 - [x] `03_certification-economics.md` — Common Criteria・FIPS 140-3・セキュリティ経済学
 
 </details>

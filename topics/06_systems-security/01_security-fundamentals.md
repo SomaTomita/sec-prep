@@ -102,6 +102,8 @@ CIA は1970年代に整理された枠組みで、語彙としては今も有効
 - 分散システム特有の脅威（クラウド・ブロックチェーン・車載） → [05](./05_distributed-systems-security.md)
 - 物理・サイドチャネル攻撃（別の攻撃者モデル） → [`../04_hardware-security/`](../04_hardware-security/index.md)
 - 体系的な脅威モデリング手法（STRIDE等） → [`../05_software-security/02_threat-modeling.md`](../05_software-security/02_threat-modeling.md)
+- 攻撃者の分類・損害額の実数・国家アクター（マクロな脅威環境） → [`../00_overview/04_threat-landscape.md`](../00_overview/04_threat-landscape.md)
+- 「セキュリティ問題が成立する条件」とステークホルダの対立 → [`../05_software-security/01_secure-sdlc.md`](../05_software-security/01_secure-sdlc.md)
 
 ---
 
