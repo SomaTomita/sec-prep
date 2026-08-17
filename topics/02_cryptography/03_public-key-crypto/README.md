@@ -16,6 +16,7 @@
 | 02 | [02_dh.md](./02_dh.md) | Diffie–Hellman 鍵共有・CDH/DDH・前方秘匿性・Logjam |
 | 03 | [03_ecc.md](./03_ecc.md) | 楕円曲線暗号（群構造・ECDH・NIST P-256 vs Curve25519・Dual_EC_DRBG） |
 | 04 | [04_digital-signatures.md](./04_digital-signatures.md) | デジタル署名（RSA-PSS・ECDSA・nonce再利用事故・EdDSA） |
+| 05 | [05_security-definitions-and-kem.md](./05_security-definitions-and-kem.md) | 安全性の定義（ゲームと優位性・IND-CPA/CCA1/CCA2・EUF-CMA）と KEM/DEM |
 
 ---
 

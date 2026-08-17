@@ -11,7 +11,7 @@
 |---|---|---|
 | 01 | [目標とプリミティブ](01_goals-and-primitives.md) | CIA・認証/否認防止・プリミティブ分類・Kerckhoffsの原理・攻撃者モデル |
 | 02 | [対称鍵暗号](02_symmetric-crypto.md) | ブロック/ストリーム・AES・DES/3DES廃止・モード ECB/CBC/CTR/GCM |
-| 03 | [公開鍵暗号](03_public-key-crypto/README.md) | RSA・Diffie–Hellman・楕円曲線・デジタル署名（概念フォルダ） |
+| 03 | [公開鍵暗号](03_public-key-crypto/README.md) | RSA・Diffie–Hellman・楕円曲線・デジタル署名・安全性の定義とKEM（概念フォルダ） |
 | 04 | [ハッシュとMAC](04_hash-and-mac.md) | ハッシュ性質・Merkle-Damgård/スポンジ・長さ拡張攻撃・HMAC・MD5/SHA-1廃止 |
 | 05 | [プロトコル概観](05_protocols-overview.md) | TLS1.3/IPsec/SSH/Signal/EMV/Blockchain の地図 |
 | 06 | [上級トピック地図](06_advanced-topics-map.md) | 耐量子(NIST 2024標準)・FHE(Gentry)・MPC(Yao/Shamir)・サイドチャネル |
@@ -27,11 +27,12 @@
 
 - [x] `01_goals-and-primitives.md` — CIA・認証/否認防止・プリミティブ分類・Kerckhoffsの原理・攻撃者モデル
 - [x] `02_symmetric-crypto.md` — 対称鍵（ブロック/ストリーム・AES・DES/3DES廃止・モード ECB/CBC/CTR/GCM）
-- [x] `03_public-key-crypto/` — 公開鍵暗号（概念フォルダ、全4ファイル完成）
+- [x] `03_public-key-crypto/` — 公開鍵暗号（概念フォルダ、全5ファイル完成）
   - [x] `01_rsa/` — RSA（鍵生成・暗号化復号・正しさ証明・パディング/攻撃）
   - [x] `02_dh.md` — Diffie–Hellman 鍵共有・CDH/DDH・前方秘匿性・Logjam
   - [x] `03_ecc.md` — 楕円曲線暗号（群構造・ECDH・NIST P-256 vs Curve25519・Dual_EC_DRBG）
   - [x] `04_digital-signatures.md` — デジタル署名（RSA-PSS・ECDSA・nonce再利用事故・EdDSA）
+  - [ ] `05_security-definitions-and-kem.md` — 安全性の定義（ゲームと優位性・IND-CPA/CCA1/CCA2・EUF-CMA）と KEM/DEM
 - [x] `04_hash-and-mac.md` — ハッシュ性質・Merkle-Damgård/スポンジ・長さ拡張攻撃・HMAC・MD5/SHA-1廃止
 - [x] `05_protocols-overview.md` — TLS1.3/IPsec/SSH/Signal/EMV/Blockchain の地図
 - [x] `06_advanced-topics-map.md` — 耐量子(NIST 2024標準)・FHE(Gentry)・MPC(Yao/Shamir)・サイドチャネル（上級地図）

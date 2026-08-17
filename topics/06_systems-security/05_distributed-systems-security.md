@@ -1,6 +1,6 @@
 # 05. 分散システムセキュリティ
 
-> 前: [04 インフラセキュリティ](./04_infrastructure-security.md) ｜ 層: 基礎(Layer 1)
+> 前: [04 インフラセキュリティ](./04_infrastructure-security.md) ｜ 次: [06 無線セキュリティ](./06_wireless-security.md) ｜ 層: 基礎(Layer 1)
 
 Security and Privacy in Contemporary Distributed Software Systems は
 クラウドストレージ・ブロックチェーン・車載システムという3つの具体例を軸に、
@@ -182,11 +182,11 @@ Wired誌上で実演され、Fiat Chrysler社は140万台のリコールを実�
 
 ## 次への接続
 
-これで `06_systems-security/` の基礎パート（脅威の語彙・ソフトウェア脆弱性・認証認可・
-インフラ・分散システム）が一通り揃った。ソフトウェアを設計段階から安全に作る手法
-（Secure SDLC・脅威モデリング・セキュアデザインパターン）は
-[`../05_software-security/`](../05_software-security/index.md)、
-法規制・国際的なサイバーセキュリティ法制は [`../07_legal/`](../07_legal/index.md) へ接続していく。
+次は前提条件が違う媒体——**誰でも受信でき、誰でも送信できる**無線を見る。
+→ [06 無線セキュリティ](./06_wireless-security.md)
+
+設計段階から安全に作る手法は [`../05_software-security/`](../05_software-security/index.md)、
+法制は [`../07_legal/`](../07_legal/index.md) へ接続していく。
 
 ---
 

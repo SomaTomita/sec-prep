@@ -1,6 +1,6 @@
 # 04. デジタル署名（RSA-PSS・ECDSA・EdDSA）
 
-> 前: [03 楕円曲線暗号](./03_ecc.md) ｜ 層: 基礎(Layer 1)
+> 前: [03 楕円曲線暗号](./03_ecc.md) ｜ 次: [05 安全性の定義と KEM](./05_security-definitions-and-kem.md) ｜ 層: 基礎(Layer 1)
 > 親: [README](./README.md)
 
 **この1ページで分かること**
