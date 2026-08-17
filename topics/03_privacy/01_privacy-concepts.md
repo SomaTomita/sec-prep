@@ -99,7 +99,7 @@ Solove (2006) は個人情報のライフサイクルに沿って4群に整理�
 | 群 | 何が起きるか | 技術側の対応 |
 |---|---|---|
 | 情報収集 | 監視・尋問 | データ最小化、[`04_anonymous-comms.md`](./04_anonymous-comms.md) |
-| 情報処理 | 集約・二次利用・排除・（保護の）不備 | [`02_anonymization-and-dp.md`](./02_anonymization-and-dp.md)、[`03_ppt-cryptographic.md`](./03_ppt-cryptographic.md) |
+| 情報処理 | 集約・二次利用・排除・（保護の）不備 | [`02_anonymization-and-dp.md`](./02_anonymization-and-dp.md)、[`03_ppt-cryptographic/README.md`](./03_ppt-cryptographic/README.md) |
 | 情報拡散 | 暴露・開示・恐喝・歪曲 | アクセス制御、[`06_law-and-dpia.md`](./06_law-and-dpia.md) |
 | 侵入 | 私生活への侵入・意思決定への干渉 | **技術だけでは解けない** |
 

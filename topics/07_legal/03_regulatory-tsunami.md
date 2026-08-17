@@ -126,7 +126,7 @@ EU-US Data Privacy Framework → 現行。同種の争点が提起されてい�
 | 政策的対応 | EU はデジタル主権を掲げ、オープンソースや域内インフラへの投資を進めている |
 
 技術的な緩和策として、**事業者に鍵を渡さない**構成（クライアント側暗号化・
-[`../03_privacy/03_ppt-cryptographic.md`](../03_privacy/03_ppt-cryptographic.md) の秘密計算）があるが、
+[`../03_privacy/03_ppt-cryptographic/README.md`](../03_privacy/03_ppt-cryptographic/README.md) の秘密計算）があるが、
 性能と機能の制約が伴う。クラウドの責任共有モデル自体は
 [`../06_systems-security/05_distributed-systems-security.md`](../06_systems-security/05_distributed-systems-security.md) が本体。
 

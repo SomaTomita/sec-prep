@@ -41,7 +41,7 @@ d 次マスキング（シェア d+1 個）は、d 個までの probe に対し�
 
 ## 秘密分散と同じ道具
 
-**[`../../03_privacy/03_ppt-cryptographic.md`](../../03_privacy/03_ppt-cryptographic.md)
+**[`../../03_privacy/03_ppt-cryptographic/README.md`](../../03_privacy/03_ppt-cryptographic/README.md)
 で見た Shamir の秘密分散と発想は同じ**——秘密を複数の断片に分け、
 断片単体からは元の値が分からないようにする。
 

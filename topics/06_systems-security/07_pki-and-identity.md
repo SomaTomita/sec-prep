@@ -144,7 +144,7 @@ EU は eIDAS 2.0（Regulation (EU) 2024/1183）により、
 
 ```
 技術的には: 「18歳以上である」ことだけを証明し、生年月日を開示しない構成が可能
-           （選択的開示。→ ../03_privacy/03_ppt-cryptographic.md）
+           （選択的開示。→ ../03_privacy/03_ppt-cryptographic/README.md）
 制度的には: 「1台の端末にしか入れられない」等の要求が設計を制約する
 ```
 
@@ -185,7 +185,7 @@ EU は eIDAS 2.0（Regulation (EU) 2024/1183）により、
 
 これで `06_systems-security/` の基礎パートが揃った。証明書が支える TLS などの
 プロトコル本体は [`../02_cryptography/05_protocols-overview.md`](../02_cryptography/05_protocols-overview.md)、
-選択的開示の暗号技術は [`../03_privacy/03_ppt-cryptographic.md`](../03_privacy/03_ppt-cryptographic.md)、
+選択的開示の暗号技術は [`../03_privacy/03_ppt-cryptographic/README.md`](../03_privacy/03_ppt-cryptographic/README.md)、
 規制面は [`../07_legal/03_regulatory-tsunami.md`](../07_legal/03_regulatory-tsunami.md) へ接続する。
 
 ---

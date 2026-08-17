@@ -1,6 +1,6 @@
 # 04. 匿名通信（Mixネットワーク・オニオンルーティング・Tor）
 
-> 前: [03 暗号的PET](./03_ppt-cryptographic.md) ｜ 次: [05 Web上のプライバシー](./05_web-privacy-tracking.md) ｜ 層: 基礎(Layer 1)
+> 前: [03 暗号的PET](./03_ppt-cryptographic/README.md) ｜ 次: [05 Web上のプライバシー](./05_web-privacy-tracking.md) ｜ 層: 基礎(Layer 1)
 
 これまでは**データの中身**や**問い合わせ内容**を隠す技術だった。ここでは
 「誰が誰と通信しているか」という**通信路のメタデータ**そのものを隠す。
@@ -149,7 +149,7 @@ ECDSAのnonce再利用（[`../02_cryptography/03_public-key-crypto/04_digital-si
 2. **端末上の照合は「暗号を破らない」が、暗号が守ろうとしたものを守らない** —
    通信路が暗号化されていても、端末側で内容を照合すれば中身は見られる
 3. **年齢確認は身元確認の基盤を要求する** — 匿名でサービスを使う選択肢が消える。
-   属性だけを証明する技術（[`03_ppt-cryptographic.md`](./03_ppt-cryptographic.md)）で
+   属性だけを証明する技術（[`03_ppt-cryptographic/README.md`](./03_ppt-cryptographic/README.md)）で
    原理的には回避できるが、制度がそれを要求するとは限らない
 
 3番目は、能力の高い AI モデルへのアクセス統制が抱えるジレンマと同じ構造である

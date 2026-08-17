@@ -121,7 +121,7 @@ DPIAを怠ること自体が（実際に情報漏洩が起きていなくても�
 |---|---|---|
 | [01](./01_privacy-concepts.md) | 匿名性・非連結性・PII | 「個人データ」該当性の判断基準 |
 | [02](./02_anonymization-and-dp.md) | k-匿名化・差分プライバシー | データ最小化原則の技術的実現 |
-| [03](./03_ppt-cryptographic.md) | PIR・MPC・FHE | 完全性・機密性原則の技術的措置 |
+| [03](./03_ppt-cryptographic/README.md) | PIR・MPC・FHE | 完全性・機密性原則の技術的措置 |
 | [04](./04_anonymous-comms.md) | Tor・Mixネットワーク | 通信の秘匿という技術的保護措置 |
 | [05](./05_web-privacy-tracking.md) | Cookie対策・DNTの失敗 | 「技術だけでは不十分」という教訓、同意管理の必要性 |
 

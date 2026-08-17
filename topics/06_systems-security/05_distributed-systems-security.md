@@ -80,7 +80,7 @@ Bitcoinのハッシュチェーン・ECDSA署名・Merkle木の詳細は上記�
 
 > **よくある誤解**: ブロックチェーンは暗号化を使わない。使うのは**ハッシュと署名**だけで、
 > 台帳の中身は公開されている。「暗号通貨」という名前に反して機密性は提供しない
-> （プライバシー保護型の派生は [`../03_privacy/03_ppt-cryptographic.md`](../03_privacy/03_ppt-cryptographic.md)）。
+> （プライバシー保護型の派生は [`../03_privacy/03_ppt-cryptographic/README.md`](../03_privacy/03_ppt-cryptographic/README.md)）。
 
 ### 投票権を配れないという制約
 

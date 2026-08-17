@@ -69,7 +69,7 @@ flowchart LR
 - **CMOS の消費電力式・メモリ階層のレイテンシ** →
   [`../../01_prerequisites/03_hardware-digital-logic/`](../../01_prerequisites/03_hardware-digital-logic/index.md)
 - **秘密分散・MPC の一般論** →
-  [`../../03_privacy/03_ppt-cryptographic.md`](../../03_privacy/03_ppt-cryptographic.md)
+  [`../../03_privacy/03_ppt-cryptographic/README.md`](../../03_privacy/03_ppt-cryptographic/README.md)
 - **Spectre/Meltdown へのソフトウェア側の緩和策** →
   [`../../05_software-security/03_security-patterns.md`](../../05_software-security/03_security-patterns.md)
 
