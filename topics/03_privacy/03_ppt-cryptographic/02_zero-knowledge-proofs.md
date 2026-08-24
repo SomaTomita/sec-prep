@@ -44,7 +44,7 @@ knowledge soundness（special soundness とも）:
 **秘密鍵は誰かが持っていれば存在するので、それでは本人確認にならない。**
 したがって認証用途では knowledge soundness が必要になる
 （*proof of knowledge* と呼ばれる系統。認証プロトコルの一般論は
-[`../../02_cryptography/05_protocols-overview.md`](../../02_cryptography/05_protocols-overview.md)）。
+[`../../02_cryptography/05_protocols/README.md`](../../02_cryptography/05_protocols/README.md)）。
 
 ---
 

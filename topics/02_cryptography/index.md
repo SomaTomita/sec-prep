@@ -13,7 +13,7 @@
 | 02 | [対称鍵暗号](02_symmetric-crypto.md) | ブロック/ストリーム・AES・DES/3DES廃止・モード ECB/CBC/CTR/GCM |
 | 03 | [公開鍵暗号](03_public-key-crypto/README.md) | RSA・Diffie–Hellman・楕円曲線・デジタル署名・安全性の定義とKEM（概念フォルダ） |
 | 04 | [ハッシュとMAC](04_hash-and-mac.md) | ハッシュ性質・Merkle-Damgård/スポンジ・長さ拡張攻撃・HMAC・MD5/SHA-1廃止 |
-| 05 | [プロトコル概観](05_protocols-overview.md) | TLS1.3/IPsec/SSH/Signal/EMV/Blockchain の地図 |
+| 05 | [プロトコル](05_protocols/README.md) | 概念フォルダ（全4ファイル）— エンティティ認証・鍵管理・TLS/IPsec/SSH・Signal/EMV/Blockchain |
 | 06 | [上級トピック地図](06_advanced-topics-map.md) | 耐量子(NIST 2024標準)・FHE(Gentry)・MPC(Yao/Shamir)・サイドチャネル |
 
 ## 深掘り（Layer 2）
@@ -34,7 +34,11 @@
   - [x] `04_digital-signatures.md` — デジタル署名（RSA-PSS・ECDSA・nonce再利用事故・EdDSA）
   - [ ] `05_security-definitions-and-kem.md` — 安全性の定義（ゲームと優位性・IND-CPA/CCA1/CCA2・EUF-CMA）と KEM/DEM
 - [x] `04_hash-and-mac.md` — ハッシュ性質・Merkle-Damgård/スポンジ・長さ拡張攻撃・HMAC・MD5/SHA-1廃止
-- [x] `05_protocols-overview.md` — TLS1.3/IPsec/SSH/Signal/EMV/Blockchain の地図
+- [x] `05_protocols/` — プロトコル（概念フォルダ、全4ファイル完成）
+  - [ ] `01_entity-authentication.md` — liveness・パスワード保存・オフライン/オンライン攻撃・リレー攻撃・FIDO
+  - [ ] `02_key-management.md` — 鍵配送の3方式・KDC・鍵階層・Kerberos・TOFU・前方秘匿性の経緯
+  - [ ] `03_tls-ipsec-ssh.md` — TLS 1.3 の 1-RTT・層の違い・CA と TOFU の対比
+  - [ ] `04_signal-emv-blockchain.md` — X3DH と Double Ratchet・EMV のオフライン制約・分散台帳
 - [x] `06_advanced-topics-map.md` — 耐量子(NIST 2024標準)・FHE(Gentry)・MPC(Yao/Shamir)・サイドチャネル（上級地図）
 
 </details>

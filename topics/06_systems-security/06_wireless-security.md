@@ -69,7 +69,7 @@ flowchart LR
 光速が上限なので、中継すれば必ず遅延が増える。この性質を使う。
 
 > 認証プロトコル側の一般論は
-> [`../02_cryptography/05_protocols-overview.md`](../02_cryptography/05_protocols-overview.md) を参照。
+> [`../02_cryptography/05_protocols/README.md`](../02_cryptography/05_protocols/README.md) を参照。
 > ここでは無線での実装面に絞った。
 
 ---
@@ -91,7 +91,7 @@ Wi-Fi には2つの運用モードがあり、**マスター鍵の作り方だ�
 
 **なぜ階層にするのか**: マスター鍵を直接暗号化に使わないことで、
 セッションごとに異なる鍵を使える。鍵階層の一般論は
-[`../02_cryptography/05_protocols-overview.md`](../02_cryptography/05_protocols-overview.md) を参照。
+[`../02_cryptography/05_protocols/README.md`](../02_cryptography/05_protocols/README.md) を参照。
 
 ---
 

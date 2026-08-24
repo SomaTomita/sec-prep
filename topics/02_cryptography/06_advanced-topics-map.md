@@ -1,6 +1,6 @@
 # 06. 上級トピックの地図（耐量子・FHE・MPC・サイドチャネル）
 
-> 対応科目: Applied Cryptography and Cryptanalysis ｜ 前: [05 プロトコルの地図](./05_protocols-overview.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Applied Cryptography and Cryptanalysis ｜ 前: [05 プロトコルの地図](./05_protocols/README.md) ｜ 層: 基礎(Layer 1)
 
 **この1ページで分かること**
 

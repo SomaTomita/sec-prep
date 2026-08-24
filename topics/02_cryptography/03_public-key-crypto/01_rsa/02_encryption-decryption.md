@@ -99,7 +99,7 @@ sequenceDiagram
 ```
 
 実際の TLS では RSA 直接より **ECDH 鍵共有 + RSA/ECDSA 署名** が主流（前方秘匿性のため）。
-プロトコル全体の地図は [`../../05_protocols-overview.md`](../../05_protocols-overview.md)。
+プロトコル全体の地図は [`../../05_protocols/README.md`](../../05_protocols/README.md)。
 
 ---
 

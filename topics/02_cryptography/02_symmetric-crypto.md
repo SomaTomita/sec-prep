@@ -145,7 +145,7 @@ AES-GCM・ChaCha20-Poly1305 が標準の暗号スイートになっている。
 2. 本体: 共有できた共通鍵で AES-GCM / ChaCha20-Poly1305 を使い、実データを高速に暗号化
 ```
 
-TLS 1.3 のプロトコル全体像は [`05_protocols-overview.md`](./05_protocols-overview.md) で扱う。
+TLS 1.3 のプロトコル全体像は [`05_protocols/README.md`](./05_protocols/README.md) で扱う。
 
 ---
 

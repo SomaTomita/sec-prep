@@ -61,7 +61,7 @@ Practical Byzantine Fault Tolerance:
 ```
 
 これは
-[`../02_cryptography/05_protocols-overview.md`](../02_cryptography/05_protocols-overview.md)
+[`../02_cryptography/05_protocols/README.md`](../02_cryptography/05_protocols/README.md)
 で見たBitcoinのProof of Work（計算資源の消費で改ざんコストを上げる）とは異なる合意方式——
 PoWは「誰でも参加できる（permissionless）」代わりに確率的な合意しか保証しないのに対し、
 PBFT系は「参加者が既知（permissioned）」な代わりに決定的かつ即座の合意を保証する。

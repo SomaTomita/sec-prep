@@ -52,7 +52,7 @@
 | 02 ソフトウェア脆弱性 | `../01_prerequisites/02_low-level-c-os/01_c-and-memory.md`（メモリレイアウトの前提） |
 | 03 認証・認可・アクセス制御 | `../01_prerequisites/02_low-level-c-os/02_process-and-os.md`（Lampsonマトリックスの予告） |
 | 04 インフラセキュリティ | `../01_prerequisites/04_networks-probability/`（TCP/IPの基礎） |
-| 05 分散システムセキュリティ | `../02_cryptography/05_protocols-overview.md`（Bitcoinの暗号プリミティブ） |
+| 05 分散システムセキュリティ | `../02_cryptography/05_protocols/README.md`（Bitcoinの暗号プリミティブ） |
 | 06 無線セキュリティ | `../04_hardware-security/03_security-building-blocks.md`（PUF と同原理を攻撃側から使う）・`../02_cryptography/02_symmetric-crypto.md`（nonce 再利用） |
 | 07 PKI とデジタルID | `../02_cryptography/03_public-key-crypto/04_digital-signatures.md`（署名の仕組み）・`../07_legal/03_regulatory-tsunami.md`（eIDAS） |
 
