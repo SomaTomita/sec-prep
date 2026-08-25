@@ -64,6 +64,11 @@ SHA-3 は SHA-2 の**後継**ではなく、構成方式が全く異なる**設�
 （NIST が「万一 Merkle–Damgård に構造的な弱点が見つかっても保険になる」という
 方針でコンペティションを実施した結果）。
 
+> Merkle–Damgård の圧縮関数をブロック暗号から作る方法（Davies–Meyer 等）は
+> [`02_symmetric-crypto/05_hashing-from-block-ciphers.md`](./02_symmetric-crypto/05_hashing-from-block-ciphers.md)、
+> スポンジ構成の内部（duplex・Keccak の3D状態）は
+> [`02_symmetric-crypto/06_permutation-based-and-challenges.md`](./02_symmetric-crypto/06_permutation-based-and-challenges.md) が本体。
+
 ---
 
 ## 長さ拡張攻撃（Length Extension Attack）
@@ -99,13 +104,13 @@ HMAC(k, m) = H( (k ⊕ opad) ‖ H( (k ⊕ ipad) ‖ m ) )
 ## MAC のもう一つの作り方：普遍ハッシュ族ベース
 
 HMAC（ハッシュ関数ベース）以外に、**普遍ハッシュ族**を使う高速な MAC もある。
-[`02_symmetric-crypto.md`](./02_symmetric-crypto.md) で既出の
+[`02_symmetric-crypto/README.md`](./02_symmetric-crypto/README.md) で既出の
 
 - **GMAC**（GCM モードの認証部分）
 - **Poly1305**（ChaCha20-Poly1305 の認証部分）
 
 はどちらもこの系統で、ブロック暗号やストリーム暗号と組み合わせた AEAD の中で使われる
-（詳細・使い方は [`02_symmetric-crypto.md`](./02_symmetric-crypto.md) 参照。ここでは重複させない）。
+（詳細・使い方は [`02_symmetric-crypto/README.md`](./02_symmetric-crypto/README.md) 参照。ここでは重複させない）。
 
 ---
 

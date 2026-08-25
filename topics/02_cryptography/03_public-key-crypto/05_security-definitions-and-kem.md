@@ -95,7 +95,7 @@ Dec(sk, c) → m         秘密鍵で復号
 これが「CCA2 安全でなければ実用に耐えない」と言われる理由。
 既存の攻撃事例は
 [`01_rsa/04_padding-and-attacks.md`](./01_rsa/04_padding-and-attacks.md) と
-[`../02_symmetric-crypto.md`](../02_symmetric-crypto.md) を参照。
+[`../02_symmetric-crypto/README.md`](../02_symmetric-crypto/README.md) を参照。
 
 ---
 
@@ -119,7 +119,7 @@ DEM (Data Encapsulation Mechanism):
 送りたい内容を公開鍵演算に通す必要がなくなるため、パディングにまつわる
 微妙な問題も避けやすくなる。
 
-これは [`../02_symmetric-crypto.md`](../02_symmetric-crypto.md) の
+これは [`../02_symmetric-crypto/README.md`](../02_symmetric-crypto/README.md) の
 **ハイブリッド暗号**を、公開鍵側の視点から見たものである（同じ仕組みの別の断面なので、
 利用側の説明はそちらを参照）。
 

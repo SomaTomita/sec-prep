@@ -1,6 +1,6 @@
 # 01. セキュリティ目標とプリミティブの分類
 
-> 対応科目: Cryptography and Network Security, Cryptographic Protocols ｜ 次: [02 対称鍵暗号](./02_symmetric-crypto.md) ｜ 層: 基礎(Layer 1)
+> 対応科目: Cryptography and Network Security, Cryptographic Protocols ｜ 次: [02 対称鍵暗号](./02_symmetric-crypto/README.md) ｜ 層: 基礎(Layer 1)
 
 **この1ページで分かること**
 
@@ -19,7 +19,7 @@
 
 | 目標 | 暗号で達成できるか | 使うプリミティブ |
 |---|---|---|
-| 機密性 (Confidentiality) | ○ | 対称鍵暗号（[02](./02_symmetric-crypto.md)）・公開鍵暗号（[03](./03_public-key-crypto/README.md)） |
+| 機密性 (Confidentiality) | ○ | 対称鍵暗号（[02](./02_symmetric-crypto/README.md)）・公開鍵暗号（[03](./03_public-key-crypto/README.md)） |
 | 完全性 (Integrity) | ○ | ハッシュ関数・MAC（[`04_hash-and-mac.md`](./04_hash-and-mac.md)） |
 | 可用性 (Availability) | **✕ 暗号の範囲外** | 冗長化・DoS対策など（システムセキュリティの領域） |
 
@@ -77,7 +77,7 @@ CIA だけでは実務上の要求を言い切れない。特に次の2つは暗
 
 対称鍵プリミティブ (symmetric-key):
   ブロック暗号（AES）、ストリーム暗号（ChaCha20）、MAC（HMAC）
-  → 送受信者が同じ鍵を共有。高速。[02](./02_symmetric-crypto.md) で詳述
+  → 送受信者が同じ鍵を共有。高速。[02](./02_symmetric-crypto/README.md) で詳述
 
 公開鍵プリミティブ (public-key / asymmetric):
   暗号化（RSA）、署名（RSA-PSS・ECDSA）、鍵合意（DH・ECDH）
@@ -85,7 +85,7 @@ CIA だけでは実務上の要求を言い切れない。特に次の2つは暗
 ```
 
 対称鍵と公開鍵はどちらか一方で完結するのではなく、実務では**組み合わせて使う**
-（ハイブリッド暗号。詳細は [`02_symmetric-crypto.md`](./02_symmetric-crypto.md) の「暗号での出口」節）。
+（ハイブリッド暗号。詳細は [`02_symmetric-crypto/README.md`](./02_symmetric-crypto/README.md) の「暗号での出口」節）。
 
 ---
 
@@ -156,7 +156,7 @@ Claude Shannon はこれを **"the enemy knows the system"**（敵はシステ�
 ## 次への接続
 
 目標とプリミティブの見取り図ができた。まず高速でよく使う**対称鍵暗号**から見ていく。
-→ [02 対称鍵暗号](./02_symmetric-crypto.md)
+→ [02 対称鍵暗号](./02_symmetric-crypto/README.md)
 
 ---
 

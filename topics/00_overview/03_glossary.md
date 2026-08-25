@@ -49,7 +49,7 @@
 
 | 用語 | 一言定義 | 本体 |
 |---|---|---|
-| 平文 / 暗号文 (plaintext / ciphertext) | 暗号化前後のデータ | [`../02_cryptography/02_symmetric-crypto.md`](../02_cryptography/02_symmetric-crypto.md) |
+| 平文 / 暗号文 (plaintext / ciphertext) | 暗号化前後のデータ | [`../02_cryptography/02_symmetric-crypto/README.md`](../02_cryptography/02_symmetric-crypto/README.md) |
 | 鍵 (key)、対称鍵 / 公開鍵 (symmetric / public-key) | 暗号化・復号に使う秘密情報 | [`../02_cryptography/01_goals-and-primitives.md`](../02_cryptography/01_goals-and-primitives.md) |
 | Kerckhoffsの原理 | 鍵以外（アルゴリズム）が公開されても安全であるべき | [`../02_cryptography/01_goals-and-primitives.md`](../02_cryptography/01_goals-and-primitives.md) |
 | crypto agility（暗号アジリティ） | 使う暗号方式を後から差し替えられる性質。方式ごとに鍵長・出力長・前提が違うため、設計時に想定していない差し替えは実際には難しい | [`../02_cryptography/06_advanced-topics-map.md`](../02_cryptography/06_advanced-topics-map.md) |

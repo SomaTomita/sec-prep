@@ -33,8 +33,10 @@ Coursera の [Cryptography I](https://www.coursera.org/learn/crypto)(Dan Boneh �
 |-----------|----------------|
 | 01_introduction | [01_goals-and-primitives](../../topics/02_cryptography/01_goals-and-primitives.md) |
 | 02_discrete-probability | [math-for-crypto](../../topics/01_prerequisites/01_math-for-crypto/index.md) |
-| 03_stream-ciphers / 04_block-ciphers / 05_block-cipher-modes | [02_symmetric-crypto](../../topics/02_cryptography/02_symmetric-crypto.md) |
-| 06_message-integrity / 07_collision-resistance | [04_hash-and-mac](../../topics/02_cryptography/04_hash-and-mac.md) |
+| 03_stream-ciphers | [02_symmetric-crypto/01_stream-ciphers-and-lfsr](../../topics/02_cryptography/02_symmetric-crypto/01_stream-ciphers-and-lfsr.md) |
+| 04_block-ciphers | [02_symmetric-crypto/02_block-cipher-architecture](../../topics/02_cryptography/02_symmetric-crypto/02_block-cipher-architecture.md)・[03_aes-internals](../../topics/02_cryptography/02_symmetric-crypto/03_aes-internals.md) |
+| 05_block-cipher-modes | [02_symmetric-crypto/04_modes-and-aead](../../topics/02_cryptography/02_symmetric-crypto/04_modes-and-aead.md) |
+| 06_message-integrity / 07_collision-resistance | [04_hash-and-mac](../../topics/02_cryptography/04_hash-and-mac.md)・[02_symmetric-crypto/05_hashing-from-block-ciphers](../../topics/02_cryptography/02_symmetric-crypto/05_hashing-from-block-ciphers.md) |
 
 ### 進捗チェックリスト(概念ファイル28本)
 

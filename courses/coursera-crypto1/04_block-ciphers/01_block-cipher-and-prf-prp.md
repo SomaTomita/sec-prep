@@ -107,5 +107,5 @@ PRF は評価だけできればよく逆写像を要求しない（`X→Y` の�
 
 ## 関連リンク
 
-- [../../../topics/02_cryptography/02_symmetric-crypto.md](../../../topics/02_cryptography/02_symmetric-crypto.md) — 対称暗号の全体像（ストリーム/ブロック）
+- [../../../topics/02_cryptography/02_symmetric-crypto/README.md](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — 対称暗号の全体像（ストリーム/ブロック）
 - [02. DES](./02_des.md) — 最初の実用 PRP を Feistel 構造で作る

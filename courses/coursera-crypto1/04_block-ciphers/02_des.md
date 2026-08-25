@@ -111,5 +111,5 @@ Luby–Rackoff 定理より、独立な 3 鍵での **3 ラウンド**。2 ラ�
 
 ## 関連リンク
 
-- [../../../topics/02_cryptography/02_symmetric-crypto.md](../../../topics/02_cryptography/02_symmetric-crypto.md) — 対称暗号の位置づけ
+- [../../../topics/02_cryptography/02_symmetric-crypto/README.md](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — 対称暗号の位置づけ
 - [03. 総当たり攻撃と 3DES](./03_exhaustive-search-and-3des.md) — 56 bit 鍵はなぜ死んだか、3DES での延命

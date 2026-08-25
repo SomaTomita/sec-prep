@@ -105,5 +105,5 @@ CBC の `q²·L²` に対し CTR は `q²·L`(`L` の次数が 1 つ低い)。AE
 
 ## 関連リンク
 
-- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto.md) — CTR/CBC が対称鍵暗号の実装のどこで使われるか
+- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — CTR/CBC が対称鍵暗号の実装のどこで使われるか
 - [06. メッセージ完全性](../06_message-integrity/README.md) — 改竄を検知する MAC へ

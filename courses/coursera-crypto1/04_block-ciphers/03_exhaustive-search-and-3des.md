@@ -112,4 +112,4 @@ E'((k1,k2,k3), m) = k1 ⊕ E(k2, m ⊕ k3)      鍵 = 64 + 56 + 64 = 184 bit
 
 - [02. DES](./02_des.md) — 攻撃対象である DES の内部構造
 - [04. 高度な攻撃](./04_advanced-attacks.md) — 総当たり以外（線形解読・サイドチャネル・量子）
-- [../../../topics/02_cryptography/02_symmetric-crypto.md](../../../topics/02_cryptography/02_symmetric-crypto.md) — 対称暗号の鍵長と安全性
+- [../../../topics/02_cryptography/02_symmetric-crypto/README.md](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — 対称暗号の鍵長と安全性

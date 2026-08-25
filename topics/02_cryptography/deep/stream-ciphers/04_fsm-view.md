@@ -131,7 +131,7 @@ C ⊕ Z = (P ⊕ Z) ⊕ Z
 3. 同じ `Z` が2回使われ、`C₁ ⊕ C₂ = P₁ ⊕ P₂` となって鍵が消える。
    [01](./01_vernam-and-otp.md) の **two-time pad** とまったく同じ失敗。
    CTR / GCM モードでの nonce 再利用が破局的なのも同じ理由
-   （[`../../02_symmetric-crypto.md`](../../02_symmetric-crypto.md) を参照）。
+   （[`../../02_symmetric-crypto/README.md`](../../02_symmetric-crypto/README.md) を参照）。
 
 </details>
 
@@ -141,5 +141,5 @@ C ⊕ Z = (P ⊕ Z) ⊕ Z
 演習2で出た **「Z が分かれば改ざんも自由」** という穴の塞ぎ方 —— 認証（MAC / AEAD）。
 
 - 認証の本体: [`../../04_hash-and-mac.md`](../../04_hash-and-mac.md)
-- ブロック暗号を同じ枠組みで使う CTR / GCM モード: [`../../02_symmetric-crypto.md`](../../02_symmetric-crypto.md)
+- ブロック暗号を同じ枠組みで使う CTR / GCM モード: [`../../02_symmetric-crypto/README.md`](../../02_symmetric-crypto/README.md)
 - 完全秘匿の証明: [`../../../01_prerequisites/01_math-for-crypto/05_info-theory/03_perfect-secrecy-otp.md`](../../../01_prerequisites/01_math-for-crypto/05_info-theory/03_perfect-secrecy-otp.md)

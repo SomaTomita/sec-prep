@@ -40,7 +40,7 @@
 | 「証明者と検証者が近い」という暗黙の仮定 | [01](./01_entity-authentication.md)（リレー攻撃） |
 | 「再送は起きない」という仮定 | [`../../06_systems-security/06_wireless-security.md`](../../06_systems-security/06_wireless-security.md)（KRACK） |
 | 「端末は正直である」という仮定 | [01](./01_entity-authentication.md)（PIN バイパス） |
-| 「鍵は1回しか使わない」という仮定 | [`../02_symmetric-crypto.md`](../02_symmetric-crypto.md)（nonce 再利用） |
+| 「鍵は1回しか使わない」という仮定 | [`../02_symmetric-crypto/README.md`](../02_symmetric-crypto/README.md)（nonce 再利用） |
 
 ---
 

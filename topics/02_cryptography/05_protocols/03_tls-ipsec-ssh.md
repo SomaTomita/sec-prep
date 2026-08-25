@@ -40,7 +40,7 @@ sequenceDiagram
 「鍵交換」と「認証」を同じ長期鍵が兼ねていたため前方秘匿性がなかった。
 分離することで、長期鍵が漏れても過去のセッションは守られる。
 
-これは [`../02_symmetric-crypto.md`](../02_symmetric-crypto.md) の**ハイブリッド暗号**の
+これは [`../02_symmetric-crypto/README.md`](../02_symmetric-crypto/README.md) の**ハイブリッド暗号**の
 パターンそのものであり、[`../03_public-key-crypto/02_dh.md`](../03_public-key-crypto/02_dh.md) が
 予告した「TLS 1.3 は DHE/ECDHE のみにした」という内容が実際に標準化されたものである。
 

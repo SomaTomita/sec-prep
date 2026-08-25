@@ -117,5 +117,5 @@ nonce はしばしば予測可能(カウンタ等)なので、予測可能 IV �
 
 ## 関連リンク
 
-- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto.md) — CBC が対称鍵暗号の実装のどこで使われるか
+- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — CBC が対称鍵暗号の実装のどこで使われるか
 - [カウンタモード](./04_counter-mode.md) — 並列化でき境界も緩い、CBC の代替

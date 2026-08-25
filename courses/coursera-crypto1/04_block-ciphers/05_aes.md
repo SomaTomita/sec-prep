@@ -99,4 +99,4 @@ graph LR
 
 - [02. DES](./02_des.md) — Feistel 構造との対比
 - [04. 高度な攻撃](./04_advanced-attacks.md) — サイドチャネル・量子への耐性
-- [../../../topics/02_cryptography/02_symmetric-crypto.md](../../../topics/02_cryptography/02_symmetric-crypto.md) — 実務で使う対称暗号
+- [../../../topics/02_cryptography/02_symmetric-crypto/README.md](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — 実務で使う対称暗号

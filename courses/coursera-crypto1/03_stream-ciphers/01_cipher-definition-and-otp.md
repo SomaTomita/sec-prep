@@ -124,5 +124,5 @@ Pr[ E(k, m) = c ] = (条件を満たす鍵の数) / |K| = 1 / 2^n
 
 ## 関連リンク
 
-- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto.md) — OTP・ストリーム暗号が対称鍵暗号のどこに位置するか
+- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — OTP・ストリーム暗号が対称鍵暗号のどこに位置するか
 - [PRG とストリーム暗号](./02_prg-and-stream-ciphers.md) — 短い鍵で OTP を実用化する次の一手

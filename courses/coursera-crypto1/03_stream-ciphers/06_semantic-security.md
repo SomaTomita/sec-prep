@@ -120,4 +120,4 @@ Adv_ss[A] ≤ Adv_PRG + 0 + Adv_PRG = 2·Adv_PRG  → negligible
 
 - [PRG の安全性の定義](./05_prg-security-definitions.md) — 証明で使う `Adv_PRG` と識別不可能性
 - [04. ブロック暗号](../04_block-ciphers/README.md) — 次の柱。多数メッセージへの安全性へ
-- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto.md) — 意味論的安全性が対称暗号全体でどう位置づくか
+- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — 意味論的安全性が対称暗号全体でどう位置づくか

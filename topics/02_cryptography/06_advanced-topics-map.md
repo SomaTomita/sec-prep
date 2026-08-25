@@ -84,6 +84,10 @@ SLH-DSA は ML-DSA が万一破られた場合の**保険**として選ばれた
 FHE が「1人が暗号化データを計算」なのに対し、MPC は「**複数人が協調して**計算」する点が違う。
 医療機関同士が患者データを共有せず統計を取る、といった用途で実用化が進む。
 
+> FHE/MPC の内部で対称鍵暗号を評価すると乗算コストが支配的になるため、
+> 乗法深度を最小化した専用暗号の研究が進む。
+> [`02_symmetric-crypto/06_permutation-based-and-challenges.md`](./02_symmetric-crypto/06_permutation-based-and-challenges.md) を参照。
+
 ---
 
 ## サイドチャネル攻撃

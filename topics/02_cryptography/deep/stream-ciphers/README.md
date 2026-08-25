@@ -1,8 +1,8 @@
 # 深掘り: ストリーム暗号（Vernam → PRG → FSM）
 
-> 親: [02 対称鍵暗号](../../02_symmetric-crypto.md) ｜ 層: 深掘り(Layer 2)
+> 親: [02 対称鍵暗号](../../02_symmetric-crypto/README.md) ｜ 層: 深掘り(Layer 2)
 
-`02_symmetric-crypto.md` では「ストリーム暗号＝鍵から擬似乱数列を作って XOR」と1行で
+`02_symmetric-crypto/README.md` では「ストリーム暗号＝鍵から擬似乱数列を作って XOR」と1行で
 片づけた部分を、**手を動かして目で見る**ために起こした深掘りフォルダ。
 
 扱うのは次の1本の筋道だけ。
@@ -53,7 +53,7 @@ JavaScript が無効な環境では説明文と図だけが残るので、読み
 
 - **完全秘匿の証明**（なぜ OTP が情報理論的に安全なのか）
   → [`../../../01_prerequisites/01_math-for-crypto/05_info-theory/03_perfect-secrecy-otp.md`](../../../01_prerequisites/01_math-for-crypto/05_info-theory/03_perfect-secrecy-otp.md)
-- **AES・ブロック暗号・モード（CTR/GCM）** → [`../../02_symmetric-crypto.md`](../../02_symmetric-crypto.md)
+- **AES・ブロック暗号・モード（CTR/GCM）** → [`../../02_symmetric-crypto/README.md`](../../02_symmetric-crypto/README.md)
 - **講義に沿った理論的な定義（PRG の安全性・意味論的安全性）**
   → `courses/coursera-crypto1/03_stream-ciphers/`（リポジトリ内のみ）
 

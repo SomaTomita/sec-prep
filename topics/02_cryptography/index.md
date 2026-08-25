@@ -10,7 +10,7 @@
 | # | ページ | 内容（1行） |
 |---|---|---|
 | 01 | [目標とプリミティブ](01_goals-and-primitives.md) | CIA・認証/否認防止・プリミティブ分類・Kerckhoffsの原理・攻撃者モデル |
-| 02 | [対称鍵暗号](02_symmetric-crypto.md) | ブロック/ストリーム・AES・DES/3DES廃止・モード ECB/CBC/CTR/GCM |
+| 02 | [対称鍵暗号](02_symmetric-crypto/README.md) | 概念フォルダ（全6ファイル）— ストリーム暗号/LFSR・Feistel/SPN・AES内部・モードとAEAD・ハッシュへの応用・置換ベース暗号 |
 | 03 | [公開鍵暗号](03_public-key-crypto/README.md) | RSA・Diffie–Hellman・楕円曲線・デジタル署名・安全性の定義とKEM（概念フォルダ） |
 | 04 | [ハッシュとMAC](04_hash-and-mac.md) | ハッシュ性質・Merkle-Damgård/スポンジ・長さ拡張攻撃・HMAC・MD5/SHA-1廃止 |
 | 05 | [プロトコル](05_protocols/README.md) | 概念フォルダ（全4ファイル）— エンティティ認証・鍵管理・TLS/IPsec/SSH・Signal/EMV/Blockchain |
@@ -26,7 +26,13 @@
 <summary>進捗チェックリスト</summary>
 
 - [x] `01_goals-and-primitives.md` — CIA・認証/否認防止・プリミティブ分類・Kerckhoffsの原理・攻撃者モデル
-- [x] `02_symmetric-crypto.md` — 対称鍵（ブロック/ストリーム・AES・DES/3DES廃止・モード ECB/CBC/CTR/GCM）
+- [x] `02_symmetric-crypto/` — 対称鍵暗号（概念フォルダ、全6ファイル完成）
+  - [ ] `01_stream-ciphers-and-lfsr.md` — ストリーム暗号のFSM・IVの必要性・LFSR・A5/1・E0・RC4・ChaCha20
+  - [ ] `02_block-cipher-architecture.md` — 換字→コードブック・Shannonの交互適用・Feistel vs SPN・DES/3DES廃止
+  - [ ] `03_aes-internals.md` — 4×4状態・SubBytes/ShiftRows/MixColumns・MDS行列と分岐数
+  - [ ] `04_modes-and-aead.md` — ECB/CBC/CTR・バースデー境界の導出・AEAD・CCM/OCB/GCM
+  - [ ] `05_hashing-from-block-ciphers.md` — MDパディング・Davies–Meyer系・MD4の系譜
+  - [ ] `06_permutation-based-and-challenges.md` — 置換ベース暗号・Keccak/duplex・軽量暗号・MPC/FHE向け
 - [x] `03_public-key-crypto/` — 公開鍵暗号（概念フォルダ、全5ファイル完成）
   - [x] `01_rsa/` — RSA（鍵生成・暗号化復号・正しさ証明・パディング/攻撃）
   - [x] `02_dh.md` — Diffie–Hellman 鍵共有・CDH/DDH・前方秘匿性・Logjam
@@ -59,6 +65,8 @@
 ### 深掘りキュー（Layer 2 候補）
 
 - [x] ストリーム暗号（Vernam/OTP・PRG・FSM）→ `deep/stream-ciphers/` に作成済み
+- [ ] 差分・線形解読の実際の計算（AES S-boxがなぜ「ほぼ最適」か数値的裏付け）→ `02_symmetric-crypto/03_aes-internals.md` 経由
+- [ ] LFSRの周期理論（原始多項式と最大周期）→ `02_symmetric-crypto/01_stream-ciphers-and-lfsr.md` 経由
 - [ ] （読み進めながら追記）
 
 </details>

@@ -93,4 +93,4 @@ S ボックスに残るわずかな線形性（`1/2 + ε` の偏り）でも、�
 
 - [02. DES](./02_des.md) — S ボックスの非線形性がなぜ必要か
 - [05. AES](./05_aes.md) — これらの攻撃に耐える設計
-- [../../../topics/02_cryptography/02_symmetric-crypto.md](../../../topics/02_cryptography/02_symmetric-crypto.md) — 対称暗号の安全性の考え方
+- [../../../topics/02_cryptography/02_symmetric-crypto/README.md](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — 対称暗号の安全性の考え方

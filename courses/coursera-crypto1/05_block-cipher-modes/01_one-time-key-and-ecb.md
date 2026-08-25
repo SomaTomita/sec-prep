@@ -107,5 +107,5 @@ flowchart LR
 
 ## 関連リンク
 
-- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto.md) — ブロック暗号と利用モードが対称鍵暗号のどこに位置するか
+- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — ブロック暗号と利用モードが対称鍵暗号のどこに位置するか
 - [CPA 安全性と nonce](./02_cpa-security-and-nonces.md) — 鍵を複数メッセージに使う世界へ

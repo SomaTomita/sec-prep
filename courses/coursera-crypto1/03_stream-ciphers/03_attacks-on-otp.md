@@ -95,4 +95,4 @@ D(k, c ⊕ p) = (c ⊕ p) ⊕ k = (m ⊕ k ⊕ p) ⊕ k = m ⊕ p
 
 - [PRG とストリーム暗号](./02_prg-and-stream-ciphers.md) — フレームごとに独立鍵を導出する正しい設計
 - [実在するストリーム暗号](./04_real-world-stream-ciphers.md) — WEP が使った RC4 と FMS 攻撃の詳細
-- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto.md) — 可鍛性への対策として MAC・認証付き暗号へ
+- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — 可鍛性への対策として MAC・認証付き暗号へ

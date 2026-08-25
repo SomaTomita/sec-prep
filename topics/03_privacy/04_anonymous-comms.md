@@ -82,7 +82,7 @@ flowchart LR
 （各ホップは自分宛ての1層だけを共通鍵暗号 AES の CTR モード（AES-128-CTR）で復号して転送）
 ```
 
-CTRモードでのデータ保護は [`../02_cryptography/02_symmetric-crypto.md`](../02_cryptography/02_symmetric-crypto.md)
+CTRモードでのデータ保護は [`../02_cryptography/02_symmetric-crypto/README.md`](../02_cryptography/02_symmetric-crypto/README.md)
 で見た仕組みそのもの——ここでは各ホップ間の通信路の暗号化に使われている。
 
 **核心の設計原則**: **どの1つの中継ノードも「送信元と宛先の両方」を同時に知らない。**

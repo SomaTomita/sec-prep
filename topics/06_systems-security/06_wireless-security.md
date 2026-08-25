@@ -106,7 +106,7 @@ WPA2 の4ウェイハンドシェイクは長年使われ、**形式的な安全
 
 **nonce の再利用が破局的である**理由は既に見たとおり——ストリーム暗号的なモードでは
 同じキーストリームが2度使われ、2つの平文の XOR が漏れる
-（[`../02_cryptography/02_symmetric-crypto.md`](../02_cryptography/02_symmetric-crypto.md)）。
+（[`../02_cryptography/02_symmetric-crypto/README.md`](../02_cryptography/02_symmetric-crypto/README.md)）。
 
 ### 教訓：証明は仮定の下でのみ成立する
 

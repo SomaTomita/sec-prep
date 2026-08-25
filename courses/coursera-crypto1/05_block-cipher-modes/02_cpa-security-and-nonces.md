@@ -102,5 +102,5 @@ nonce ベース暗号は「`(k,n)` が一意」を安全性の前提にしてい
 
 ## 関連リンク
 
-- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto.md) — CPA 安全性が対称鍵暗号の安全性目標のどこに位置するか
+- [対称暗号の全体像](../../../topics/02_cryptography/02_symmetric-crypto/README.md) — CPA 安全性が対称鍵暗号の安全性目標のどこに位置するか
 - [CBC モード](./03_cbc-mode.md) — nonce/IV を実際に使う最初の具体モード
