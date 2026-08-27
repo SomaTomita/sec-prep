@@ -11,7 +11,7 @@
 
 | # | ページ | 内容（1行） |
 |---|---|---|
-| 01 | [デジタルプラットフォーム設計](01_digital-platform-design.md) | 設計抽象レベル・PPAからPPAS(Security)へ・HW/SW協調設計とTCB |
+| 01 | [デジタルプラットフォーム設計](01_digital-platform-design.md) | 設計抽象レベル・PPAからPPAS(Security)へ・HW/SW協調設計とTCB・FHE高速化の事例 |
 | 02 | [ハードウェア攻撃](02_hardware-attacks.md) | 攻撃者能力の分類(非侵襲/半侵襲/侵襲)・攻撃者の作業手順・部品の真正性・フォールト注入(RSA-CRT)・Spectre/Meltdown |
 | 03 | [セキュリティ部品](03_security-building-blocks.md) | Root of Trust・TPM(PCR)・RNG（エントロピー評価と健全性テスト）・PUF |
 | 04 | [サイドチャネル](04_side-channels/README.md) | 概念フォルダ（全4ファイル）— タイミング攻撃・電力解析(SPA/DPA/CPA)・キャッシュ攻撃・マスキングと耐量子実装 |
