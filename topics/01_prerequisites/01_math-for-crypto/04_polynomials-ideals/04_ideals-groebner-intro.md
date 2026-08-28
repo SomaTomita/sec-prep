@@ -118,11 +118,7 @@ f_2 から割る:  xy^2 = x·(y^2-1) + x       余り x（x も xy にも y^2 �
 
 ## 次への接続
 
-多項式環 `Z_q[x]/(x^n+1)`（円分多項式＝1 の原始 k 乗根だけを根に持つ多項式。`n` が2の冪のとき `x^n+1` は k=2n の場合）上で定義される
-**Ring-LWE** は、格子暗号を効率化した変種。NTRU も同じ多項式環の上に構成される。
-NIST 標準の Kyber（CRYSTALS-Kyber, FIPS 203 で ML-KEM）は厳密には Ring-LWE を
-一般化した **Module-LWE** が基盤（同じリング上の `k×k` サイズの行列・ベクトルを
-扱う——Ring-LWE が「1リング」なら Module-LWE は「リングの行列」）で、パラメータは
-`q=3329, n=256`。多項式環の代数構造が効率的な実装と安全性証明を両立させる鍵になる。
-格子暗号の標準の地図は [`../../../02_cryptography/06_advanced-topics-map.md`](../../../02_cryptography/06_advanced-topics-map.md)、
-安全性仮定の数学的詳細は両フォルダ共通の深掘りキュー（Layer 2、未着手）で扱う。
+多項式環 `Z_q[x]/(x^n+1)` の上に格子を作ると **Ring-LWE**、その一般化が **Module-LWE** で、
+NIST 標準の ML-KEM（FIPS 203）はこれを基盤にする。**このフォルダの剰余環がそのまま
+耐量子暗号の土台になる**——詳細は [`../06_lattices/04_ring-and-module-lwe.md`](../06_lattices/04_ring-and-module-lwe.md)。
+格子暗号の標準の地図は [`../../../02_cryptography/06_advanced-topics-map.md`](../../../02_cryptography/06_advanced-topics-map.md)。

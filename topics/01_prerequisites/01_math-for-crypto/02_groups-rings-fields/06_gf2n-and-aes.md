@@ -1,6 +1,6 @@
 # 06. 有限体 GF(2^n) と AES
 
-> 親: [README](./README.md) ｜ 前: [05 体と有限体GF(p)](./05_fields-and-gfp.md) ｜ 層: 基礎(Layer 1)
+> 親: [README](./README.md) ｜ 前: [05 体と有限体GF(p)](./05_fields-and-gfp.md) ｜ 次: [07 有限体上の線形代数](./07_linear-algebra-over-fields.md) ｜ 層: 基礎(Layer 1)
 
 **この1ページで分かること**
 
@@ -118,9 +118,9 @@ flowchart LR
 
 ## 次への接続
 
-群・環・体・有限体という代数の道具が揃った。次はこの土台の上に、
-RSA・DH の安全性を支える整数論（素数・フェルマー/オイラーの定理・離散対数問題）へ進む。
-→ [`../03_number-theory/`](../03_number-theory/README.md)
+この `GF(2⁸)` の元を成分としてベクトル・行列を組むと、MixColumns のような線形層や
+LFSR の解読がすべて同じ道具（連立一次方程式）で説明できる。
+→ [07 有限体上の線形代数](./07_linear-algebra-over-fields.md)
 
 ## 動かして確認する
 

@@ -11,7 +11,7 @@
 
 このフォルダは群・環・体を **概念ごとに1ファイル** で積み上げる。
 番号順に読めば「群の公理 → 位数とラグランジュ → 巡回群と生成元 → 環と零因子 →
-体とGF(p) → GF(2^n)とAES」と一本道で繋がる。
+体とGF(p) → GF(2^n)とAES → その体の上の線形代数」と一本道で繋がる。
 
 ---
 
@@ -25,6 +25,7 @@
 | 04 | [04_rings-and-zero-divisors.md](./04_rings-and-zero-divisors.md) | 環の定義・零因子・Z_nが合成数で体にならない理由 | mod 6 の乗算表 |
 | 05 | [05_fields-and-gfp.md](./05_fields-and-gfp.md) | 体の定義・有限体GF(p) | 逆元の詳細は `../01_modular-arithmetic/06` へ |
 | 06 | [06_gf2n-and-aes.md](./06_gf2n-and-aes.md) | 有限体GF(2^n)・GF(2^8)とAES | GF(2^8)乗算1例をステップトレース |
+| 07 | [07_linear-algebra-over-fields.md](./07_linear-algebra-over-fields.md) | 有限体上のベクトル空間・行列・連立一次方程式・MDS と分岐数 | LFSR の状態復元を連立方程式で解く |
 
 ---
 
@@ -35,7 +36,7 @@
 - DH: 巡回群 Z_p^* の生成元 g と位数の概念が必須
 
 ### 上級暗号手法
-- 格子ベース暗号（NTRU, Ring-LWE）は多項式環と整数の剰余環を組み合わせた構造
+- 格子ベース暗号（NTRU, Ring-LWE）は多項式環と整数の剰余環を組み合わせた構造（→ [`../06_lattices/`](../06_lattices/README.md)）
 - ECC（楕円曲線）は体上の点の集合が群をなすことを利用
 
 ### 計算機代数
@@ -50,6 +51,8 @@
 - **剰余環 GF(q)[x]/(f(x)) による拡大体構成の一般論** → [`../04_polynomials-ideals/03_quotient-rings-gf2n.md`](../04_polynomials-ideals/03_quotient-rings-gf2n.md)（本フォルダは AES での「使い方」だけ扱う）
 - **フェルマーの小定理・オイラーの定理・離散対数問題の困難性** → [`../03_number-theory/`](../03_number-theory/README.md)
 - **RSA・DH・ECC などプロトコルそのもの** → `../../../02_cryptography/`（本フォルダはその土台となる代数）
+- **LFSR の解読手順・AES の MixColumns がなぜその行列か** → [`../../../02_cryptography/02_symmetric-crypto/`](../../../02_cryptography/02_symmetric-crypto/README.md)（本フォルダは線形代数の道具立てだけ）
+- **線形解読・差分解読の攻撃手順** → `courses/coursera-crypto1/04_block-ciphers/04_advanced-attacks.md`
 
 ---
 
@@ -59,6 +62,7 @@
 - [ ] 楕円曲線の点が群をなす証明（群演算の定義） → `deep/elliptic-curve-group/`
 - [ ] 原始根（primitive root）の存在証明 → `deep/primitive-root/`
 - [ ] ラグランジュの定理の証明 → `deep/lagrange-theorem/`
+- [ ] MDS 行列の構成法（Vandermonde・Cauchy）と分岐数の証明 → `deep/mds-matrices/`
 
 ---
 

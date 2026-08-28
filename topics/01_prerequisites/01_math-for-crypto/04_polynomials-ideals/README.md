@@ -34,6 +34,7 @@ Magma 実習で最初に手を動かす対象そのものであり、
 - Ring-LWE・NTRU の安全性議論に多項式環の知識が前提として必要
 - 格子簡約（LLL, BKZ）も計算機代数で扱い、上級暗号で安全性の文脈で再登場
 - Kyber（ML-KEM）の Module-LWE 構造は、このフォルダの剰余環の考え方の延長線上にある
+  （格子そのものの本体は [`../06_lattices/`](../06_lattices/README.md)）
 
 ---
 
@@ -43,9 +44,9 @@ Magma 実習で最初に手を動かす対象そのものであり、
   → 本体は [`../02_groups-rings-fields/06_gf2n-and-aes.md`](../02_groups-rings-fields/06_gf2n-and-aes.md)。
   **このフォルダが持つのは「剰余環で拡大体を作る」一般論**（[03](./03_quotient-rings-gf2n.md)）であり、
   AES 固有の応用はそちらに委ねる。
-- **Ring-LWE/NTRU/Kyber の安全性仮定そのものの詳細**（格子暗号の本体）
-  → [`../../../02_cryptography/06_advanced-topics-map.md`](../../../02_cryptography/06_advanced-topics-map.md)（PQC標準の地図）は書けているが、
-  数学的詳細は両フォルダ共通の深掘りキュー行き（Layer 2 未着手）。ここでは入口のみ（[04](./04_ideals-groebner-intro.md)）。
+- **格子そのもの・LWE・Ring/Module-LWE の詳細** → [`../06_lattices/`](../06_lattices/README.md)
+  （このフォルダは多項式環という**土台**を提供するだけ。格子の本体はそちら）
+- **PQC 標準の地図（どの方式が FIPS か）** → [`../../../02_cryptography/06_advanced-topics-map.md`](../../../02_cryptography/06_advanced-topics-map.md)
 
 ---
 
@@ -53,7 +54,6 @@ Magma 実習で最初に手を動かす対象そのものであり、
 
 - [ ] AES の GF(2^8) 演算を手で計算 → `deep/aes-field-arithmetic/`
 - [ ] Buchberger アルゴリズムの動作例 → `deep/groebner-buchberger/`
-- [ ] Ring-LWE の定義と安全性仮定 → `deep/ring-lwe-intro/`
 - [ ] 多項式の既約性判定アルゴリズム → `deep/irreducibility-test/`
 
 ---

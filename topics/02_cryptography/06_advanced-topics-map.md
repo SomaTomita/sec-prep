@@ -36,8 +36,8 @@ SLH-DSA は ML-DSA が万一破られた場合の**保険**として選ばれた
 （[`04_hash-and-mac.md`](./04_hash-and-mac.md)）だけに依存し理論的に手堅い。
 
 格子暗号の核心は **LWE（Learning With Errors）問題**——ノイズを乗せた連立一次方程式を
-解くのが計算量的に困難という仮定。数学的な詳細は数論・格子理論の深掘りとして今後扱う
-（`../01_prerequisites/01_math-for-crypto/` の深掘りキュー行き）。
+解くのが計算量的に困難という仮定。数学的な詳細は
+[`../01_prerequisites/01_math-for-crypto/06_lattices/`](../01_prerequisites/01_math-for-crypto/06_lattices/README.md) を参照。
 
 ### 標準ができたことと、移行が終わることは別問題
 
