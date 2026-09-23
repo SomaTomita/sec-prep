@@ -2,10 +2,8 @@
 
 > 層: 地図 (Layer 0)
 
-[`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/index.md)
-の物理・設計の基礎の上に、「信頼をどう物理的に確立し、どう物理的に破られるか」を扱う。
-[`../02_cryptography/`](../02_cryptography/index.md) が数学的に証明した安全性が、
-実際のチップの上でどう崩れうるか（そしてどう守るか）が本領域の核心。
+数学的に安全な暗号（[`../02_cryptography/`](../02_cryptography/index.md)）が**実際のチップの上でどう崩れ、どう守るか**を扱う。
+物理・設計の基礎は [`../01_prerequisites/03_hardware-digital-logic/`](../01_prerequisites/03_hardware-digital-logic/index.md) が前提。
 
 ## 読む順
 
