@@ -14,6 +14,13 @@ hide:
 
 ## 領域マップ
 
+```mermaid
+flowchart LR
+    O["00 全体像"] --> P["01 前提知識"]
+    P --> C["02 暗号"] & PR["03 プライバシー"] & H["04 HW"] & S["05 ソフトウェア"] & SY["06 システム"]
+    C & PR & H & S & SY --> L["07 法務"] & M["08 マネジメント"]
+```
+
 <div class="grid cards" markdown>
 
 -   :material-map-outline:{ .lg .middle } **00. コース全体像**
