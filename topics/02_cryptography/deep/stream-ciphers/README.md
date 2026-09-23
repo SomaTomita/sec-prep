@@ -2,21 +2,13 @@
 
 > 親: [02 対称鍵暗号](../../02_symmetric-crypto/README.md) ｜ 層: 深掘り(Layer 2)
 
-`02_symmetric-crypto/README.md` では「ストリーム暗号＝鍵から擬似乱数列を作って XOR」と1行で
-片づけた部分を、**手を動かして目で見る**ために起こした深掘りフォルダ。
+「ストリーム暗号＝鍵から擬似乱数列を作って XOR」の 1 行を、**手を動かして目で見る**ための深掘りフォルダ。各ページに動かせるウィジェットがある（JavaScript 無効でも読み物として成立）。
 
-扱うのは次の1本の筋道だけ。
-
+```mermaid
+flowchart TD
+  A["Vernam / OTP: 長い真乱数鍵を XOR。安全だが運用が重い"] -->|"鍵が長すぎる"| B["短い鍵 + PRG で伸ばす"]
+  B -->|"展開の中身を開ける"| C["FSM: K と IV で初期化し、状態更新しながら Z を吐く"]
 ```
-Vernam / OTP          長い完全ランダム鍵をそのまま XOR。安全だが運用が重い
-      ↓  鍵が長すぎる
-短い鍵 + 展開アルゴリズム   短い秘密鍵を PRG で伸ばしてキーストリームにする
-      ↓  展開の中身を開けると
-FSM（状態機械）        K と IV で状態を初期化し、状態を更新しながら Z を吐き続ける
-```
-
-各ページに**その場で動かせるウィジェット**を置いてある（ボタンでビットが1桁ずつ動く）。
-JavaScript が無効な環境では説明文と図だけが残るので、読み物としても成立する。
 
 ## 読む順
 
@@ -55,7 +47,7 @@ JavaScript が無効な環境では説明文と図だけが残るので、読み
   → [`../../../01_prerequisites/01_math-for-crypto/05_info-theory/03_perfect-secrecy-otp.md`](../../../01_prerequisites/01_math-for-crypto/05_info-theory/03_perfect-secrecy-otp.md)
 - **AES・ブロック暗号・モード（CTR/GCM）** → [`../../02_symmetric-crypto/README.md`](../../02_symmetric-crypto/README.md)
 - **講義に沿った理論的な定義（PRG の安全性・意味論的安全性）**
-  → `courses/coursera-crypto1/03_stream-ciphers/`（リポジトリ内のみ）
+  → [`courses/coursera-crypto1/03_stream-ciphers/`](../../../courses/coursera-crypto1/03_stream-ciphers/README.md)
 
 ## 参考
 
