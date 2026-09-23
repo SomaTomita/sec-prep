@@ -2,8 +2,13 @@
 
 > 層: 地図 (Layer 0)
 
-このサブ領域は暗号系の専門選択科目群の中核。
-道具（数学）は `../01_prerequisites/01_math-for-crypto/` に、適用がここ。
+暗号は「合鍵を持つ人だけが読める・書ける」仕組みを数学で作る道具箱。道具（数学）は [`01_math-for-crypto/`](../01_prerequisites/01_math-for-crypto/index.md)、その適用がここ。
+
+```mermaid
+flowchart LR
+  A["01 目標と部品"] --> B["02 対称鍵 AES 等"] --> D["04 ハッシュ / MAC"] --> E["05 プロトコル TLS 等"] --> F["06 上級: 耐量子 / FHE / MPC"]
+  A --> C["03 公開鍵 RSA / DH / ECC"] --> E
+```
 
 ## 読む順
 
