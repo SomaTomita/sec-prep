@@ -5,12 +5,12 @@
 
 ## 一言で
 
-**係数を整数に制限したベクトル空間**。連続だったベクトル空間が飛び飛びの点の集合に変わり、
-Gauss 消去で瞬時に解けていた問題が急に難しくなる。耐量子暗号標準（ML-KEM/ML-DSA）と
-FHE のノイズは、すべてこの1つの数学的土台の上に乗っている。
+**係数を整数に制限したベクトル空間**（方眼紙の交点を n 次元に伸ばしたもの）。連続な空間が飛び飛びの点になり、Gauss 消去で解けた問題が急に難しくなる。耐量子暗号標準（ML-KEM/ML-DSA）と FHE のノイズはこの 1 つの土台の上に乗る。
 
-このフォルダは番号順に読めば「格子と基底 → SVP/CVP → LWE と SIS → Ring/Module-LWE」
-と一本道で繋がる。
+```mermaid
+flowchart LR
+  A["01 格子と基底"] --> B["02 SVP/CVP"] --> C["03 LWE と SIS"] --> D["04 Ring/Module-LWE"] --> E["ML-KEM / ML-DSA / FHE"]
+```
 
 ---
 
@@ -27,12 +27,7 @@ FHE のノイズは、すべてこの1つの数学的土台の上に乗ってい
 
 ## なぜ重要か / コースでの位置づけ
 
-NIST 標準 FIPS 203（ML-KEM）・FIPS 204（ML-DSA）はどちらも格子問題（Module-LWE/SIS）を
-安全性の根拠にしており、もはや「上級トピック」ではなく実務標準である。
-COSIC Course 2026 の27本中5本（PQ移行・PQC実装・FHE・MPC・FHE高速化・FHE応用）が
-本フォルダの内容に依存する。FHE のノイズも LWE のノイズと同一の道具であり、
-FHE がなぜ遅いか（[`../../../04_hardware-security/01_digital-platform-design.md`](../../../04_hardware-security/01_digital-platform-design.md)）
-を理解する土台にもなる。
+NIST 標準 FIPS 203（ML-KEM）・FIPS 204（ML-DSA）はどちらも格子問題（Module-LWE/SIS）が根拠で、もはや実務標準。受講科目の PQ 移行・PQC 実装・FHE・MPC・FHE 高速化・FHE 応用が本フォルダに依存する。FHE のノイズは LWE のノイズと同一の道具で、FHE がなぜ遅いか（[`../../../04_hardware-security/01_digital-platform-design.md`](../../../04_hardware-security/01_digital-platform-design.md)）を理解する土台。
 
 ---
 
