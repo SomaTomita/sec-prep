@@ -2,26 +2,36 @@
 
 > 対応科目: Advanced Methods for Security and Privacy by Design ｜ 前: [04 セキュリティテスト](./04_security-testing.md) ｜ 層: 基礎(Layer 1)
 
-[01](./01_secure-sdlc.md)〜[04](./04_security-testing.md)は「開発プロセスのどこで」
-「何を検証するか」を見てきた。本ファイルはさらに手前、**設計の出発点そのもの**に
-セキュリティ・プライバシーをどう組み込むかという2つの古典的原則論——
-Security by Design（Saltzer & Schroeder）とPrivacy by Design（Cavoukian）を扱う。
-GDPRの条文詳細は[`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)に
-既にあるため、ここでは重複させず「設計方法論」に絞る。
-
 **この1ページで分かること**
 
-- Saltzer & Schroeder の8原則（1975年）——最小権限・フェイルセーフ等、今も現役の設計語彙
-- Cavoukian の Privacy by Design 7原則と、GDPR・Secure SDLC との対応関係
+- Saltzer & Schroeder の 8 原則（1975 年）——最小権限・フェイルセーフ等、今も現役の設計語彙
+- Cavoukian の Privacy by Design 7 原則と、GDPR・Secure SDLC との対応関係
 - 同じ機能に両原則群を同時に適用する設計判断の例
+
+「鍵は必要な人にだけ、扉は迷ったら閉める」——50 年前から変わらない設計の常識を言葉にしたもの。[01](./01_secure-sdlc.md)〜[04](./04_security-testing.md) より手前、**設計の出発点**に組み込む 2 つの原則論。GDPR 条文は [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)。
+
+### 最小の例: ファイル共有リンク 1 本
+
+| 原則 | 共有リンクでは |
+|---|---|
+| 最小権限（Security） | 「閲覧のみ」を既定にし、編集権は明示的に付ける |
+| フェイルセーフ（Security） | 権限の判定に失敗したら「見せない」 |
+| デフォルトでプライバシー（Privacy） | 新規リンクは「リンクを知る人のみ」、公開は選択制 |
+
+1 つの機能に両方の原則群が同時にかかる。以下、それぞれの原則の全体。
+
+```mermaid
+flowchart LR
+  F["1 つの機能"] --> S["Security by Design: 権限とアクセス制御の構造"]
+  F --> P["Privacy by Design: 本人にとっての可視性と既定値"]
+  S & P --> D["両方を満たす設計判断"]
+```
 
 ---
 
 ## Security by Design：Saltzer & Schroeder の8原則（1975年）
 
-*The Protection of Information in Computer Systems*（1975年）で提示された、
-保護機構設計の古典的原則。50年前の論文だが、最小権限・フェイルセーフ等は今も
-現役の設計語彙として使われる。
+*The Protection of Information in Computer Systems*（1975）の古典的原則。今も現役の設計語彙。
 
 | 原則 | 内容 | [03](./03_security-patterns.md)との対応 |
 |---|---|---|
@@ -34,16 +44,13 @@ GDPRの条文詳細は[`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-
 | 心理的受容性 (Psychological Acceptability) | ユーザが使いにくい保護機構は回避される（付箋にパスワードを書く等） | — |
 | 経済性 (Economy of Mechanism) | 設計は可能な限り単純・小さく保つ（複雑さはバグと脆弱性の温床） | — |
 
-**最小共通メカニズムとサイドチャネルの関係**は原則同士のつながりが見えやすい例——
-クラウドの同居インスタンスがキャッシュを共有する（＝共有メカニズムを最小化していない）
-ことがFlush+Reload攻撃（＝キャッシュの追い出しと再読込の時間差から他者のメモリアクセスを推測するサイドチャネル攻撃）を可能にした、と読み替えられる。
+**最小共通メカニズムとサイドチャネル**はつながりが見えやすい例——同居インスタンスのキャッシュ共有（共有メカニズムを最小化していない）が Flush+Reload（キャッシュの追い出しと再読込の時間差から他者のアクセスを推測する攻撃）を可能にした。
 
 ---
 
 ## Privacy by Design：Cavoukian の7つの基本原則（1990年代提唱、2010年に国際的承認）
 
-Ann Cavoukian（当時オンタリオ州情報プライバシー・コミッショナー）が提唱し、2010年の
-データ保護当局国際会議（ICDPPC）で決議として承認された、プライバシーの設計原則。
+Cavoukian（オンタリオ州情報プライバシー・コミッショナー）が提唱、2010 年の国際会議で承認された設計原則。
 
 | # | 原則 | 内容 |
 |---|---|---|
@@ -55,9 +62,7 @@ Ann Cavoukian（当時オンタリオ州情報プライバシー・コミッシ�
 | 6 | 可視性と透明性（Visibility and Transparency） | 何が・なぜ行われているかを関係者に開示する |
 | 7 | 利用者のプライバシーを尊重（Respect for User Privacy） | 利用者の利益を最優先に、強いデフォルト・適切な通知・使いやすい選択肢を提供する |
 
-**原則5「全ライフサイクルの保護」がSecure SDLC（[01](./01_secure-sdlc.md)）と同型**である点、
-**原則2「デフォルトでプライバシー」がGDPRのデータ最小化**を設計側から言い換えたものである点
-——両者ともすでに学んだ概念の「設計原則としての再定式化」であることを意識すると覚えやすい。
+原則 5 は Secure SDLC（[01](./01_secure-sdlc.md)）と同型、原則 2 は GDPR のデータ最小化の設計側からの言い換え——既習概念の再定式化と見ると覚えやすい。
 
 ---
 
@@ -75,9 +80,7 @@ Privacy by Design視点:
   可視性と透明性 → 「あなたの位置は◯◯人に近似表示されています」と常時表示する
 ```
 
-同じ機能に対して、Security側は「権限とアクセス制御の構造」、Privacy側は
-「本人にとっての可視性とデフォルト」という異なる軸から設計を制約する——
-両方を同時に満たす設計判断が、実務での "by design" の実践。
+Security 側は「権限と構造」、Privacy 側は「本人の可視性と既定値」という別の軸から制約する。両方を同時に満たすのが "by design" の実践。
 
 ---
 
@@ -108,8 +111,7 @@ Privacy by Design視点:
 
 ## 暗号での出口
 
-これで`05_software-security/`の基礎パート（Secure SDLC・脅威モデリング・設計パターン・
-テスト・by design原則）が一通り揃った。GDPRの条文詳細・DPIAの実施要件は
+`05_software-security/` の基礎パートはこれで揃った。GDPR 条文・DPIA は
 [`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)、
 最小共通メカニズムとサイドチャネルの物理的機構は
 [`../04_hardware-security/04_side-channels/README.md`](../04_hardware-security/04_side-channels/README.md)、

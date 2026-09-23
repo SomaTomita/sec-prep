@@ -2,22 +2,29 @@
 
 > 前: [01 Secure SDLC](./01_secure-sdlc.md) ｜ 次: [03 セキュリティパターン](./03_security-patterns.md) ｜ 層: 基礎(Layer 1)
 
-「どこにどんな脅威がありうるか」を場当たり的な思いつきではなく、**データフロー図(DFD)**
-を土台に体系的に洗い出す方法論群。セキュリティ側の代表がSTRIDE、そこから派生した
-プライバシー側の代表がLINDDUN——後者は[`../03_privacy/`](../03_privacy/index.md)が
-「作成後にリンクする」と予告していた本体をここで提供する。
-
 **この1ページで分かること**
 
-- 脅威モデリングの土台となるデータフロー図（DFD）の描き方と信頼境界の意味
-- STRIDE（セキュリティ脅威の6分類）・attack tree（ゴール起点の経路分解）・LINDDUN（プライバシー脅威の7分類）の使い分け
-- STRIDE の Repudiation と LINDDUN の Non-repudiation が正反対の脅威を指すという落とし穴
+- 土台となるデータフロー図（DFD）の描き方と信頼境界の意味
+- STRIDE（セキュリティ脅威 6 分類）・attack tree（ゴール起点の経路分解）・LINDDUN（プライバシー脅威 7 分類）の使い分け
+- STRIDE の Repudiation と LINDDUN の Non-repudiation が正反対の脅威を指す落とし穴
+
+家を建てる前に「誰が・どこから・何を盗みに来るか」を書き出す作業。思いつきではなく **DFD** を土台に体系的に洗い出す。プライバシー側の LINDDUN は [`../03_privacy/`](../03_privacy/index.md) が予告した本体。
+
+### 最小の例: ログインフォーム 1 個に S と T を当てる
+
+```
+[ブラウザ] --ID/パスワード--> (ログイン処理)
+  S なりすまし: 他人の ID/パスワードを入力する         → 対策: 多要素認証
+  T 改ざん:     送信途中でパスワード欄を書き換える      → 対策: TLS
+```
+
+要素 1 つに脅威分類を順に当てるだけ。これを図の全要素・全分類で繰り返すのが脅威モデリング。
 
 ```mermaid
 flowchart LR
-    A["DFD を描いて<br>系を分解する"] --> B["STRIDE / LINDDUN で<br>各要素を総当たり（網羅）"]
-    B --> C["attack tree で<br>ゴール別に経路を深掘り"]
-    C --> D["対策の設計へ<br>（03 セキュリティパターン）"]
+    A["DFD を描いて系を分解"] --> B["STRIDE / LINDDUN で各要素を総当たり"]
+    B --> C["attack tree でゴール別に深掘り"]
+    C --> D["対策の設計へ（03）"]
 ```
 
 ---
@@ -26,7 +33,7 @@ flowchart LR
 
 ```
 記法: プロセス(丸) ／ データストア(2本線) ／ 外部エンティティ(四角) ／ データフロー(矢印)
-     信頼境界(trust boundary, 点線)を跨ぐ矢印ほど攻撃者の到達可能性が高い
+     信頼境界(trust boundary＝信用の度合いが変わる線、点線)を跨ぐ矢印ほど攻撃者が届きやすい
 ```
 
 ### サンプル系：ログイン付きオンライン注文システム
@@ -39,16 +46,13 @@ flowchart LR
                                               [ブラウザ]（Cookie保持）
 ```
 
-以降のSTRIDE・attack treeは、このサンプル系（3本のデータフロー・1つの信頼境界）に対して行う。
+以降はこのサンプル系（3 本のフロー・1 つの信頼境界）に対して行う。
 
 ---
 
 ## STRIDE（Kohnfelder & Garg, Microsoft, 1999年）
 
-1999年4月1日、Microsoft社内誌 "Interface" に発表された "The Threats to our Products" が
-初出。「脅威をどう見つけるか」を初めて体系立てた点が画期的とされ、2002年までに
-Microsoft SDLの標準プロセスとして採用された。DFDの各要素（プロセス・データストア・
-データフロー・外部エンティティ）を6分類の脅威で総当たりする。
+1999 年に Microsoft 社内誌で初出、2002 年までに Microsoft SDL の標準プロセスに。DFD の各要素を 6 分類の脅威で総当たりする。
 
 | 頭文字 | 脅威 | サンプル系での具体例 | 対策 |
 |---|---|---|---|
@@ -59,17 +63,13 @@ Microsoft SDLの標準プロセスとして採用された。DFDの各要素（�
 | D | Denial of Service（サービス拒否） | ログインエンドポイントに大量リクエストを送る | レート制限・WAF |
 | E | Elevation of Privilege（権限昇格） | 一般ユーザが管理者用エンドポイントに直接アクセスする | 認可チェックの徹底（[`../06_systems-security/03_authn-authz-access-control.md`](../06_systems-security/03_authn-authz-access-control.md)で詳述） |
 
-STRIDEは「6分類のどれに当てはまるか」を機械的に問うことで、レビュアーの経験に
-依存しがちな脅威発見を再現可能なプロセスに変える点が価値。
+価値は、経験に依存しがちな脅威発見を「6 分類を機械的に問う」再現可能なプロセスに変えること。
 
 ---
 
 ## Attack Tree（Schneier, 1999年）
 
-Bruce Schneierが *Dr. Dobb's Journal*（1999年12月号）で発表。STRIDEが「DFDの各要素に
-何が起きうるか」を横断的に問うのに対し、attack treeは**1つの攻撃者ゴール**を起点に
-「どうやって達成するか」を縦に分解する。根がゴール、子が下位目標、AND/ORノードで
-組み合わせを表す（同じ形式は1991年のWeissの提案が先行するが、Schneierの論文が普及させた）。
+Schneier が 1999 年に発表（形式自体は Weiss 1991 が先行）。STRIDE が各要素を横断的に問うのに対し、attack tree は**1 つの攻撃者ゴール**を根に置き、達成経路を AND/OR で縦に分解する。
 
 ```
 ゴール: [ユーザDB]の内容を盗む
@@ -82,28 +82,21 @@ Bruce Schneierが *Dr. Dobb's Journal*（1999年12月号）で発表。STRIDEが
        AND: フィッシングメールを送る + 管理者が認証情報を入力する
 ```
 
-STRIDEで見つけた個々の脅威（S, T, E等）が、attack treeでは**1つのゴールに至る複数経路**
-として再構成される——STRIDEが「網羅性」、attack treeが「経路の深掘りと優先順位付け」を担う、
-補完関係にある。
+STRIDE の個々の脅威が、attack tree では**1 つのゴールへの複数経路**として再構成される。STRIDE＝網羅性、attack tree＝深掘りと優先順位、の補完関係。
 
 ---
 
 ## LINDDUN（Deng, Wuyts, Scandariato, Preneel, Joosen; 2011年）
 
-*Requirements Engineering* 誌に発表された、STRIDEをプライバシー版に翻案した方法論。
-確立されたプライバシー工学の研究に基づく、実務でも広く使われる方法論。
-STRIDEと同じくDFD上で各要素を7分類の脅威で総当たりするが、対象が「セキュリティ特性の破れ」
-ではなく「プライバシー特性の破れ」になる。
+STRIDE をプライバシー版に翻案した方法論（*Requirements Engineering* 誌）。同じく DFD 上で総当たりするが、対象が「プライバシー特性の破れ」になる。
 
 ### 7カテゴリと`../03_privacy/01_privacy-concepts.md`との対応
 
-[01_privacy-concepts](../03_privacy/01_privacy-concepts.md)で定義した**匿名性・非連結性・
-非検知性・非観測性**の4性質のうち3つがLINDDUNの脅威名にそのまま現れる——脅威モデリングの
-文脈で「その性質が破られるとはどういう具体的シナリオか」を与えるのがLINDDUNの役割。
+[01_privacy-concepts](../03_privacy/01_privacy-concepts.md) の 4 性質（匿名性・非連結性・非検知性・非観測性）のうち 3 つが脅威名にそのまま現れる。LINDDUN の役割は「その性質が破られる具体的シナリオ」を与えること。
 
 | LINDDUN頭文字 | 脅威 | 定義（何が破られるか） | 対応するプライバシー特性 |
 |---|---|---|---|
-| L | Linkability | 複数のIOI（データ・行為）を結びつけて追加情報を得られる | **非連結性**（[01](../03_privacy/01_privacy-concepts.md)で定義済み）の破れ |
+| L | Linkability | 複数の IOI（Item of Interest＝守りたい対象：データ・行為）を結びつけて追加情報を得られる | **非連結性**（[01](../03_privacy/01_privacy-concepts.md)）の破れ |
 | I | Identifiability | 意図せず個人の身元が漏洩・推測される | **匿名性**の破れ |
 | N | Non-repudiation | ある主張・行為を特定個人に帰属させる証拠が残る | 匿名性・非連結性の「否認可能性」を伴う破れ（証拠付きで断定できてしまう点がSTRIDEのRepudiationと極性が逆） |
 | D | Detectability | データが「存在すること自体」を第三者が推測できる | **非検知性**の破れ |
@@ -111,12 +104,14 @@ STRIDEと同じくDFD上で各要素を7分類の脅威で総当たりするが�
 | U | Unawareness | データ主体が自分のデータの扱われ方を十分に知らされていない | GDPR透明性原則（[`../03_privacy/06_law-and-dpia.md`](../03_privacy/06_law-and-dpia.md)）の破れ |
 | N | Non-compliance | システムがデータ保護原則・法規制に準拠していない | GDPR全体（同上）への違反 |
 
-**Unobservability**（非検知性かつ関係者間の匿名性という最強の合成特性）はLINDDUN単体の
-カテゴリとしては現れない——Detectability と Identifiability/Linkability を組み合わせて
-分析すれば同じ状態を表現できるため。STRIDEのRepudiation（「やった」ことを否認**できる**、
-攻撃者に有利）とLINDDUNのNon-repudiation（「やった」ことを否認**できなくなる**、
-データ主体に不利）が同じ語幹で正反対の脅威を指す点は、両方法論を並べて学ぶ際に
-最も混同しやすい落とし穴。
+**Unobservability**（非検知性＋匿名性の合成特性）は単独カテゴリにない——D と I/L の組み合わせで表現できるため。
+
+| | STRIDE の Repudiation | LINDDUN の Non-repudiation |
+|---|---|---|
+| 何が脅威か | 「やった」ことを否認**できる** | 「やった」ことを否認**できなくなる** |
+| 誰に不利か | 守る側（攻撃者に有利） | データ主体 |
+
+同じ語幹で正反対を指す、最も混同しやすい落とし穴。
 
 ### サンプル系へのLINDDUN適用（一部）
 
@@ -159,9 +154,7 @@ STRIDEと同じくDFD上で各要素を7分類の脅威で総当たりするが�
 
 ## 次への接続
 
-脅威を洗い出した後は、それに対する**設計レベルの防御**を体系化する。
-セキュリティ設計パターンと、Spectre/Meltdownという実例に対するソフトウェア側の
-多層防御を見る。→ [03 セキュリティパターン](./03_security-patterns.md)
+洗い出した脅威への**設計レベルの防御**を体系化する。→ [03 セキュリティパターン](./03_security-patterns.md)
 
 ---
 
