@@ -2,20 +2,28 @@
 
 > 層: 地図 (Layer 0)
 
-このサブ領域は「暗号で使う数学の土台」を扱う。
-暗号系 4 科目すべてが前提として仮定する代数・整数論・情報理論を、
-Layer 1（概念理解レベル）で押さえる。
+「暗号で使う数学の土台」。暗号系科目が前提とする代数・整数論・情報理論・格子を、概念理解レベル（Layer 1）で押さえる。数学が不安なら 01 から順に、1 ファイルずつ「最小の例 → 定義」の順で読めばよい。
 
 ## 読む順
 
+```mermaid
+flowchart LR
+  A["01 合同算術"] --> B["02 群・環・体"] --> C["03 整数論"]
+  B --> D["04 多項式・イデアル"] --> F["06 格子"]
+  A --> E["05 情報理論"]
+  C --> R["RSA / DH / ECC"]
+  E --> O["OTP / 鍵長"]
+  F --> P["ML-KEM / FHE"]
+```
+
 | # | ページ | 内容（1行） |
 |---|---|---|
-| 01 | [合同算術](01_modular-arithmetic/README.md) | 余り→合同式→演算→gcd→拡張ユークリッド→逆元→CRT入口（概念別フォルダ） |
-| 02 | [群・環・体](02_groups-rings-fields/README.md) | 群・環・体・有限体 GF(p), GF(2^n)・線形代数（概念別フォルダ: 二項演算→位数→巡回群→環→体→GF(2^n)→線形代数） |
-| 03 | [整数論](03_number-theory/README.md) | 素数・フェルマー小定理・オイラー・CRT・離散対数・素因数分解（概念別フォルダ） |
-| 04 | [多項式・イデアル](04_polynomials-ideals/README.md) | 多項式環・既約多項式・イデアル・Gröbner 基底概観（概念別フォルダ） |
-| 05 | [情報理論](05_info-theory/README.md) | エントロピー・条件付きエントロピー・相互情報量・完全秘匿（概念別フォルダ） |
-| 06 | [格子](06_lattices/README.md) | 格子と基底・SVP/CVP・LWE と SIS・Ring/Module-LWE（概念別フォルダ） |
+| 01 | [合同算術](01_modular-arithmetic/README.md) | 余り→合同式→gcd→拡張ユークリッド→逆元→CRT 入口 |
+| 02 | [群・環・体](02_groups-rings-fields/README.md) | 二項演算→位数→巡回群→環→体→GF(2^n)→線形代数 |
+| 03 | [整数論](03_number-theory/README.md) | 素数・Fermat・Euler・CRT・離散対数・素因数分解 |
+| 04 | [多項式・イデアル](04_polynomials-ideals/README.md) | 多項式環・既約多項式・剰余環 GF(q^n)・イデアル・Gröbner 基底 |
+| 05 | [情報理論](05_info-theory/README.md) | エントロピー・相互情報量・完全秘匿(OTP)・鍵長 |
+| 06 | [格子](06_lattices/README.md) | 格子と基底・SVP/CVP・LWE と SIS・Ring/Module-LWE |
 
 <details>
 <summary>進捗チェックリスト</summary>
